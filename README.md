@@ -1,2 +1,2 @@
-# open-plc.github.io
+# open-plc
 Open PLC
