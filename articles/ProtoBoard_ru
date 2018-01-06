@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+ <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+ <TITLE></TITLE>
+ <META NAME="AUTHOR" CONTENT="Alexandr Suvorov">
+ <META NAME="CREATED" CONTENT="20180103;19344050">
+ <META NAME="CHANGEDBY" CONTENT="Alexandr Suvorov">
+ <META NAME="CHANGED" CONTENT="20180105;17524570">
+ <STYLE TYPE="text/css">
+ <!--
+  @page { size: 21cm 29.7cm; margin-bottom: 0.01cm }
+  P { margin-bottom: 0.21cm }
+  A:link { color: #000080; so-language: zxx; text-decoration: underline }
+  A:visited { color: #800000; so-language: zxx; text-decoration: underline }
+ -->
+ </STYLE>
+</HEAD>
+<BODY LANG="en-US" LINK="#000080" VLINK="#800000" DIR="LTR">
+<P STYLE="margin-bottom: 0cm; background: transparent"><IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/label.jpg?raw=true" NAME="label" ALIGN=BOTTOM WIDTH=38 HEIGHT=38 BORDER=0></P>
+<P STYLE="margin-bottom: 0cm; background: transparent"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; background: transparent"><FONT SIZE=4><SPAN LANG="ru-RU"><B>Оглавление</B></SPAN></FONT></P>
+<P LANG="ru-RU" STYLE="margin-bottom: 0cm; background: transparent"><BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent; page-break-before: auto">
+<FONT SIZE=5><B>Универсальная плата для макетирования</B></FONT></P>
+<P STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f001.png?raw=true" NAME="f001" ALIGN=BOTTOM WIDTH=346 HEIGHT=378 BORDER=0></P>
+<P STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Разработана специальная, универсальная печатная плата
+для макетирования.</B></FONT></P>
+<P STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Безусловно, существуют различные беспаячные платы для
+изготовления прототипов. Например широко распространенная
+<SPAN LANG="en-US">&ldquo;BreadBoard&rdquo;:</SPAN></B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f002.png?raw=true" NAME="f002" ALIGN=BOTTOM WIDTH=378 HEIGHT=412 BORDER=0></P>
+<P STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Данную плату можно использовать для прототипов, но
+для работы с &laquo;голубой таблеткой&raquo; она не совсем удобна.</B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f003.png?raw=true" NAME="f003" ALIGN=BOTTOM WIDTH=378 HEIGHT=412 BORDER=0></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Пример использования.</B></FONT></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Справа от &laquo;таблетки&raquo; плата разработанная
+для совместного использования с &laquo;голубой таблеткой&raquo;,
+слева ( обведено кружком ), остался всего один ряд контактов типа
+&laquo;мама&raquo; для подключения дополнительных устройств. К
+правому ряду контактов &laquo;голубой таблетки&raquo; больше ничего
+подключить нельзя.</B></FONT></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Та же &laquo;таблетка&raquo; и дополнительная плата
+на универсальной макетной плате:</B></FONT></P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f004.png?raw=true" NAME="f004" ALIGN=BOTTOM WIDTH=227 HEIGHT=189 BORDER=0>
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f005.png?raw=true" NAME="f005" ALIGN=BOTTOM WIDTH=227 HEIGHT=189 BORDER=0></P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Видим, что и слева и справа есть свободные для
+использования контакты.</B></FONT></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Пример дополнительной платы &mdash; &laquo;<SPAN LANG="en-US">CAN
+</SPAN>интерфейс&raquo; для совместного использования с &laquo;голубой
+таблеткой&raquo;, из примеров выше.</B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f006.png?raw=true" NAME="f006" ALIGN=BOTTOM WIDTH=302 HEIGHT=204 BORDER=0></P>
+<P ALIGN=LEFT STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Сравнение размеров беспаячной и универсальной плат.</B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f007.png?raw=true" NAME="f007" ALIGN=BOTTOM WIDTH=491 HEIGHT=312 BORDER=0></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Универсальную плату каждый может сделать по своим
+требованиям из набора контактов как &laquo;мама&raquo; так и &laquo;папа&raquo;.
+Контакты могут быть как однорядные, так и двухрядные 1<SPAN LANG="en-US">x20,
+2x20</SPAN>. По краям платы можно смонтировать клеммники.</B></FONT></P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Пример используемых контактов и клеммников:<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f008.png?raw=true" NAME="f008" ALIGN=BOTTOM WIDTH=378 HEIGHT=283 BORDER=0></B></FONT></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Примеры изготовленных плат, с разными типами
+контактов:</B></FONT></P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f009.png?raw=true" NAME="f009" ALIGN=BOTTOM WIDTH=227 HEIGHT=189 BORDER=0>
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f010.png?raw=true" NAME="f010" ALIGN=BOTTOM WIDTH=208 HEIGHT=189 BORDER=0>
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f011.png?raw=true" NAME="f011" ALIGN=BOTTOM WIDTH=147 HEIGHT=189 BORDER=0></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Для макетирования <SPAN LANG="en-US">DIP-</SPAN>элементов
+необходимы переходники-цанговые разъемы:</B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f012.png?raw=true" NAME="f012" ALIGN=BOTTOM WIDTH=249 HEIGHT=227 BORDER=0></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Примеры монтажа <SPAN LANG="en-US">DIP-</SPAN>элементов:</B></FONT></P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f013.png?raw=true" NAME="f013" ALIGN=BOTTOM WIDTH=208 HEIGHT=227 BORDER=0>
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f014.png?raw=true" NAME="f014" ALIGN=BOTTOM WIDTH=189 HEIGHT=227 BORDER=0></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>С нижней стороны платы имеются резиновые &laquo;ножки&raquo;:</B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f015.png?raw=true" NAME="f015" ALIGN=BOTTOM WIDTH=208 HEIGHT=246 BORDER=0></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>На плате представлены две шины, <SPAN LANG="en-US">A
+</SPAN>и <SPAN LANG="en-US">B </SPAN>из 20 проводников каждая<SPAN LANG="en-US">.
+</SPAN>Объединить проводники шин в один можно перемычкой:</B></FONT></P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f016.png?raw=true" NAME="f016" ALIGN=BOTTOM WIDTH=378 HEIGHT=265 BORDER=0></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Это предназначено например для проводников &laquo;+&raquo;
+и &laquo;-&raquo; питания, общих проводников.</B></FONT></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>На универсальную плату можно монтировать модули с
+двурядным расположением контактов, чего в принципе нельзя сделать на
+стандартной беспаечной плате.</B></FONT></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Пример модуля с двурядными контактами:</B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f017.png?raw=true" NAME="f017" ALIGN=BOTTOM WIDTH=189 HEIGHT=227 BORDER=0></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Монтаж данного модуля на универсальную плату:</B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f018.png?raw=true" NAME="f018" ALIGN=BOTTOM WIDTH=242 HEIGHT=227 BORDER=0></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Размер универсальной платы выбран для установки в
+стандартную коробку на <SPAN LANG="en-US">DIN-</SPAN>рейку. Если в
+этом случае будет использован <SPAN LANG="en-US">USB </SPAN>разъем,
+то штырьки &laquo;голубой таблетки&raquo; должны быть впаяны
+следующим образом:</B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f019.png?raw=true" NAME="f019" ALIGN=BOTTOM WIDTH=170 HEIGHT=227 BORDER=0></P>
+<P STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>&laquo;Таблетка&raquo; и модуль <SPAN LANG="en-US">CAN
+</SPAN>установленные на универсальную плату:</B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f020.png?raw=true" NAME="f020" ALIGN=BOTTOM WIDTH=280 HEIGHT=227 BORDER=0></P>
+<P STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Универсальная плата в коробке на <SPAN LANG="en-US">DIN-</SPAN>рейку
+без крышек:</B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f021.png?raw=true" NAME="f021" ALIGN=BOTTOM WIDTH=321 HEIGHT=227 BORDER=0></P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B><SPAN LANG="en-US">Универсальная плата в коробке на
+DIN-рейку </SPAN>с установленными крышками:</B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f022.png?raw=true" NAME="f022" ALIGN=BOTTOM WIDTH=215 HEIGHT=227 BORDER=0></P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Это решение позволяет придать прототипу внешний вид
+промышленного изделия.</B></FONT></P>
+<P ALIGN=LEFT STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>После изготовления прототипов модули или элементы
+прототипа можно впаять на эту плату</B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<IMG SRC="https://github.com/open-plc-com/open-plc/blob/master/images/a001f023.png?raw=true" NAME="f023" ALIGN=BOTTOM WIDTH=249 HEIGHT=227 BORDER=0></P>
+<P LANG="ru-RU" ALIGN=CENTER STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>и разместить в коробке на <SPAN LANG="en-US">DIN-</SPAN>рейку
+или коробке собственного изготовления.</B></FONT></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Платы можно изготовить самостоятельно, или заказать
+через сайт ( <SPAN LANG="en-US">open-plc.com </SPAN>страница контакты
+).</B></FONT></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B>Возможны различные варианты поставки от &laquo;все
+спаяю сам&raquo;, нужны только комплектующие, до готовых плат с
+впаянными по требованию разъемами.</B></FONT></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<FONT SIZE=4><B><A HREF="https://github.com/open-plc-com/hardwares/blob/master/universal_board/universal_board.pdf">Чертеж
+&laquo;универсальной платы&raquo;</A></B></FONT></P>
+<P LANG="ru-RU" STYLE="margin-left: 1cm; margin-bottom: 0cm; background: transparent">
+<BR>
+</P>
+</BODY>
+</HTML>
