@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Open-PLC</title>
+<link href="l_icon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="l_icon.ico" rel="apple-touch-icon" sizes="32x32">
+<style>
+html, body
+{
+   width: 100%;
+   height: 100%;
+}
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #E6E6E6;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+#Layer01
+{
+   background-color: #CCCCCC;
+   background-image: none;
+}
+#Logo_Image
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#Layer03
+{
+   background-color: #B3B3B3;
+   background-image: none;
+}
+#wb_MainMenu
+{
+   border: 0px #B3B3B3 solid;
+   background-color: #B3B3B3;
+}
+#wb_MainMenu ul
+{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+#wb_MainMenu li
+{
+   float: left;
+   margin: 0;
+   padding: 0px 4px 0px 0px;
+   width: 100px;
+}
+#wb_MainMenu a
+{
+   display: block;
+   float: left;
+   color: #333333;
+   border: 1px #000000 solid;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+   background-color: #B3B3B3;
+   background-color: rgba(179,179,179,0.70);
+   background: -moz-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: -webkit-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: -o-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: -ms-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 16px;
+   font-style: italic;
+   text-decoration: none;
+   width: 88px;
+   height: 26px;
+   padding: 0px 5px 0px 5px;
+   vertical-align: middle;
+   line-height: 26px;
+   text-align: center;
+}
+#wb_MainMenu li:hover a, #wb_MainMenu a:hover, #wb_MainMenu .active
+{
+   color: #FFFFFF;
+   background-color: #337AB7;
+   background: -moz-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: -webkit-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: -o-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: -ms-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   border: 1px #2E6DA4 solid;
+}
+#wb_MainMenu li.firstmain
+{
+   padding-left: 0px;
+}
+#wb_MainMenu li.lastmain
+{
+   padding-right: 0px;
+}
+#wb_MainMenu br
+{
+   clear: both;
+   font-size: 1px;
+   height: 0;
+   line-height: 0;
+}
+#Layer05
+{
+   background-color: #CCCCCC;
+   background-image: none;
+}
+#Layer06
+{
+   background-color: #CCCCCC;
+   background-image: none;
+}
+#Layer02
+{
+   background-color: #F0F8FF;
+   background-image: none;
+   border: 1px #CCCCCC solid;
+}
+#wb_indexText4 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_indexText4 div
+{
+   text-align: left;
+}
+#wb_indexText5 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_indexText5 div
+{
+   text-align: left;
+}
+</style>
+</head>
+<body>
+<div id="Layer01" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:102px;float:left;clear:left;display:block;z-index:7;">
+<div id="wb_Logo_Image" style="position:absolute;left:9px;top:8px;width:395px;height:77px;z-index:0;">
+<img src="images/logo.png" id="Logo_Image" alt=""></div>
+<div id="wb_Home" style="position:absolute;left:0px;top:0px;width:20px;height:20px;z-index:1;">
+<a id="Home" style="visibility:hidden">&nbsp;</a>
+</div>
+</div>
+<div id="Layer03" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;;height:52px;float:left;clear:left;display:block;z-index:8;">
+<div id="wb_MainMenu" style="position:absolute;left:71px;top:12px;width:800px;height:28px;z-index:2;">
+<ul>
+<li class="firstmain"><a href="./index.html" target="_self" title="Home">&#1043;&#1083;&#1072;&#1074;&#1085;&#1072;&#1103;</a>
+</li>
+<li><a class="active" href="./content.html" target="_self">&#1057;&#1090;&#1072;&#1090;&#1100;&#1080;</a>
+</li>
+</ul>
+</div>
+<div id="Layer05" style="position:absolute;text-align:left;left:0px;top:12px;width:52px;height:40px;z-index:3;">
+</div>
+<div id="Layer06" style="position:absolute;text-align:left;left:0px;top:0px;width:52px;height:12px;z-index:4;">
+</div>
+</div>
+<div id="Layer02" style="position:relative;overflow:scroll;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:9;">
+<div id="wb_indexText4" style="position:absolute;left:244px;top:27px;width:159px;height:28px;z-index:5;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:24px;"><strong><em>Оглавление</em></strong></span></div>
+<div id="wb_indexText5" style="position:absolute;left:51px;top:70px;width:606px;height:19px;z-index:6;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;"><strong><a href="./page_a_01.html#a001">Унивесальная плата для прототипирования</a></strong></span></div>
+</div>
+</body>
+</html>
