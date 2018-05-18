@@ -1,1 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Open-PLC</title>
+<link href="logo.ico" rel="shortcut icon" type="image/x-icon">
+<link href="logo.ico" rel="apple-touch-icon" sizes="32x32">
+<style>
+html, body
+{
+width: 100%;
+height: 100%;
+}
+body
+{
+background-color: #FFFFFF;
+background-image: url(images/main_background.jpg);
+background-attachment: fixed;
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+color: #000000;
+font-family: Arial;
+font-weight: normal;
+font-size: 13px;
+line-height: 1.1875;
+margin: 0;
+padding: 0;
+}
+a
+{
+color: #0000FF;
+text-decoration: underline;
+}
+a:visited
+{
+color: #800080;
+}
+a:active
+{
+color: #E6E6E6;
+}
+a:hover
+{
+color: #0000FF;
+text-decoration: underline;
+}
+#Text01
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text01 div
+{
+text-align: left;
+}
+#indexText2
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: center;
+}
+#indexText2 div
+{
+text-align: center;
+}
+#Layer01
+{
+background-color: #CCCCCC;
+background-image: none;
+}
+#Layer02
+{
+background-color: transparent;
+background-image: none;
+}
+#Layer03
+{
+background-color: transparent;
+background-image: none;
+border: 1px transparent solid;
+}
+#Layer04
+{
+background-color: transparent;
+background-image: none;
+border: 1px #CCCCCC solid;
+}
+#Layer022
+{
+background-color: transparent;
+background-image: none;
+}
+#Layer023
+{
+background-color: #CCCCCC;
+background-image: none;
+}
+#Layer05
+{
+background-color: transparent;
+background-image: none;
+border: 1px #CCCCCC solid;
+}
+#Layer06
+{
+background-color: #E1E1E1;
+background-image: none;
+border: 1px #CCCCCC solid;
+}
+#Logo_Image
+{
+border: 0px #000000 solid;
+padding: 0px 0px 0px 0px;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+}
+#indexText3
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#indexText3 div
+{
+text-align: left;
+}
+#NavigationBar1 ul.navbar
+{
+list-style: none;
+margin: 0;
+padding: 0;
+}
+#NavigationBar1 ul.navbar li
+{
+height: 30px;
+width: 120px;
+margin: 0 0 4px 0;
+vertical-align: bottom;
+}
+#NavigationBar1 ul.navbar li a
+{
+display: block;
+position: relative;
+}
+#NavigationBar1 ul.navbar li a img
+{
+position: absolute;
+left: 0;
+z-index: 1;
+border-width: 0;
+}
+#NavigationBar1 ul.navbar li span
+{
+display: block;
+height: 30px;
+width: 120px;
+position: absolute;
+z-index: 2;
+}
+#NavigationBar1 ul li a.active span
+{
+visibility: hidden !important;
+}
+#NavigationBar1 ul li a.active .hover
+{
+visibility: visible !important;
+}
+#NavigationBar1 a .hover
+{
+visibility: hidden;
+}
+#NavigationBar1 a:hover .hover
+{
+visibility: visible;
+}
+#NavigationBar1 a:hover span
+{
+visibility: hidden;
+}
+#NavigationBar1 ul li a.active img
+{
+}
+#NavigationBar1
+{
+margin: 10px 0px 0px 0px;
+}
+#NavigationBar1.affix
+{
+top: 0 !important;
+position: fixed !important;
+left: 50% !important;
+margin-left: -502px;
+}
+#Shape1
+{
+border-width: 0;
+}
+#Text03
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text03 div
+{
+text-align: left;
+}
+#Text04
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text04 div
+{
+text-align: left;
+}
+#Text02
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text02 div
+{
+text-align: left;
+}
+#Text05
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text05 div
+{
+text-align: left;
+}
+#Text06
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text06 div
+{
+text-align: left;
+}
+#Text07
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text07 div
+{
+text-align: left;
+}
+#Text08
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text08 div
+{
+text-align: left;
+}
+#Text09
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text09 div
+{
+text-align: left;
+}
+#Text10
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text10 div
+{
+text-align: left;
+}
+#Text11
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text11 div
+{
+text-align: left;
+}
+#Text12
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text12 div
+{
+text-align: left;
+}
+#Image01
+{
+border: 0px #000000 solid;
+padding: 0px 0px 0px 0px;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+}
+#Text13
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text13 div
+{
+text-align: left;
+}
+#Text14
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text14 div
+{
+text-align: left;
+}
+#Text15
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text15 div
+{
+text-align: left;
+}
+#Text16
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text16 div
+{
+text-align: left;
+}
+#Text17
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text17 div
+{
+text-align: left;
+}
+#Shape2
+{
+border-width: 0;
+}
+#Shape3
+{
+border-width: 0;
+}
+#Text18
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text18 div
+{
+text-align: left;
+}
+#Text19
+{
+background-color: transparent;
+background-image: none;
+border: 0px #000000 solid;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+#Text19 div
+{
+text-align: left;
+}
+#MainMenu
+{
+border: 0px #B3B3B3 solid;
+background-color: #B3B3B3;
+}
+#MainMenu ul
+{
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+#MainMenu li
+{
+float: left;
+margin: 0;
+padding: 0px 4px 0px 0px;
+}
+#MainMenu a
+{
+display: block;
+float: left;
+color: #333333;
+border: 1px #000000 solid;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+background-color: #B3B3B3;
+background-color: rgba(179,179,179,0.70);
+background: -moz-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+background: -webkit-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+background: -o-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+background: -ms-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+background: linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+font-family: Arial;
+font-weight: bold;
+font-size: 16px;
+font-style: italic;
+text-decoration: none;
+height: 26px;
+line-height: 26px;
+padding: 0px 5px 0px 5px;
+vertical-align: middle;
+text-align: center;
+}
+#MainMenu li:hover a, #MainMenu a:hover, #MainMenu .active
+{
+color: #FFFFFF;
+background-color: #337AB7;
+background: -moz-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+background: -webkit-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+background: -o-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+background: -ms-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+background: linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+border: 1px #2E6DA4 solid;
+}
+#MainMenu li.firstmain
+{
+padding-left: 0px;
+}
+#MainMenu li.lastmain
+{
+padding-right: 0px;
+}
+#MainMenu br
+{
+clear: both;
+font-size: 1px;
+height: 0;
+line-height: 0;
+}
+#Layer021
+{
+background-color: #B3B3B3;
+background-image: none;
+}
+</style>
+<script src="jquery-1.12.4.min.js"></script>
+<script src="affix.min.js"></script>
+<script src="scrollspy.min.js"></script>
+<script>
+$(document).ready(function()
+{
+$("#NavigationBar1").affix({offset:{top: $("#NavigationBar1").offset().top}});
+});
+</script>
+<style>
+#NavigationBar1, #NavigationBar1.affix
+{
+left: 10px !important;
+margin-left: 0;
+z-index: 999 !important;
+}
+</style>
+</head>
+<body data-spy="scroll">
 
+<div id="NavigationBar1" style="position:absolute;left:10px;top:154px;width:120px;height:136px;z-index:33;">
+<ul class="navbar">
+<li><a href="#Home"><img alt="" src="images/img0017_over.png" class="hover"><span><img alt="" src="images/img0017.png"></span></a></li>
+<li><a href="#Page1"><img alt="" src="images/img0003_over.png" class="hover"><span><img alt="" src="images/img0003.png"></span></a></li>
+<li><a href="#Page2"><img alt="" src="images/img0005_over.png" class="hover"><span><img alt="" src="images/img0005.png"></span></a></li>
+<li><a href="#Contacts"><img alt="" src="images/img0006_over.png" class="hover"><span><img alt="" src="images/img0006.png"></span></a></li>
+</ul>
+</div>
+<div id="Layer01" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:102px;float:left;clear:left;display:block;z-index:34;">
+<div id="Logo_Image" style="position:absolute;left:9px;top:8px;width:395px;height:77px;z-index:0;">
+<img src="images/logo.png" id="Logo_Image" alt=""></div>
+<div id="Home" style="position:absolute;left:0px;top:0px;width:20px;height:20px;visibility:hidden;z-index:1;">
+<a id="Home" style="visibility:hidden">&nbsp;</a>
+</div>
+</div>
+<div id="Layer02" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;;height:52px;float:left;clear:left;display:none;z-index:35;">
+<div id="Layer021" style="position:absolute;text-align:left;left:52px;right:0px;top:0px;height:52px;z-index:2;">
+</div>
+<div id="MainMenu" style="position:absolute;left:70px;top:12px;width:954px;height:28px;z-index:3;">
+<ul>
+<li class="firstmain"><a class="active" href="./index.html" target="_self">Open-PLC</a>
+</li>
+<li><a href="./manuals.html" target="_self">&#1056;&#1091;&#1082;&#1086;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1072;</a>
+</li>
+<li><a href="#" target="_self" title="&#1055;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;"></a>
+</li>
+<li><a href="#" target="_self" title="Arduino"></a>
+</li>
+<li><a href="#" target="_self" title="&#1055;&#1088;&#1086;&#1076;&#1091;&#1082;&#1094;&#1080;&#1103;"></a>
+</li>
+</ul>
+</div>
+<div id="Layer022" style="position:absolute;text-align:left;left:0px;top:12px;width:52px;height:40px;z-index:4;">
+</div>
+<div id="Layer023" style="position:absolute;text-align:left;left:0px;top:0px;width:52px;height:12px;z-index:5;">
+</div>
+</div>
+<div id="Layer03" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:36;">
+<div id="Shape1" style="position:absolute;left:139px;top:9px;width:680px;height:600px;z-index:6;">
+<img src="images/img0001.png" id="Shape1" alt="" style="width:680px;height:600px;"></div>
+<div id="Text01" style="position:absolute;left:169px;top:35px;width:640px;height:24px;z-index:7;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:21px;"><strong><em>Откройте для себя инновационные проекты на основе Open-PLC:</em></strong></span></div>
+<div id="Text02" style="position:absolute;left:209px;top:70px;width:400px;height:21px;z-index:8;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:13px;">•</span><span style="color:#000000;font-family:'Times New Roman';font-size:19px;"> идеи проекта</span></div>
+<div id="Text03" style="position:absolute;left:209px;top:95px;width:400px;height:21px;z-index:9;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:13px;">• </span><span style="color:#000000;font-family:'Times New Roman';font-size:19px;">учебные пособия ( руководства )</span></div>
+<div id="Text04" style="position:absolute;left:209px;top:120px;width:400px;height:21px;z-index:10;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:13px;">• </span><span style="color:#000000;font-family:'Times New Roman';font-size:19px;">наборы для начинающих и экспертов</span></div>
+<div id="Text05" style="position:absolute;left:169px;top:175px;width:620px;height:43px;z-index:11;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Open-PLC - это модульные, распределенные управляющие системы с открытыми исходниками. <strong><em>Модуль</em></strong> это основная единица создания систем.</span></div>
+<div id="Text06" style="position:absolute;left:169px;top:239px;width:620px;height:63px;z-index:12;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Управляющая система, или система автоматизации - это модули объединенные в единую сеть различными способами. Каждый модуль выполняет определенные задачи.</span></div>
+<div id="Text07" style="position:absolute;left:169px;top:323px;width:620px;height:42px;z-index:13;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Система создается из модулей взаимодействующих как мастер-подчиненный. Мастер-модуль управляет работой подчиненных.</span></div>
+<div id="Text08" style="position:absolute;left:169px;top:386px;width:620px;height:42px;z-index:14;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Мастер-модули могут быть объединены в распределенную не иерархическую сеть.</span></div>
+<div id="Text09" style="position:absolute;left:169px;top:453px;width:620px;height:42px;z-index:15;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Для начала создания своей собственной системы достаточно минимальных знаний и умений.</span></div>
+<div id="Text10" style="position:absolute;left:169px;top:520px;width:620px;height:63px;z-index:16;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Например для реализации идей «умного дома» можно не иметь проекта, а создавать систему по мере появления идей и опыта, начиная с простейшего модуля.</span></div>
+</div>
+<div id="Layer04" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:37;">
+<div id="Page1" style="position:absolute;left:9px;top:9px;width:19px;height:18px;visibility:hidden;z-index:17;">
+<a id="Page1" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="Shape2" style="position:absolute;left:139px;top:14px;width:680px;height:693px;z-index:18;">
+<img src="images/img0002.png" id="Shape2" alt="" style="width:680px;height:693px;"></div>
+<div id="Text11" style="position:absolute;left:169px;top:27px;width:640px;height:212px;z-index:19;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Систему можно использовать для решения различных задач, например «умный дом», IoT, пром. автоматизация, ...<br><br>Система имеет открытую архитектуру, которая позволяет легко объединяться с различными решениями, как аппаратными, так и программными.</span><span style="color:#000000;font-family:Arial;font-size:19px;"><br><br></span><span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Система масштабируется от простейшего автономного работающего модуля, до сложных сетевых решений. Началом собственного проекта может быть ознакомительная плата - «Голубая Таблетка»</span><span style="color:#000000;font-family:Arial;font-size:19px;"><br></span></div>
+<div id="Image01" style="position:absolute;left:169px;top:239px;width:643px;height:150px;z-index:20;">
+<img src="images/hf001.png" id="Image01" alt=""></div>
+<div id="Text12" style="position:absolute;left:169px;top:400px;width:640px;height:21px;z-index:21;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Модуль системы это совокупность аппаратных и программных компонентов.</span></div>
+<div id="Text13" style="position:absolute;left:169px;top:436px;width:640px;height:42px;z-index:22;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Мастер-модуль может быть любым, от простого микроконтроллера, до компьютера с операционной системой:</span></div>
+<div id="Text14" style="position:absolute;left:209px;top:481px;width:640px;height:21px;z-index:23;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:13px;">•</span><span style="color:#000000;font-family:'Times New Roman';font-size:19px;"> на основе STM32Fxxx без операционной системы</span></div>
+<div id="Text15" style="position:absolute;left:209px;top:502px;width:640px;height:21px;z-index:24;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:13px;">•</span><span style="color:#000000;font-family:'Times New Roman';font-size:19px;"> Raspberry и подобные с Linux</span></div>
+<div id="Text16" style="position:absolute;left:209px;top:523px;width:640px;height:21px;z-index:25;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:13px;">•</span><span style="color:#000000;font-family:'Times New Roman';font-size:19px;"> x86 с различными операционными системами.</span></div>
+<div id="Text17" style="position:absolute;left:169px;top:569px;width:640px;height:126px;z-index:26;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">При создании подчиненных модулей будем использовать микроконтроллеры компании STM ( STM32F10x, STM32F30x ). Простейшая ознакомительная плата - «Голубая Таблетка» STM32F103C8T6.<br><br>Как пример, в качестве датчиков/исполнительных механизмов можно использовать различные модули для Arduino.</span></div>
+</div>
+<div id="Layer05" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:38;">
+<div id="Page2" style="position:absolute;left:9px;top:9px;width:19px;height:18px;visibility:hidden;z-index:27;">
+<a id="Page2" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="Shape3" style="position:absolute;left:139px;top:14px;width:680px;height:460px;z-index:28;">
+<img src="images/img0004.png" id="Shape3" alt="" style="width:680px;height:460px;"></div>
+<div id="Text18" style="position:absolute;left:169px;top:29px;width:640px;height:420px;z-index:29;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Описание программирования будет пополняться на сайте по мере создания программного обеспечения.<br><br>Сценарий работы модулей можно писать на «С», «C++», языках программирования IEC 61131.<br><br>Для подчиненных модулей создаются готовые прошивки разного назначения. Прошивки подчиненных модулей унифицированы, пользователь интерактивно конфигурирует их под свои требования.<br><br>Все излагаемое и описываемое на сайте является компонентами единой системы. Но каждый компонент или идея могут быть использованы как автономно, так и в составе своего собственного проекта.<br><br>Если предложенного аппаратного или программного функционала будет недостаточно, то мы можем разработать и изготовить индивидуальные версии ваших модулей различного назначения, от решений для дома, до промышленных.<br><br>Мы поможем развить ваш проект!</span></div>
+</div>
+<div id="Layer06" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:39;">
+<div id="Contacts" style="position:absolute;left:9px;top:9px;width:19px;height:18px;visibility:hidden;z-index:30;">
+<a id="Contacts" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="Text19" style="position:absolute;left:169px;top:60px;width:640px;height:63px;z-index:31;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;"><a href="https://github.com/open-plc-com/open-plc/issues">Обсуждение проекта</a><br><br>e-mail: info@open-plc.com</span></div>
+</div>
+</body>
+</html>
