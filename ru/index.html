@@ -1,560 +1,118 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Open-PLC</title>
-<link href="logo.ico" rel="shortcut icon" type="image/x-icon">
-<link href="logo.ico" rel="apple-touch-icon" sizes="32x32">
-<style>
-html, body
-{
-width: 100%;
-height: 100%;
-}
-body
-{
-background-color: #FFFFFF;
-background-image: url(images/main_background.jpg);
-background-attachment: fixed;
-background-position: center center;
-background-repeat: no-repeat;
-background-size: cover;
-color: #000000;
-font-family: Arial;
-font-weight: normal;
-font-size: 13px;
-line-height: 1.1875;
-margin: 0;
-padding: 0;
-}
-a
-{
-color: #0000FF;
-text-decoration: underline;
-}
-a:visited
-{
-color: #800080;
-}
-a:active
-{
-color: #E6E6E6;
-}
-a:hover
-{
-color: #0000FF;
-text-decoration: underline;
-}
-#Text01
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text01 div
-{
-text-align: left;
-}
-#indexText2
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: center;
-}
-#indexText2 div
-{
-text-align: center;
-}
-#Layer01
-{
-background-color: #CCCCCC;
-background-image: none;
-}
-#Layer02
-{
-background-color: transparent;
-background-image: none;
-}
-#Layer03
-{
-background-color: transparent;
-background-image: none;
-border: 1px transparent solid;
-}
-#Layer04
-{
-background-color: transparent;
-background-image: none;
-border: 1px #CCCCCC solid;
-}
-#Layer022
-{
-background-color: transparent;
-background-image: none;
-}
-#Layer023
-{
-background-color: #CCCCCC;
-background-image: none;
-}
-#Layer05
-{
-background-color: transparent;
-background-image: none;
-border: 1px #CCCCCC solid;
-}
-#Layer06
-{
-background-color: #E1E1E1;
-background-image: none;
-border: 1px #CCCCCC solid;
-}
-#Logo_Image
-{
-border: 0px #000000 solid;
-padding: 0px 0px 0px 0px;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-}
-#indexText3
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#indexText3 div
-{
-text-align: left;
-}
-#NavigationBar1 ul.navbar
-{
-list-style: none;
-margin: 0;
-padding: 0;
-}
-#NavigationBar1 ul.navbar li
-{
-height: 30px;
-width: 120px;
-margin: 0 0 4px 0;
-vertical-align: bottom;
-}
-#NavigationBar1 ul.navbar li a
-{
-display: block;
-position: relative;
-}
-#NavigationBar1 ul.navbar li a img
-{
-position: absolute;
-left: 0;
-z-index: 1;
-border-width: 0;
-}
-#NavigationBar1 ul.navbar li span
-{
-display: block;
-height: 30px;
-width: 120px;
-position: absolute;
-z-index: 2;
-}
-#NavigationBar1 ul li a.active span
-{
-visibility: hidden !important;
-}
-#NavigationBar1 ul li a.active .hover
-{
-visibility: visible !important;
-}
-#NavigationBar1 a .hover
-{
-visibility: hidden;
-}
-#NavigationBar1 a:hover .hover
-{
-visibility: visible;
-}
-#NavigationBar1 a:hover span
-{
-visibility: hidden;
-}
-#NavigationBar1 ul li a.active img
-{
-}
-#NavigationBar1
-{
-margin: 10px 0px 0px 0px;
-}
-#NavigationBar1.affix
-{
-top: 0 !important;
-position: fixed !important;
-left: 50% !important;
-margin-left: -502px;
-}
-#Shape1
-{
-border-width: 0;
-}
-#Text03
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text03 div
-{
-text-align: left;
-}
-#Text04
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text04 div
-{
-text-align: left;
-}
-#Text02
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text02 div
-{
-text-align: left;
-}
-#Text05
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text05 div
-{
-text-align: left;
-}
-#Text06
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text06 div
-{
-text-align: left;
-}
-#Text07
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text07 div
-{
-text-align: left;
-}
-#Text08
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text08 div
-{
-text-align: left;
-}
-#Text09
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text09 div
-{
-text-align: left;
-}
-#Text10
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text10 div
-{
-text-align: left;
-}
-#Text11
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text11 div
-{
-text-align: left;
-}
-#Text12
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text12 div
-{
-text-align: left;
-}
-#Image01
-{
-border: 0px #000000 solid;
-padding: 0px 0px 0px 0px;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-}
-#Text13
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text13 div
-{
-text-align: left;
-}
-#Text14
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text14 div
-{
-text-align: left;
-}
-#Text15
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text15 div
-{
-text-align: left;
-}
-#Text16
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text16 div
-{
-text-align: left;
-}
-#Text17
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text17 div
-{
-text-align: left;
-}
-#Shape2
-{
-border-width: 0;
-}
-#Shape3
-{
-border-width: 0;
-}
-#Text18
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text18 div
-{
-text-align: left;
-}
-#Text19
-{
-background-color: transparent;
-background-image: none;
-border: 0px #000000 solid;
-padding: 0;
-margin: 0;
-text-align: left;
-}
-#Text19 div
-{
-text-align: left;
-}
-#MainMenu
-{
-border: 0px #B3B3B3 solid;
-background-color: #B3B3B3;
-}
-#MainMenu ul
-{
-list-style-type: none;
-margin: 0;
-padding: 0;
-}
-#MainMenu li
-{
-float: left;
-margin: 0;
-padding: 0px 4px 0px 0px;
-}
-#MainMenu a
-{
-display: block;
-float: left;
-color: #333333;
-border: 1px #000000 solid;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-border-radius: 5px;
-background-color: #B3B3B3;
-background-color: rgba(179,179,179,0.70);
-background: -moz-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
-background: -webkit-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
-background: -o-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
-background: -ms-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
-background: linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
-font-family: Arial;
-font-weight: bold;
-font-size: 16px;
-font-style: italic;
-text-decoration: none;
-height: 26px;
-line-height: 26px;
-padding: 0px 5px 0px 5px;
-vertical-align: middle;
-text-align: center;
-}
-#MainMenu li:hover a, #MainMenu a:hover, #MainMenu .active
-{
-color: #FFFFFF;
-background-color: #337AB7;
-background: -moz-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
-background: -webkit-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
-background: -o-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
-background: -ms-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
-background: linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
-border: 1px #2E6DA4 solid;
-}
-#MainMenu li.firstmain
-{
-padding-left: 0px;
-}
-#MainMenu li.lastmain
-{
-padding-right: 0px;
-}
-#MainMenu br
-{
-clear: both;
-font-size: 1px;
-height: 0;
-line-height: 0;
-}
-#Layer021
-{
-background-color: #B3B3B3;
-background-image: none;
-}
-</style>
-<script src="jquery-1.12.4.min.js"></script>
-<script src="affix.min.js"></script>
-<script src="scrollspy.min.js"></script>
-<script>
-$(document).ready(function()
-{
+<!doctype html> <html lang="ru"> <head> <meta charset="utf-8">
+<title>Open-PLC</title> <link href="logo.ico" rel="shortcut icon"
+type="image/x-icon"> <link href="logo.ico" rel="apple-touch-icon" sizes="">
+<style> html, body { width: 100%; height: 100%; } body { background-color:
+#F0F8FF; background-image: url(images/main_background.jpg);
+background-attachment: fixed; background-position: center center;
+background-repeat: no-repeat; background-size: cover; color: #000000;
+font-family: Arial; font-weight: normal; font-size: 13px; line-height: 1.1875;
+margin: 0; padding: 0; } a { color: #F0F8FF; text-decoration: underline; }
+a:visited { color: #800080; } a:active { color: #E6E6E6; } a:hover { color:
+#0000FF; text-decoration: underline; } #Text01 { background-color: transparent;
+background-image: none; border: 0px #000000 solid; padding: 0; margin: 0;
+text-align: left; } #Text01 div { text-align: left; } #indexText2 {
+background-color: transparent; background-image: none; border: 0px #000000
+solid; padding: 0; margin: 0; text-align: center; } #indexText2 div {
+text-align: center; } #Layer01 { background-color: #CCCCCC; background-image:
+none; } #Layer02 { background-color: transparent; background-image: none; }
+#Layer03 { background-color: transparent; background-image: none; border: 1px
+transparent solid; } #Layer04 { background-color: transparent;
+background-image: none; border: 1px #CCCCCC solid; } #Layer022 {
+background-color: transparent; background-image: none; } #Layer023 {
+background-color: #CCCCCC; background-image: none; } #Layer05 {
+background-color: transparent; background-image: none; border: 1px #CCCCCC
+solid; } #Layer06 { background-color: #E1E1E1; background-image: none; border:
+1px #CCCCCC solid; } #Logo_Image { border: 0px #000000 solid; padding: 0px 0px
+0px 0px; left: 0; top: 0; width: 100%; height: 100%; } #indexText3 {
+background-color: transparent; background-image: none; border: 0px #000000
+solid; padding: 0; margin: 0; text-align: left; } #indexText3 div { text-align:
+left; } #NavigationBar1 ul.navbar { list-style: none; margin: 0; padding: 0; }
+#NavigationBar1 ul.navbar li { height: 30px; width: 120px; margin: 0 0 4px 0;
+vertical-align: bottom; } #NavigationBar1 ul.navbar li a { display: block;
+position: relative; } #NavigationBar1 ul.navbar li a img { position: absolute;
+left: 0; z-index: 1; border-width: 0; } #NavigationBar1 ul.navbar li span {
+display: block; height: 30px; width: 120px; position: absolute; z-index: 2; }
+#NavigationBar1 ul li a.active span { visibility: hidden !important; }
+#NavigationBar1 ul li a.active .hover { visibility: visible !important; }
+#NavigationBar1 a .hover { visibility: hidden; } #NavigationBar1 a:hover .hover
+{ visibility: visible; } #NavigationBar1 a:hover span { visibility: hidden; }
+#NavigationBar1 ul li a.active img { } #NavigationBar1 { margin: 10px 0px 0px
+0px; } #NavigationBar1.affix { top: 0 !important; position: fixed !important;
+left: 50% !important; margin-left: -502px; } #Shape1 { border-width: 0; }
+#Text03 { background-color: transparent; background-image: none; border: 0px
+#000000 solid; padding: 0; margin: 0; text-align: left; } #Text03 div {
+text-align: left; } #Text04 { background-color: transparent; background-image:
+none; border: 0px #000000 solid; padding: 0; margin: 0; text-align: left; }
+#Text04 div { text-align: left; } #Text02 { background-color: transparent;
+background-image: none; border: 0px #000000 solid; padding: 0; margin: 0;
+text-align: left; } #Text02 div { text-align: left; } #Text05 {
+background-color: transparent; background-image: none; border: 0px #000000
+solid; padding: 0; margin: 0; text-align: left; } #Text05 div { text-align:
+left; } #Text06 { background-color: transparent; background-image: none;
+border: 0px #000000 solid; padding: 0; margin: 0; text-align: left; } #Text06
+div { text-align: left; } #Text07 { background-color: transparent;
+background-image: none; border: 0px #000000 solid; padding: 0; margin: 0;
+text-align: left; } #Text07 div { text-align: left; } #Text08 {
+background-color: transparent; background-image: none; border: 0px #000000
+solid; padding: 0; margin: 0; text-align: left; } #Text08 div { text-align:
+left; } #Text09 { background-color: transparent; background-image: none;
+border: 0px #000000 solid; padding: 0; margin: 0; text-align: left; } #Text09
+div { text-align: left; } #Text10 { background-color: transparent;
+background-image: none; border: 0px #000000 solid; padding: 0; margin: 0;
+text-align: left; } #Text10 div { text-align: left; } #Text12 {
+background-color: transparent; background-image: none; border: 0px #000000
+solid; padding: 0; margin: 0; text-align: left; } #Text12 div { text-align:
+left; } #Image01 { border: 0px #000000 solid; padding: 0px 0px 0px 0px; left:
+0; top: 0; width: 100%; height: 100%; } #Text13 { background-color:
+transparent; background-image: none; border: 0px #000000 solid; padding: 0;
+margin: 0; text-align: left; } #Text13 div { text-align: left; } #Text14 {
+background-color: transparent; background-image: none; border: 0px #000000
+solid; padding: 0; margin: 0; text-align: left; } #Text14 div { text-align:
+left; } #Text15 { background-color: transparent; background-image: none;
+border: 0px #000000 solid; padding: 0; margin: 0; text-align: left; } #Text15
+div { text-align: left; } #Text16 { background-color: transparent;
+background-image: none; border: 0px #000000 solid; padding: 0; margin: 0;
+text-align: left; } #Text16 div { text-align: left; } #Text17 {
+background-color: transparent; background-image: none; border: 0px #000000
+solid; padding: 0; margin: 0; text-align: left; } #Text17 div { text-align:
+left; } #Shape2 { border-width: 0; } #Shape3 { border-width: 0; } #Text18 {
+background-color: transparent; background-image: none; border: 0px #000000
+solid; padding: 0; margin: 0; text-align: left; } #Text18 div { text-align:
+left; } #Text19 { background-color: transparent; background-image: none;
+border: 0px #000000 solid; padding: 0; margin: 0; text-align: left; } #Text19
+div { text-align: left; } #MainMenu { border: 0px #B3B3B3 solid;
+background-color: #B3B3B3; } #MainMenu ul { list-style-type: none; margin: 0;
+padding: 0; } #MainMenu li { float: left; margin: 0; padding: 0px 4px 0px 0px;
+} #MainMenu a { display: block; float: left; color: #333333; border: 1px
+#000000 solid; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+border-radius: 5px; background-color: #B3B3B3; background-color:
+rgba(179,179,179,0.70); background:
+-moz-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+background: -webkit-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0
+100%); background: -o-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0
+100%); background: -ms-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0
+100%); background: linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0
+100%); font-family: Arial; font-weight: bold; font-size: 16px; font-style:
+italic; text-decoration: none; height: 26px; line-height: 26px; padding: 0px
+5px 0px 5px; vertical-align: middle; text-align: center; } #MainMenu li:hover
+a, #MainMenu a:hover { color: #FFFFFF; background-color: #337AB7; background:
+-moz-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%); background:
+-webkit-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%); background:
+-o-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%); background:
+-ms-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%); background:
+linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%); border: 1px #2E6DA4 solid; }
+#MainMenu li.firstmain { padding-left: 0px; } #MainMenu li.lastmain {
+padding-right: 0px; } #MainMenu br { clear: both; font-size: 1px; height: 0;
+line-height: 0; } #Layer021 { background-color: #B3B3B3; background-image:
+none; } #Text11 { background-color: transparent; background-image: none;
+border: 0px #000000 solid; padding: 0; margin: 0; text-align: left; } #Text11
+div { text-align: left; } </style> <script src="jquery-1.12.4.min.js"></script>
+<script src="affix.min.js"></script> <script src="scrollspy.min.js"></script>
+<script> $(document).ready(function() {
 $("#NavigationBar1").affix({offset:{top: $("#NavigationBar1").offset().top}});
-});
-</script>
-<style>
-#NavigationBar1, #NavigationBar1.affix
-{
-left: 10px !important;
-margin-left: 0;
-z-index: 999 !important;
-}
-</style>
-</head>
+}); </script> <style> #NavigationBar1, #NavigationBar1.affix { left: 10px
+!important; margin-left: 0; z-index: 999 !important; } </style> </head>
 <body data-spy="scroll">
-
 <div id="NavigationBar1" style="position:absolute;left:10px;top:154px;width:120px;height:136px;z-index:33;">
 <ul class="navbar">
 <li><a href="#Home"><img alt="" src="images/img0017_over.png" class="hover"><span><img alt="" src="images/img0017.png"></span></a></li>
@@ -566,30 +124,26 @@ z-index: 999 !important;
 <div id="Layer01" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:102px;float:left;clear:left;display:block;z-index:34;">
 <div id="Logo_Image" style="position:absolute;left:9px;top:8px;width:395px;height:77px;z-index:0;">
 <img src="images/logo.png" id="Logo_Image" alt=""></div>
-<div id="Home" style="position:absolute;left:0px;top:0px;width:20px;height:20px;visibility:hidden;z-index:1;">
+<div id="Home" style="position:absolute;left:0px;top:0px;width:20px;height:20px;z-index:1;">
 <a id="Home" style="visibility:hidden">&nbsp;</a>
 </div>
 </div>
-<div id="Layer02" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;;height:52px;float:left;clear:left;display:none;z-index:35;">
+<div id="Layer02" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;;height:52px;float:left;clear:left;display:block;z-index:35;">
 <div id="Layer021" style="position:absolute;text-align:left;left:52px;right:0px;top:0px;height:52px;z-index:2;">
 </div>
-<div id="MainMenu" style="position:absolute;left:70px;top:12px;width:954px;height:28px;z-index:3;">
+<div id="Layer022" style="position:absolute;text-align:left;left:0px;top:12px;width:52px;height:40px;z-index:3;">
+</div>
+<div id="Layer023" style="position:absolute;text-align:left;left:0px;top:0px;width:52px;height:12px;z-index:4;">
+</div>
+<div id="MainMenu" style="position:absolute;left:70px;top:12px;width:954px;height:28px;z-index:5;">
 <ul>
-<li class="firstmain"><a class="active" href="./index.html" target="_self">Open-PLC</a>
+<li class="firstmain"><a href="./index.html" target="_self">Open-PLC</a>
 </li>
-<li><a href="./manuals.html" target="_self">&#1056;&#1091;&#1082;&#1086;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1072;</a>
+<li><a href="./manuals_p1.html" target="_self">&#1056;&#1091;&#1082;&#1086;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1072;</a>
 </li>
-<li><a href="#" target="_self" title="&#1055;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;"></a>
-</li>
-<li><a href="#" target="_self" title="Arduino"></a>
-</li>
-<li><a href="#" target="_self" title="&#1055;&#1088;&#1086;&#1076;&#1091;&#1082;&#1094;&#1080;&#1103;"></a>
+<li><a href="./programming_p1.html" target="_self">&#1055;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;</a>
 </li>
 </ul>
-</div>
-<div id="Layer022" style="position:absolute;text-align:left;left:0px;top:12px;width:52px;height:40px;z-index:4;">
-</div>
-<div id="Layer023" style="position:absolute;text-align:left;left:0px;top:0px;width:52px;height:12px;z-index:5;">
 </div>
 </div>
 <div id="Layer03" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:36;">
@@ -608,7 +162,7 @@ z-index: 999 !important;
 <div id="Text06" style="position:absolute;left:169px;top:239px;width:620px;height:63px;z-index:12;text-align:left;">
 <span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Управляющая система, или система автоматизации - это модули объединенные в единую сеть различными способами. Каждый модуль выполняет определенные задачи.</span></div>
 <div id="Text07" style="position:absolute;left:169px;top:323px;width:620px;height:42px;z-index:13;text-align:left;">
-<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Система создается из модулей взаимодействующих как мастер-подчиненный. Мастер-модуль управляет работой подчиненных.</span></div>
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Система создается из модулей взаимодействующих как<br>мастер-подчиненный. Мастер-модуль управляет работой подчиненных.</span></div>
 <div id="Text08" style="position:absolute;left:169px;top:386px;width:620px;height:42px;z-index:14;text-align:left;">
 <span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Мастер-модули могут быть объединены в распределенную не иерархическую сеть.</span></div>
 <div id="Text09" style="position:absolute;left:169px;top:453px;width:620px;height:42px;z-index:15;text-align:left;">
@@ -652,8 +206,8 @@ z-index: 999 !important;
 <div id="Contacts" style="position:absolute;left:9px;top:9px;width:19px;height:18px;visibility:hidden;z-index:30;">
 <a id="Contacts" style="visibility:hidden">&nbsp;</a>
 </div>
-<div id="Text19" style="position:absolute;left:169px;top:60px;width:640px;height:63px;z-index:31;text-align:left;">
-<span style="color:#000000;font-family:'Times New Roman';font-size:19px;"><a href="https://github.com/open-plc-com/open-plc/issues">Обсуждение проекта</a><br><br>e-mail: info@open-plc.com</span></div>
+<div id="Text19" style="position:absolute;left:169px;top:60px;width:640px;height:21px;z-index:31;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">e-mail: info@open-plc.com</span></div>
 </div>
 </body>
 </html>
