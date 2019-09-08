@@ -1,0 +1,350 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1251">
+	<title>Open-PLC</title>
+	<link href="logo.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="logo.ico" rel="apple-touch-icon" sizes="">
+	<META NAME="CHANGEDBY" CONTENT="Alexander Suvorov">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 21cm 29.7cm }
+		P { margin-bottom: 0cm }
+		H2 { margin-left: 2.28cm; text-indent: -0.76cm; margin-top: 0cm; margin-bottom: 0cm; page-break-after: avoid }
+		H2.western { font-family: "Times New Roman", serif; font-size: 20pt; font-style: normal; font-weight: bold }
+		H2.cjk { font-family: "SimSun"; font-size: 14pt; font-style: italic; font-weight: bold }
+		H2.ctl { font-family: "Mangal"; font-size: 14pt; font-style: italic; font-weight: bold }
+		H3 { margin-left: 3.04cm; text-indent: -0.76cm; margin-top: 0cm; margin-bottom: 0cm; page-break-after: avoid }
+		H3.western { font-family: "Times New Roman", serif; font-size: 18pt; font-weight: bold }
+		H3.cjk { font-family: "SimSun"; font-size: 14pt; font-weight: bold }
+		H3.ctl { font-family: "Mangal"; font-size: 14pt; font-weight: bold }
+		EM { font-style: italic }
+		A:link { color: #000080; so-language: zxx; text-decoration: underline }
+		A:visited { color: #800000; so-language: zxx; text-decoration: underline }
+		STRONG { font-weight: bold }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="ru-RU" LINK="#000080" VLINK="#800000" BGCOLOR="#f0f8ff" DIR="LTR">
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=6*>
+	<COL WIDTH=250*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100% VALIGN=TOP>
+			<P ALIGN=LEFT STYLE="background: #cccccc"><IMG SRC="images/logo.png" NAME="f001" ALIGN=BOTTOM HSPACE=11 VSPACE=11 WIDTH=398 HEIGHT=76 BORDER=0></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=2%>
+			<P STYLE="background: #cccccc"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P ALIGN=CENTER STYLE="background: #b3b3b3"><FONT SIZE=6><B><STRONG><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><SPAN STYLE="font-style: normal">Программа
+			создания шаблона прошивки</SPAN></FONT></FONT></STRONG><STRONG><FONT COLOR="#000000"><FONT FACE="Arial"><FONT SIZE=4 STYLE="font-size: 14pt"><SPAN STYLE="font-style: normal"><BR>Самое
+			простое программирование микроконтроллера STM32F103C8</SPAN></FONT></FONT></FONT></STRONG></B></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR>
+</P>
+<P><FONT SIZE=4><A HREF="../../programming_p1_ru.html">Оглавление</A></FONT></P>
+<P><BR>
+</P>
+<P><FONT SIZE=4>Цель создания данной программы:</FONT></P>
+<UL>
+	<LI><P><FONT SIZE=4>сделать простым программирование
+	микроконтроллера</FONT></P>
+	<LI><P><FONT SIZE=4>убрать ограничения на использование ресурсов МК
+	присущие <SPAN LANG="en-US">Arduino</SPAN></FONT></P>
+	<LI><P><FONT SIZE=4>легкая интеграция своего программного кода.</FONT></P>
+</UL>
+<P><BR>
+</P>
+<H2 CLASS="western"> Что необходимо для работы с программой:</H2>
+<UL>
+	<UL>
+		<UL>
+			<LI><P><FONT SIZE=4>Аппаратные средства</FONT></P>
+			<LI><P><FONT SIZE=4>Программное обеспечение</FONT></P>
+		</UL>
+	</UL>
+</UL>
+<P><BR>
+</P>
+<H3 CLASS="western"> Аппаратные средства</H3>
+<UL>
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4><SPAN LANG="ru-RU">Конечно,
+	в первую очередь сам контроллер.&quot;Голубая Таблетка&quot;: </SPAN></FONT><FONT SIZE=4><SPAN LANG="ru-RU">
+	<IMG SRC="images/blue_pill.jpg" NAME="blue_pill.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=63 BORDER=0></SPAN></FONT></P>
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4>адаптер USB-UART: </FONT><FONT SIZE=4>
+	<IMG SRC="images/uart.jpg" NAME="uart.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=76 BORDER=0></FONT></P>
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4>Кабель Micro-USB: </FONT><FONT SIZE=4>
+	<IMG SRC="images/usb.jpg" NAME="usb.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=110 BORDER=0></FONT></P>
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4>набор проводов для
+	соединения компонетов между собой: </FONT><FONT SIZE=4>
+	<IMG SRC="images/wires.jpg" NAME="wires.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=165 BORDER=0></FONT></P>
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4><SPAN LANG="ru-RU">Для
+	более быстрой, по сравнению с UART загрузкой &quot;прошивки&quot; и
+	отладки программ рекомендуется использовать программатор ST-Link V2,
+	например такой: </SPAN></FONT><FONT SIZE=4><SPAN LANG="ru-RU">
+	<IMG SRC="images/st_link.jpg" NAME="st_link.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=113 BORDER=0></SPAN></FONT></P>
+</UL>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Все используемые
+детали&nbsp;/&nbsp;компоненты можно приобрести на <A HREF="https://ru.aliexpress.com/">aliexpress.com</A>.</FONT></P>
+<P STYLE="margin-right: 11cm"><BR>
+</P>
+<H3 CLASS="western"> Программное обеспечение</H3>
+<UL>
+	<UL>
+		<UL>
+			<LI><P><A HREF="https://www.st.com/en/development-tools/flasher-stm32.html"><FONT SIZE=4><SPAN LANG="ru-RU">STM32
+			Flash loader demonstrator </SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=4><SPAN LANG="ru-RU">(</SPAN></FONT></FONT></A><FONT COLOR="#002052"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><SPAN LANG="ru-RU"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">FLASHER-STM32</SPAN></SPAN></SPAN></FONT></FONT></FONT><A HREF="https://www.st.com/en/development-tools/flasher-stm32.html"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><SPAN LANG="ru-RU">)</SPAN></FONT></FONT></A></P>
+			<LI><P ALIGN=LEFT><FONT SIZE=4><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><SPAN LANG="ru-RU"><A HREF="https://www.st.com/en/development-tools/stsw-stm32102.html">STM32
+			Virtual COM Port Driver</A> </SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><SPAN LANG="ru-RU">(</SPAN></FONT><FONT COLOR="#002052"><FONT FACE="Times New Roman, serif"><SPAN LANG="ru-RU"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">STSW-STM32102</SPAN></SPAN></SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><SPAN LANG="ru-RU">)</SPAN></FONT></FONT></P>
+			<LI><P><FONT SIZE=4><FONT COLOR="#000000"><SPAN LANG="ru-RU"><A HREF="https://www.st.com/en/development-tools/stsw-link004.html">STM32
+			ST-LINK utility</A> </SPAN></FONT><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">(</SPAN></FONT><FONT COLOR="#002052"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">STSW-LINK004</SPAN></SPAN></SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">)</SPAN></FONT></FONT></P>
+			<LI><P><FONT SIZE=4><A HREF="https://www.embitz.org/">www.embitz.org</A><SPAN LANG="ru-RU">
+			Среда разработки</SPAN></FONT></P>
+			<LI><P><FONT SIZE=4><A HREF="https://github.com/open-plc-com/MIOC/blob/master/bin/mioc_exe.7z">MIOC</A>
+			- программа&nbsp;-&nbsp;конфигуратор. Создание шаблона прошивки</FONT></P>
+			<LI><P><FONT SIZE=4><SPAN LANG="ru-RU">эмулятор терминала
+			</SPAN><A HREF="https://osdn.net/projects/ttssh2/releases/">terraterm</A></FONT></P>
+		</UL>
+	</UL>
+</UL>
+<P><BR>
+</P>
+<H2 CLASS="western"> Что такое модуль</H2>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><FONT SIZE=4>Модуль это
+совокупность аппаратной и программной частей. Аппаратная часть -
+&quot;таблетка&quot; STM32F103C8T6, программная часть - &quot;шаблон
+прошивки&quot;, созданный при помощи программы  <A HREF="https://github.com/open-plc-com/MIOC/blob/master/bin/mioc.exe">MIOC</A>
+Данная программа - <A HREF="https://github.com/open-plc-com/MIOC/tree/master/src">OpenSource</A></FONT></P>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><BR>
+</P>
+<H2 CLASS="western"> Порты микроконтроллера</H2>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>У микроконтроллера есть
+выводы или ножки. Часть из них это питание микроконтроллера, часть
+имеют специальное назначение ( например Reset ), часть - интерфейс
+ввода/вывода общего назначения (&nbsp;англ. general-purpose
+input/output, GPIO&nbsp;).</FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Порты объединены в группы
+(&nbsp;A;&nbsp;B;&nbsp;C...&nbsp;). Каждая группа содержит до 16
+портов, пронумерованных от 0 до 15. В итоге нумерация портов выглядит
+как PA0, PA1, ...</FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Порты служат для связи
+между компонентами модуля, к примеру микропроцессором и различными
+периферийными устройствами. Порты могут выступать как в роли входа, в
+роли выхода и как двунаправленные.</FONT></P>
+<P><FONT SIZE=4>На плате &quot;таблетки&quot; нанесена маркировка
+портов.</FONT></P>
+<P><BR>
+</P>
+<H3 CLASS="western"> GPIO - Интерфейс ввода/вывода общего назначения</H3>
+<P><FONT SIZE=4>В модуле IO основные типы портов представлены в
+таблице:</FONT></P>
+<TABLE WIDTH=764 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=232>
+	<COL WIDTH=514>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">AIN</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4>аналоговый вход</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">IN_FLOATING</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4>вход без подтяжки (&nbsp;Float&nbsp;)</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">IPD</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4>вход с подтяжкой к земле (&nbsp;Pull-down&nbsp;)</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">IPU</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4>вход с подтяжкой к питанию (&nbsp;Pull-up&nbsp;)</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">Out_OD</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4>выход с открытым стоком (&nbsp;Open Drain&nbsp;)</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">Out_PP</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4>выход с двумя состояниями (&nbsp;Push-Pull&nbsp;)</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">AF_OD</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4>выход с открытым стоком для альтернативных функций
+			(&nbsp;Alternate Function&nbsp;). Используется когда выводы
+			управляются периферией, которая может быть задействована на этом
+			выводе. Например USART, I2C и тому подобное</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">AF</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">PP</SPAN></FONT></EM></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><EM><FONT SIZE=4><SPAN LANG="ru-RU">то же что и GPIO_Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">AF_OD,
+			но с двумя состояниями</SPAN></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><FONT SIZE=4>В качестве датчиков, исполнительных механизмов будем
+использовать различные устройства от Arduino.</FONT></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> Программа MIOC
+(&nbsp;Module&nbsp;Input-Output&nbsp;Configurator&nbsp;)</H2>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>С помощью данной программы
+создаем&nbsp;/&nbsp;конфигурируем шаблон прошивки (&nbsp;проект для
+Embitz&nbsp;;&nbsp;Keil&nbsp;) модуля IO. Программа установки не
+требует. Скачали, запустили. С помощью данной программы создаём
+глобальные переменные, которые будем использовать в своих прошивках.
+Переменные могут быть ассоциированы с портами.</FONT></P>
+<P><FONT SIZE=4>Окно первого запуска:<BR><IMG SRC="images/mioc001.jpg" NAME="mioc001 .jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Создадим проект:<BR><IMG SRC="images/mioc002.jpg" NAME="mioc002.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><IMG SRC="images/mioc003.jpg" NAME="mioc003.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></P>
+<P><IMG SRC="images/mioc004.jpg" NAME="mioc004.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></P>
+<P><IMG SRC="images/mioc005.jpg" NAME="mioc005.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> Первая программа - &quot;hello word&quot; для
+микроконтроллера</H2>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Поморгаем светодиодом,
+который имеется на &quot;голубой таблетке&quot;. Данный светодиод
+подключен к порту PC13.</FONT></P>
+<P><FONT SIZE=4>Добавить строку в таблицу переменных<BR><IMG SRC="images/mioc006.jpg" NAME="mioc006.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><IMG SRC="images/mioc007.jpg" NAME="mioc007.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></P>
+<P><FONT SIZE=4>Генерируем <SPAN LANG="en-US">BSP </SPAN>код (кнопка
+<SPAN LANG="en-US">F8</SPAN>)<BR><IMG SRC="images/mioc008.jpg" NAME="mioc008.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Далее, каждый раз, после изменения проекта,
+<B>обязательна генерация </B><SPAN LANG="en-US"><B>BSP!</B></SPAN></FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Открыть созданный проект в
+среде разработки EmBitz или Keil. EmBitz пока как временное решение,
+похоже автор забросил данный проект. По всей видимости в дальнейшем в
+проекте будет использоваться Code::Blocks.</FONT></P>
+<P><FONT SIZE=4>В файле main.c напишем следующее:<BR><IMG SRC="images/mioc009.jpg" NAME="mioc009.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=408 BORDER=0></FONT></P>
+<P><FONT SIZE=4>(Для увеличения размера картинки откройте её в новой
+вкладке)</FONT></P>
+<P><FONT SIZE=4>В <SPAN LANG="en-US">EmBitz </SPAN>нажать <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><B>F2</B></SPAN></FONT><SPAN LANG="en-US">,
+</SPAN>после появления окна информации нажать <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><B>F7</B></SPAN></FONT><SPAN LANG="en-US">,
+</SPAN>должна выполниться компиляция.<BR>Повторное нажатие <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><B>F2</B></SPAN></FONT>
+скроет информационные закладки.<BR><IMG SRC="images/mioc010.jpg" NAME="mioc010.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Загружаем в микроконтроллер, смотрим, как работает.</FONT></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> Кнопка</H2>
+<P><FONT SIZE=4>Добавим кнопку, например такую: 
+<IMG SRC="images/button.jpg" NAME="button.jpg" ALIGN=MIDDLE WIDTH=38 HEIGHT=44 BORDER=0></FONT></P>
+<P><FONT SIZE=4>схема подключения 
+<IMG SRC="images/button_sch.jpg" NAME="button_sch.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=100 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Добавим переменную в таблицу:<BR><IMG SRC="images/mioc011.jpg" NAME="Графический объект1" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Генерируем <SPAN LANG="en-US">BSP.</SPAN></FONT></P>
+<P><FONT SIZE=4>Изменим программу на следующую:<BR><IMG SRC="images/mioc012.jpg" NAME="mioc012.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Создаём новую <SPAN LANG="en-US">BSP</SPAN> <SPAN LANG="en-US">(F8)</SPAN>,
+компилируем, загружаем в микроконтроллер.</FONT></P>
+<P><FONT SIZE=4>Нажимаем на кнопку - светодиод зажигается, отпускаем
+- тухнет.</FONT></P>
+<P><FONT SIZE=4>Вместо светодиода на другой порт можно подключить
+реле, вроде такого: 
+<IMG SRC="images/relay.jpg" NAME="relay.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=87 BORDER=0></FONT></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> Вывод сообщений на консоль</H2>
+<P><FONT SIZE=4>Нужно определить, что будет консолью.</FONT></P>
+<P><FONT SIZE=4>Возможны варианты:</FONT></P>
+<UL>
+	<LI><P><FONT SIZE=4>адаптер USB-UART</FONT></P>
+	<LI><P><FONT SIZE=4>виртуальный COM-порт (&nbsp;кабель Micro-USB&nbsp;)</FONT></P>
+</UL>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Если в конфигурации
+выбраны одновременно <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><SPAN STYLE="font-style: normal"><B>UART1</B></SPAN></SPAN></FONT><SPAN LANG="en-US">
+</SPAN>и <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><SPAN STYLE="font-style: normal"><B>USB
+as Console</B></SPAN></SPAN></FONT><SPAN LANG="en-US">, </SPAN>при
+этом <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><SPAN STYLE="font-style: normal"><B>USB
+VCP</B></SPAN></SPAN></FONT><SPAN LANG="en-US"> </SPAN>не выбран, то
+консоль будет назначена &quot;в никуда&quot;. Т.е. ругаться на
+функцию <SPAN LANG="en-US">print_str </SPAN>(&nbsp;или&nbsp;макрос&nbsp;print&nbsp;)
+не будет, но и вывода тоже не будет никакого. Такое же поведение
+будет если не выбрать ни один интерфейс, или выбрать <SPAN LANG="en-US">USB
+VCP, </SPAN>но не выбрать ни <SPAN LANG="en-US">UART1 </SPAN>ни <SPAN LANG="en-US">USB
+as Console</SPAN>.</FONT></P>
+<P><FONT SIZE=4>Конфигурация консоли:<BR><IMG SRC="images/mioc013.jpg" NAME="mioc013.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Подключим TettaTerm к
+COM-порту (&nbsp;консоли&nbsp;). Если загрузку прошивки производим
+через UART1, то не забываем отключать/подключать COM-порт. В
+TerraTerm &quot;горячие кнопки&quot; <SPAN LANG="en-US">Alt</SPAN>+I;
+<SPAN LANG="en-US">Alt</SPAN>+N Для варианта загрузки через ST-Link
+этого делать не требуется.</FONT></P>
+<P><FONT SIZE=4>Отредактируем программу:<BR><IMG SRC="images/mioc014.jpg" NAME="mioc014.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Тепперь на консоли будет отображаться состояние
+кнопки.<BR><IMG SRC="images/mioc015.jpg" NAME="mioc015.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0>mioc01<SPAN LANG="en-US">5</SPAN>.jpg</FONT></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> DS18B20</H2>
+<P><FONT SIZE=4>Подключим к &quot;таблетке&quot; температурный датчик
+DS18B20.</FONT></P>
+<P><IMG SRC="images/ds18b20.jpg" NAME="ds18b20.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=393 BORDER=0></P>
+<P><FONT SIZE=4>Поместим в конфигурацию переменную:<BR><IMG SRC="images/mioc016.jpg" NAME="mioc016.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Изменим программу на следующую:<BR><IMG SRC="images/mioc017.jpg" NAME="mioc017.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Создаём новую конфигурацию, компилируем, загружаем в
+микроконтроллер.</FONT></P>
+<P><FONT SIZE=4>На консоли будет отображаться температура, измеряемая
+датчиком.<BR><IMG SRC="images/mioc018.jpg" NAME="mioc018.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0></FONT></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> АЦП</H2>
+<P><FONT SIZE=4>В качестве примера работы с АЦП можно использовать
+потенциометр<BR><IMG SRC="images/potentiometr.jpg" NAME="potentiometr.jpg" ALIGN=BOTTOM WIDTH=113 HEIGHT=115 BORDER=0></FONT></P>
+<P><FONT SIZE=4>или датчик влажности почвы<BR><IMG SRC="images/soil_measure.jpg" NAME="soil_measure.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=137 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Остановимся на последнем:</FONT></P>
+<P><FONT SIZE=4>Конфигурируем порт:<BR><IMG SRC="images/mioc019.jpg" NAME="mioc019.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Редактируем программу:<BR><IMG SRC="images/mioc020.jpg" NAME="mioc020.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Компилируем, загружаем.</FONT></P>
+<P><FONT SIZE=4>В консоли наблюдаем:<BR><IMG SRC="images/mioc021.jpg" NAME="mioc021.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0></FONT></P>
+<P LANG="en-US" STYLE="margin-right: 11cm"><FONT SIZE=4>adc <SPAN LANG="ru-RU">-
+текущее показание АЦП, </SPAN>max <SPAN LANG="ru-RU">и </SPAN>min <SPAN LANG="ru-RU">-</SPAN>
+<SPAN LANG="ru-RU">зафиксированные минимальное и максимальное
+показания датчика, совсем сухой (0%) и совсем мокрый (100%).</SPAN></FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Совсем мокрый (100%) -
+опустим датчик в стакан с водой. Совсем сухой <SPAN LANG="en-US">(0%)
+</SPAN>- лежит на открытом воздухе.</FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>По сути мы откалибровали
+датчик влажности от 0 до 100%. Максимальное и минимальное значения
+поместим в текст программы.<BR><IMG SRC="images/mioc022.jpg" NAME="mioc022.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Результат работы. Датчик в цветочном горшке:<BR><IMG SRC="images/mioc023.jpg" NAME="mioc023.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Данный проект - шаблон решения для полива растений.</FONT></P>
+<P><BR>
+</P>
+<P><FONT SIZE=4><A HREF="../../programming_p1_ru.html">Оглавление</A></FONT></P>
+<P><BR>
+</P>
+</BODY>
+</HTML>
