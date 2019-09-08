@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
-	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1251">
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
 	<title>Open-PLC</title>
 	<link href="logo.ico" rel="shortcut icon" type="image/x-icon">
 	<link href="logo.ico" rel="apple-touch-icon" sizes="">
@@ -40,61 +40,61 @@
 			</P>
 		</TD>
 		<TD WIDTH=98%>
-			<P ALIGN=CENTER STYLE="background: #b3b3b3"><FONT SIZE=6><B><STRONG><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><SPAN STYLE="font-style: normal">Программа
-			создания шаблона прошивки</SPAN></FONT></FONT></STRONG><STRONG><FONT COLOR="#000000"><FONT FACE="Arial"><FONT SIZE=4 STYLE="font-size: 14pt"><SPAN STYLE="font-style: normal"><BR>Самое
-			простое программирование микроконтроллера STM32F103C8</SPAN></FONT></FONT></FONT></STRONG></B></FONT></P>
+			<P ALIGN=CENTER STYLE="background: #b3b3b3"><FONT SIZE=6><B><STRONG><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><SPAN STYLE="font-style: normal">РџСЂРѕРіСЂР°РјРјР°
+			СЃРѕР·РґР°РЅРёСЏ С€Р°Р±Р»РѕРЅР° РїСЂРѕС€РёРІРєРё</SPAN></FONT></FONT></STRONG><STRONG><FONT COLOR="#000000"><FONT FACE="Arial"><FONT SIZE=4 STYLE="font-size: 14pt"><SPAN STYLE="font-style: normal"><BR>РЎР°РјРѕРµ
+			РїСЂРѕСЃС‚РѕРµ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ РјРёРєСЂРѕРєРѕРЅС‚СЂРѕР»Р»РµСЂР° STM32F103C8</SPAN></FONT></FONT></FONT></STRONG></B></FONT></P>
 		</TD>
 	</TR>
 </TABLE>
 <P><BR>
 </P>
-<P><FONT SIZE=4><A HREF="../../programming_p1_ru.html">Оглавление</A></FONT></P>
+<P><FONT SIZE=4><A HREF="../../programming_p1_ru.html">РћРіР»Р°РІР»РµРЅРёРµ</A></FONT></P>
 <P><BR>
 </P>
-<P><FONT SIZE=4>Цель создания данной программы:</FONT></P>
+<P><FONT SIZE=4>Р¦РµР»СЊ СЃРѕР·РґР°РЅРёСЏ РґР°РЅРЅРѕР№ РїСЂРѕРіСЂР°РјРјС‹:</FONT></P>
 <UL>
-	<LI><P><FONT SIZE=4>сделать простым программирование
-	микроконтроллера</FONT></P>
-	<LI><P><FONT SIZE=4>убрать ограничения на использование ресурсов МК
-	присущие <SPAN LANG="en-US">Arduino</SPAN></FONT></P>
-	<LI><P><FONT SIZE=4>легкая интеграция своего программного кода.</FONT></P>
+	<LI><P><FONT SIZE=4>СЃРґРµР»Р°С‚СЊ РїСЂРѕСЃС‚С‹Рј РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ
+	РјРёРєСЂРѕРєРѕРЅС‚СЂРѕР»Р»РµСЂР°</FONT></P>
+	<LI><P><FONT SIZE=4>СѓР±СЂР°С‚СЊ РѕРіСЂР°РЅРёС‡РµРЅРёСЏ РЅР° РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЂРµСЃСѓСЂСЃРѕРІ РњРљ
+	РїСЂРёСЃСѓС‰РёРµ <SPAN LANG="en-US">Arduino</SPAN></FONT></P>
+	<LI><P><FONT SIZE=4>Р»РµРіРєР°СЏ РёРЅС‚РµРіСЂР°С†РёСЏ СЃРІРѕРµРіРѕ РїСЂРѕРіСЂР°РјРјРЅРѕРіРѕ РєРѕРґР°.</FONT></P>
 </UL>
 <P><BR>
 </P>
-<H2 CLASS="western"> Что необходимо для работы с программой:</H2>
+<H2 CLASS="western"> Р§С‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РїСЂРѕРіСЂР°РјРјРѕР№:</H2>
 <UL>
 	<UL>
 		<UL>
-			<LI><P><FONT SIZE=4>Аппаратные средства</FONT></P>
-			<LI><P><FONT SIZE=4>Программное обеспечение</FONT></P>
+			<LI><P><FONT SIZE=4>РђРїРїР°СЂР°С‚РЅС‹Рµ СЃСЂРµРґСЃС‚РІР°</FONT></P>
+			<LI><P><FONT SIZE=4>РџСЂРѕРіСЂР°РјРјРЅРѕРµ РѕР±РµСЃРїРµС‡РµРЅРёРµ</FONT></P>
 		</UL>
 	</UL>
 </UL>
 <P><BR>
 </P>
-<H3 CLASS="western"> Аппаратные средства</H3>
+<H3 CLASS="western"> РђРїРїР°СЂР°С‚РЅС‹Рµ СЃСЂРµРґСЃС‚РІР°</H3>
 <UL>
-	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4><SPAN LANG="ru-RU">Конечно,
-	в первую очередь сам контроллер.&quot;Голубая Таблетка&quot;: </SPAN></FONT><FONT SIZE=4><SPAN LANG="ru-RU">
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4><SPAN LANG="ru-RU">РљРѕРЅРµС‡РЅРѕ,
+	РІ РїРµСЂРІСѓСЋ РѕС‡РµСЂРµРґСЊ СЃР°Рј РєРѕРЅС‚СЂРѕР»Р»РµСЂ.&quot;Р“РѕР»СѓР±Р°СЏ РўР°Р±Р»РµС‚РєР°&quot;: </SPAN></FONT><FONT SIZE=4><SPAN LANG="ru-RU">
 	<IMG SRC="images/blue_pill.jpg" NAME="blue_pill.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=63 BORDER=0></SPAN></FONT></P>
-	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4>адаптер USB-UART: </FONT><FONT SIZE=4>
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4>Р°РґР°РїС‚РµСЂ USB-UART: </FONT><FONT SIZE=4>
 	<IMG SRC="images/uart.jpg" NAME="uart.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=76 BORDER=0></FONT></P>
-	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4>Кабель Micro-USB: </FONT><FONT SIZE=4>
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4>РљР°Р±РµР»СЊ Micro-USB: </FONT><FONT SIZE=4>
 	<IMG SRC="images/usb.jpg" NAME="usb.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=110 BORDER=0></FONT></P>
-	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4>набор проводов для
-	соединения компонетов между собой: </FONT><FONT SIZE=4>
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4>РЅР°Р±РѕСЂ РїСЂРѕРІРѕРґРѕРІ РґР»СЏ
+	СЃРѕРµРґРёРЅРµРЅРёСЏ РєРѕРјРїРѕРЅРµС‚РѕРІ РјРµР¶РґСѓ СЃРѕР±РѕР№: </FONT><FONT SIZE=4>
 	<IMG SRC="images/wires.jpg" NAME="wires.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=165 BORDER=0></FONT></P>
-	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4><SPAN LANG="ru-RU">Для
-	более быстрой, по сравнению с UART загрузкой &quot;прошивки&quot; и
-	отладки программ рекомендуется использовать программатор ST-Link V2,
-	например такой: </SPAN></FONT><FONT SIZE=4><SPAN LANG="ru-RU">
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4><SPAN LANG="ru-RU">Р”Р»СЏ
+	Р±РѕР»РµРµ Р±С‹СЃС‚СЂРѕР№, РїРѕ СЃСЂР°РІРЅРµРЅРёСЋ СЃ UART Р·Р°РіСЂСѓР·РєРѕР№ &quot;РїСЂРѕС€РёРІРєРё&quot; Рё
+	РѕС‚Р»Р°РґРєРё РїСЂРѕРіСЂР°РјРј СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РїСЂРѕРіСЂР°РјРјР°С‚РѕСЂ ST-Link V2,
+	РЅР°РїСЂРёРјРµСЂ С‚Р°РєРѕР№: </SPAN></FONT><FONT SIZE=4><SPAN LANG="ru-RU">
 	<IMG SRC="images/st_link.jpg" NAME="st_link.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=113 BORDER=0></SPAN></FONT></P>
 </UL>
-<P STYLE="margin-right: 11cm"><FONT SIZE=4>Все используемые
-детали&nbsp;/&nbsp;компоненты можно приобрести на <A HREF="https://ru.aliexpress.com/">aliexpress.com</A>.</FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Р’СЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ
+РґРµС‚Р°Р»Рё&nbsp;/&nbsp;РєРѕРјРїРѕРЅРµРЅС‚С‹ РјРѕР¶РЅРѕ РїСЂРёРѕР±СЂРµСЃС‚Рё РЅР° <A HREF="https://ru.aliexpress.com/">aliexpress.com</A>.</FONT></P>
 <P STYLE="margin-right: 11cm"><BR>
 </P>
-<H3 CLASS="western"> Программное обеспечение</H3>
+<H3 CLASS="western"> РџСЂРѕРіСЂР°РјРјРЅРѕРµ РѕР±РµСЃРїРµС‡РµРЅРёРµ</H3>
 <UL>
 	<UL>
 		<UL>
@@ -105,45 +105,45 @@
 			<LI><P><FONT SIZE=4><FONT COLOR="#000000"><SPAN LANG="ru-RU"><A HREF="https://www.st.com/en/development-tools/stsw-link004.html">STM32
 			ST-LINK utility</A> </SPAN></FONT><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">(</SPAN></FONT><FONT COLOR="#002052"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">STSW-LINK004</SPAN></SPAN></SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">)</SPAN></FONT></FONT></P>
 			<LI><P><FONT SIZE=4><A HREF="https://www.embitz.org/">www.embitz.org</A><SPAN LANG="ru-RU">
-			Среда разработки</SPAN></FONT></P>
+			РЎСЂРµРґР° СЂР°Р·СЂР°Р±РѕС‚РєРё</SPAN></FONT></P>
 			<LI><P><FONT SIZE=4><A HREF="https://github.com/open-plc-com/MIOC/blob/master/bin/mioc_exe.7z">MIOC</A>
-			- программа&nbsp;-&nbsp;конфигуратор. Создание шаблона прошивки</FONT></P>
-			<LI><P><FONT SIZE=4><SPAN LANG="ru-RU">эмулятор терминала
+			- РїСЂРѕРіСЂР°РјРјР°&nbsp;-&nbsp;РєРѕРЅС„РёРіСѓСЂР°С‚РѕСЂ. РЎРѕР·РґР°РЅРёРµ С€Р°Р±Р»РѕРЅР° РїСЂРѕС€РёРІРєРё</FONT></P>
+			<LI><P><FONT SIZE=4><SPAN LANG="ru-RU">СЌРјСѓР»СЏС‚РѕСЂ С‚РµСЂРјРёРЅР°Р»Р°
 			</SPAN><A HREF="https://osdn.net/projects/ttssh2/releases/">terraterm</A></FONT></P>
 		</UL>
 	</UL>
 </UL>
 <P><BR>
 </P>
-<H2 CLASS="western"> Что такое модуль</H2>
-<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><FONT SIZE=4>Модуль это
-совокупность аппаратной и программной частей. Аппаратная часть -
-&quot;таблетка&quot; STM32F103C8T6, программная часть - &quot;шаблон
-прошивки&quot;, созданный при помощи программы  <A HREF="https://github.com/open-plc-com/MIOC/blob/master/bin/mioc.exe">MIOC</A>
-Данная программа - <A HREF="https://github.com/open-plc-com/MIOC/tree/master/src">OpenSource</A></FONT></P>
+<H2 CLASS="western"> Р§С‚Рѕ С‚Р°РєРѕРµ РјРѕРґСѓР»СЊ</H2>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><FONT SIZE=4>РњРѕРґСѓР»СЊ СЌС‚Рѕ
+СЃРѕРІРѕРєСѓРїРЅРѕСЃС‚СЊ Р°РїРїР°СЂР°С‚РЅРѕР№ Рё РїСЂРѕРіСЂР°РјРјРЅРѕР№ С‡Р°СЃС‚РµР№. РђРїРїР°СЂР°С‚РЅР°СЏ С‡Р°СЃС‚СЊ -
+&quot;С‚Р°Р±Р»РµС‚РєР°&quot; STM32F103C8T6, РїСЂРѕРіСЂР°РјРјРЅР°СЏ С‡Р°СЃС‚СЊ - &quot;С€Р°Р±Р»РѕРЅ
+РїСЂРѕС€РёРІРєРё&quot;, СЃРѕР·РґР°РЅРЅС‹Р№ РїСЂРё РїРѕРјРѕС‰Рё РїСЂРѕРіСЂР°РјРјС‹  <A HREF="https://github.com/open-plc-com/MIOC/blob/master/bin/mioc.exe">MIOC</A>
+Р”Р°РЅРЅР°СЏ РїСЂРѕРіСЂР°РјРјР° - <A HREF="https://github.com/open-plc-com/MIOC/tree/master/src">OpenSource</A></FONT></P>
 <P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><BR>
 </P>
-<H2 CLASS="western"> Порты микроконтроллера</H2>
-<P STYLE="margin-right: 11cm"><FONT SIZE=4>У микроконтроллера есть
-выводы или ножки. Часть из них это питание микроконтроллера, часть
-имеют специальное назначение ( например Reset ), часть - интерфейс
-ввода/вывода общего назначения (&nbsp;англ. general-purpose
+<H2 CLASS="western"> РџРѕСЂС‚С‹ РјРёРєСЂРѕРєРѕРЅС‚СЂРѕР»Р»РµСЂР°</H2>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>РЈ РјРёРєСЂРѕРєРѕРЅС‚СЂРѕР»Р»РµСЂР° РµСЃС‚СЊ
+РІС‹РІРѕРґС‹ РёР»Рё РЅРѕР¶РєРё. Р§Р°СЃС‚СЊ РёР· РЅРёС… СЌС‚Рѕ РїРёС‚Р°РЅРёРµ РјРёРєСЂРѕРєРѕРЅС‚СЂРѕР»Р»РµСЂР°, С‡Р°СЃС‚СЊ
+РёРјРµСЋС‚ СЃРїРµС†РёР°Р»СЊРЅРѕРµ РЅР°Р·РЅР°С‡РµРЅРёРµ ( РЅР°РїСЂРёРјРµСЂ Reset ), С‡Р°СЃС‚СЊ - РёРЅС‚РµСЂС„РµР№СЃ
+РІРІРѕРґР°/РІС‹РІРѕРґР° РѕР±С‰РµРіРѕ РЅР°Р·РЅР°С‡РµРЅРёСЏ (&nbsp;Р°РЅРіР». general-purpose
 input/output, GPIO&nbsp;).</FONT></P>
-<P STYLE="margin-right: 11cm"><FONT SIZE=4>Порты объединены в группы
-(&nbsp;A;&nbsp;B;&nbsp;C...&nbsp;). Каждая группа содержит до 16
-портов, пронумерованных от 0 до 15. В итоге нумерация портов выглядит
-как PA0, PA1, ...</FONT></P>
-<P STYLE="margin-right: 11cm"><FONT SIZE=4>Порты служат для связи
-между компонентами модуля, к примеру микропроцессором и различными
-периферийными устройствами. Порты могут выступать как в роли входа, в
-роли выхода и как двунаправленные.</FONT></P>
-<P><FONT SIZE=4>На плате &quot;таблетки&quot; нанесена маркировка
-портов.</FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>РџРѕСЂС‚С‹ РѕР±СЉРµРґРёРЅРµРЅС‹ РІ РіСЂСѓРїРїС‹
+(&nbsp;A;&nbsp;B;&nbsp;C...&nbsp;). РљР°Р¶РґР°СЏ РіСЂСѓРїРїР° СЃРѕРґРµСЂР¶РёС‚ РґРѕ 16
+РїРѕСЂС‚РѕРІ, РїСЂРѕРЅСѓРјРµСЂРѕРІР°РЅРЅС‹С… РѕС‚ 0 РґРѕ 15. Р’ РёС‚РѕРіРµ РЅСѓРјРµСЂР°С†РёСЏ РїРѕСЂС‚РѕРІ РІС‹РіР»СЏРґРёС‚
+РєР°Рє PA0, PA1, ...</FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>РџРѕСЂС‚С‹ СЃР»СѓР¶Р°С‚ РґР»СЏ СЃРІСЏР·Рё
+РјРµР¶РґСѓ РєРѕРјРїРѕРЅРµРЅС‚Р°РјРё РјРѕРґСѓР»СЏ, Рє РїСЂРёРјРµСЂСѓ РјРёРєСЂРѕРїСЂРѕС†РµСЃСЃРѕСЂРѕРј Рё СЂР°Р·Р»РёС‡РЅС‹РјРё
+РїРµСЂРёС„РµСЂРёР№РЅС‹РјРё СѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё. РџРѕСЂС‚С‹ РјРѕРіСѓС‚ РІС‹СЃС‚СѓРїР°С‚СЊ РєР°Рє РІ СЂРѕР»Рё РІС…РѕРґР°, РІ
+СЂРѕР»Рё РІС‹С…РѕРґР° Рё РєР°Рє РґРІСѓРЅР°РїСЂР°РІР»РµРЅРЅС‹Рµ.</FONT></P>
+<P><FONT SIZE=4>РќР° РїР»Р°С‚Рµ &quot;С‚Р°Р±Р»РµС‚РєРё&quot; РЅР°РЅРµСЃРµРЅР° РјР°СЂРєРёСЂРѕРІРєР°
+РїРѕСЂС‚РѕРІ.</FONT></P>
 <P><BR>
 </P>
-<H3 CLASS="western"> GPIO - Интерфейс ввода/вывода общего назначения</H3>
-<P><FONT SIZE=4>В модуле IO основные типы портов представлены в
-таблице:</FONT></P>
+<H3 CLASS="western"> GPIO - РРЅС‚РµСЂС„РµР№СЃ РІРІРѕРґР°/РІС‹РІРѕРґР° РѕР±С‰РµРіРѕ РЅР°Р·РЅР°С‡РµРЅРёСЏ</H3>
+<P><FONT SIZE=4>Р’ РјРѕРґСѓР»Рµ IO РѕСЃРЅРѕРІРЅС‹Рµ С‚РёРїС‹ РїРѕСЂС‚РѕРІ РїСЂРµРґСЃС‚Р°РІР»РµРЅС‹ РІ
+С‚Р°Р±Р»РёС†Рµ:</FONT></P>
 <TABLE WIDTH=764 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
 	<COL WIDTH=232>
 	<COL WIDTH=514>
@@ -152,7 +152,7 @@ input/output, GPIO&nbsp;).</FONT></P>
 			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">AIN</SPAN></FONT></P>
 		</TD>
 		<TD WIDTH=514>
-			<P><FONT SIZE=4>аналоговый вход</FONT></P>
+			<P><FONT SIZE=4>Р°РЅР°Р»РѕРіРѕРІС‹Р№ РІС…РѕРґ</FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -160,7 +160,7 @@ input/output, GPIO&nbsp;).</FONT></P>
 			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">IN_FLOATING</SPAN></FONT></P>
 		</TD>
 		<TD WIDTH=514>
-			<P><FONT SIZE=4>вход без подтяжки (&nbsp;Float&nbsp;)</FONT></P>
+			<P><FONT SIZE=4>РІС…РѕРґ Р±РµР· РїРѕРґС‚СЏР¶РєРё (&nbsp;Float&nbsp;)</FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -168,7 +168,7 @@ input/output, GPIO&nbsp;).</FONT></P>
 			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">IPD</SPAN></FONT></P>
 		</TD>
 		<TD WIDTH=514>
-			<P><FONT SIZE=4>вход с подтяжкой к земле (&nbsp;Pull-down&nbsp;)</FONT></P>
+			<P><FONT SIZE=4>РІС…РѕРґ СЃ РїРѕРґС‚СЏР¶РєРѕР№ Рє Р·РµРјР»Рµ (&nbsp;Pull-down&nbsp;)</FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -176,7 +176,7 @@ input/output, GPIO&nbsp;).</FONT></P>
 			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">IPU</SPAN></FONT></P>
 		</TD>
 		<TD WIDTH=514>
-			<P><FONT SIZE=4>вход с подтяжкой к питанию (&nbsp;Pull-up&nbsp;)</FONT></P>
+			<P><FONT SIZE=4>РІС…РѕРґ СЃ РїРѕРґС‚СЏР¶РєРѕР№ Рє РїРёС‚Р°РЅРёСЋ (&nbsp;Pull-up&nbsp;)</FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -184,7 +184,7 @@ input/output, GPIO&nbsp;).</FONT></P>
 			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">Out_OD</SPAN></FONT></P>
 		</TD>
 		<TD WIDTH=514>
-			<P><FONT SIZE=4>выход с открытым стоком (&nbsp;Open Drain&nbsp;)</FONT></P>
+			<P><FONT SIZE=4>РІС‹С…РѕРґ СЃ РѕС‚РєСЂС‹С‚С‹Рј СЃС‚РѕРєРѕРј (&nbsp;Open Drain&nbsp;)</FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -192,7 +192,7 @@ input/output, GPIO&nbsp;).</FONT></P>
 			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">Out_PP</SPAN></FONT></P>
 		</TD>
 		<TD WIDTH=514>
-			<P><FONT SIZE=4>выход с двумя состояниями (&nbsp;Push-Pull&nbsp;)</FONT></P>
+			<P><FONT SIZE=4>РІС‹С…РѕРґ СЃ РґРІСѓРјСЏ СЃРѕСЃС‚РѕСЏРЅРёСЏРјРё (&nbsp;Push-Pull&nbsp;)</FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -200,10 +200,10 @@ input/output, GPIO&nbsp;).</FONT></P>
 			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">AF_OD</SPAN></FONT></P>
 		</TD>
 		<TD WIDTH=514>
-			<P><FONT SIZE=4>выход с открытым стоком для альтернативных функций
-			(&nbsp;Alternate Function&nbsp;). Используется когда выводы
-			управляются периферией, которая может быть задействована на этом
-			выводе. Например USART, I2C и тому подобное</FONT></P>
+			<P><FONT SIZE=4>РІС‹С…РѕРґ СЃ РѕС‚РєСЂС‹С‚С‹Рј СЃС‚РѕРєРѕРј РґР»СЏ Р°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹С… С„СѓРЅРєС†РёР№
+			(&nbsp;Alternate Function&nbsp;). РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РєРѕРіРґР° РІС‹РІРѕРґС‹
+			СѓРїСЂР°РІР»СЏСЋС‚СЃСЏ РїРµСЂРёС„РµСЂРёРµР№, РєРѕС‚РѕСЂР°СЏ РјРѕР¶РµС‚ Р±С‹С‚СЊ Р·Р°РґРµР№СЃС‚РІРѕРІР°РЅР° РЅР° СЌС‚РѕРј
+			РІС‹РІРѕРґРµ. РќР°РїСЂРёРјРµСЂ USART, I2C Рё С‚РѕРјСѓ РїРѕРґРѕР±РЅРѕРµ</FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -211,139 +211,139 @@ input/output, GPIO&nbsp;).</FONT></P>
 			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">AF</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">PP</SPAN></FONT></EM></P>
 		</TD>
 		<TD WIDTH=514>
-			<P><EM><FONT SIZE=4><SPAN LANG="ru-RU">то же что и GPIO_Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">AF_OD,
-			но с двумя состояниями</SPAN></FONT></P>
+			<P><EM><FONT SIZE=4><SPAN LANG="ru-RU">С‚Рѕ Р¶Рµ С‡С‚Рѕ Рё GPIO_Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">AF_OD,
+			РЅРѕ СЃ РґРІСѓРјСЏ СЃРѕСЃС‚РѕСЏРЅРёСЏРјРё</SPAN></FONT></P>
 		</TD>
 	</TR>
 </TABLE>
-<P><FONT SIZE=4>В качестве датчиков, исполнительных механизмов будем
-использовать различные устройства от Arduino.</FONT></P>
+<P><FONT SIZE=4>Р’ РєР°С‡РµСЃС‚РІРµ РґР°С‚С‡РёРєРѕРІ, РёСЃРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРµС…Р°РЅРёР·РјРѕРІ Р±СѓРґРµРј
+РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂР°Р·Р»РёС‡РЅС‹Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР° РѕС‚ Arduino.</FONT></P>
 <P><BR>
 </P>
-<H2 CLASS="western"> Программа MIOC
+<H2 CLASS="western"> РџСЂРѕРіСЂР°РјРјР° MIOC
 (&nbsp;Module&nbsp;Input-Output&nbsp;Configurator&nbsp;)</H2>
-<P STYLE="margin-right: 11cm"><FONT SIZE=4>С помощью данной программы
-создаем&nbsp;/&nbsp;конфигурируем шаблон прошивки (&nbsp;проект для
-Embitz&nbsp;;&nbsp;Keil&nbsp;) модуля IO. Программа установки не
-требует. Скачали, запустили. С помощью данной программы создаём
-глобальные переменные, которые будем использовать в своих прошивках.
-Переменные могут быть ассоциированы с портами.</FONT></P>
-<P><FONT SIZE=4>Окно первого запуска:<BR><IMG SRC="images/mioc001.jpg" NAME="mioc001 .jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
-<P><FONT SIZE=4>Создадим проект:<BR><IMG SRC="images/mioc002.jpg" NAME="mioc002.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>РЎ РїРѕРјРѕС‰СЊСЋ РґР°РЅРЅРѕР№ РїСЂРѕРіСЂР°РјРјС‹
+СЃРѕР·РґР°РµРј&nbsp;/&nbsp;РєРѕРЅС„РёРіСѓСЂРёСЂСѓРµРј С€Р°Р±Р»РѕРЅ РїСЂРѕС€РёРІРєРё (&nbsp;РїСЂРѕРµРєС‚ РґР»СЏ
+Embitz&nbsp;;&nbsp;Keil&nbsp;) РјРѕРґСѓР»СЏ IO. РџСЂРѕРіСЂР°РјРјР° СѓСЃС‚Р°РЅРѕРІРєРё РЅРµ
+С‚СЂРµР±СѓРµС‚. РЎРєР°С‡Р°Р»Рё, Р·Р°РїСѓСЃС‚РёР»Рё. РЎ РїРѕРјРѕС‰СЊСЋ РґР°РЅРЅРѕР№ РїСЂРѕРіСЂР°РјРјС‹ СЃРѕР·РґР°С‘Рј
+РіР»РѕР±Р°Р»СЊРЅС‹Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ, РєРѕС‚РѕСЂС‹Рµ Р±СѓРґРµРј РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РІ СЃРІРѕРёС… РїСЂРѕС€РёРІРєР°С….
+РџРµСЂРµРјРµРЅРЅС‹Рµ РјРѕРіСѓС‚ Р±С‹С‚СЊ Р°СЃСЃРѕС†РёРёСЂРѕРІР°РЅС‹ СЃ РїРѕСЂС‚Р°РјРё.</FONT></P>
+<P><FONT SIZE=4>РћРєРЅРѕ РїРµСЂРІРѕРіРѕ Р·Р°РїСѓСЃРєР°:<BR><IMG SRC="images/mioc001.jpg" NAME="mioc001 .jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>РЎРѕР·РґР°РґРёРј РїСЂРѕРµРєС‚:<BR><IMG SRC="images/mioc002.jpg" NAME="mioc002.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
 <P><IMG SRC="images/mioc003.jpg" NAME="mioc003.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></P>
 <P><IMG SRC="images/mioc004.jpg" NAME="mioc004.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></P>
 <P><IMG SRC="images/mioc005.jpg" NAME="mioc005.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></P>
 <P><BR>
 </P>
-<H2 CLASS="western"> Первая программа - &quot;hello word&quot; для
-микроконтроллера</H2>
-<P STYLE="margin-right: 11cm"><FONT SIZE=4>Поморгаем светодиодом,
-который имеется на &quot;голубой таблетке&quot;. Данный светодиод
-подключен к порту PC13.</FONT></P>
-<P><FONT SIZE=4>Добавить строку в таблицу переменных<BR><IMG SRC="images/mioc006.jpg" NAME="mioc006.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<H2 CLASS="western"> РџРµСЂРІР°СЏ РїСЂРѕРіСЂР°РјРјР° - &quot;hello word&quot; РґР»СЏ
+РјРёРєСЂРѕРєРѕРЅС‚СЂРѕР»Р»РµСЂР°</H2>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>РџРѕРјРѕСЂРіР°РµРј СЃРІРµС‚РѕРґРёРѕРґРѕРј,
+РєРѕС‚РѕСЂС‹Р№ РёРјРµРµС‚СЃСЏ РЅР° &quot;РіРѕР»СѓР±РѕР№ С‚Р°Р±Р»РµС‚РєРµ&quot;. Р”Р°РЅРЅС‹Р№ СЃРІРµС‚РѕРґРёРѕРґ
+РїРѕРґРєР»СЋС‡РµРЅ Рє РїРѕСЂС‚Сѓ PC13.</FONT></P>
+<P><FONT SIZE=4>Р”РѕР±Р°РІРёС‚СЊ СЃС‚СЂРѕРєСѓ РІ С‚Р°Р±Р»РёС†Сѓ РїРµСЂРµРјРµРЅРЅС‹С…<BR><IMG SRC="images/mioc006.jpg" NAME="mioc006.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
 <P><IMG SRC="images/mioc007.jpg" NAME="mioc007.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></P>
-<P><FONT SIZE=4>Генерируем <SPAN LANG="en-US">BSP </SPAN>код (кнопка
+<P><FONT SIZE=4>Р“РµРЅРµСЂРёСЂСѓРµРј <SPAN LANG="en-US">BSP </SPAN>РєРѕРґ (РєРЅРѕРїРєР°
 <SPAN LANG="en-US">F8</SPAN>)<BR><IMG SRC="images/mioc008.jpg" NAME="mioc008.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
-<P><FONT SIZE=4>Далее, каждый раз, после изменения проекта,
-<B>обязательна генерация </B><SPAN LANG="en-US"><B>BSP!</B></SPAN></FONT></P>
-<P STYLE="margin-right: 11cm"><FONT SIZE=4>Открыть созданный проект в
-среде разработки EmBitz или Keil. EmBitz пока как временное решение,
-похоже автор забросил данный проект. По всей видимости в дальнейшем в
-проекте будет использоваться Code::Blocks.</FONT></P>
-<P><FONT SIZE=4>В файле main.c напишем следующее:<BR><IMG SRC="images/mioc009.jpg" NAME="mioc009.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=408 BORDER=0></FONT></P>
-<P><FONT SIZE=4>(Для увеличения размера картинки откройте её в новой
-вкладке)</FONT></P>
-<P><FONT SIZE=4>В <SPAN LANG="en-US">EmBitz </SPAN>нажать <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><B>F2</B></SPAN></FONT><SPAN LANG="en-US">,
-</SPAN>после появления окна информации нажать <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><B>F7</B></SPAN></FONT><SPAN LANG="en-US">,
-</SPAN>должна выполниться компиляция.<BR>Повторное нажатие <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><B>F2</B></SPAN></FONT>
-скроет информационные закладки.<BR><IMG SRC="images/mioc010.jpg" NAME="mioc010.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
-<P><FONT SIZE=4>Загружаем в микроконтроллер, смотрим, как работает.</FONT></P>
+<P><FONT SIZE=4>Р”Р°Р»РµРµ, РєР°Р¶РґС‹Р№ СЂР°Р·, РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ РїСЂРѕРµРєС‚Р°,
+<B>РѕР±СЏР·Р°С‚РµР»СЊРЅР° РіРµРЅРµСЂР°С†РёСЏ </B><SPAN LANG="en-US"><B>BSP!</B></SPAN></FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>РћС‚РєСЂС‹С‚СЊ СЃРѕР·РґР°РЅРЅС‹Р№ РїСЂРѕРµРєС‚ РІ
+СЃСЂРµРґРµ СЂР°Р·СЂР°Р±РѕС‚РєРё EmBitz РёР»Рё Keil. EmBitz РїРѕРєР° РєР°Рє РІСЂРµРјРµРЅРЅРѕРµ СЂРµС€РµРЅРёРµ,
+РїРѕС…РѕР¶Рµ Р°РІС‚РѕСЂ Р·Р°Р±СЂРѕСЃРёР» РґР°РЅРЅС‹Р№ РїСЂРѕРµРєС‚. РџРѕ РІСЃРµР№ РІРёРґРёРјРѕСЃС‚Рё РІ РґР°Р»СЊРЅРµР№С€РµРј РІ
+РїСЂРѕРµРєС‚Рµ Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ Code::Blocks.</FONT></P>
+<P><FONT SIZE=4>Р’ С„Р°Р№Р»Рµ main.c РЅР°РїРёС€РµРј СЃР»РµРґСѓСЋС‰РµРµ:<BR><IMG SRC="images/mioc009.jpg" NAME="mioc009.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=408 BORDER=0></FONT></P>
+<P><FONT SIZE=4>(Р”Р»СЏ СѓРІРµР»РёС‡РµРЅРёСЏ СЂР°Р·РјРµСЂР° РєР°СЂС‚РёРЅРєРё РѕС‚РєСЂРѕР№С‚Рµ РµС‘ РІ РЅРѕРІРѕР№
+РІРєР»Р°РґРєРµ)</FONT></P>
+<P><FONT SIZE=4>Р’ <SPAN LANG="en-US">EmBitz </SPAN>РЅР°Р¶Р°С‚СЊ <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><B>F2</B></SPAN></FONT><SPAN LANG="en-US">,
+</SPAN>РїРѕСЃР»Рµ РїРѕСЏРІР»РµРЅРёСЏ РѕРєРЅР° РёРЅС„РѕСЂРјР°С†РёРё РЅР°Р¶Р°С‚СЊ <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><B>F7</B></SPAN></FONT><SPAN LANG="en-US">,
+</SPAN>РґРѕР»Р¶РЅР° РІС‹РїРѕР»РЅРёС‚СЊСЃСЏ РєРѕРјРїРёР»СЏС†РёСЏ.<BR>РџРѕРІС‚РѕСЂРЅРѕРµ РЅР°Р¶Р°С‚РёРµ <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><B>F2</B></SPAN></FONT>
+СЃРєСЂРѕРµС‚ РёРЅС„РѕСЂРјР°С†РёРѕРЅРЅС‹Рµ Р·Р°РєР»Р°РґРєРё.<BR><IMG SRC="images/mioc010.jpg" NAME="mioc010.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Р—Р°РіСЂСѓР¶Р°РµРј РІ РјРёРєСЂРѕРєРѕРЅС‚СЂРѕР»Р»РµСЂ, СЃРјРѕС‚СЂРёРј, РєР°Рє СЂР°Р±РѕС‚Р°РµС‚.</FONT></P>
 <P><BR>
 </P>
-<H2 CLASS="western"> Кнопка</H2>
-<P><FONT SIZE=4>Добавим кнопку, например такую: 
+<H2 CLASS="western"> РљРЅРѕРїРєР°</H2>
+<P><FONT SIZE=4>Р”РѕР±Р°РІРёРј РєРЅРѕРїРєСѓ, РЅР°РїСЂРёРјРµСЂ С‚Р°РєСѓСЋ: 
 <IMG SRC="images/button.jpg" NAME="button.jpg" ALIGN=MIDDLE WIDTH=38 HEIGHT=44 BORDER=0></FONT></P>
-<P><FONT SIZE=4>схема подключения 
+<P><FONT SIZE=4>СЃС…РµРјР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ 
 <IMG SRC="images/button_sch.jpg" NAME="button_sch.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=100 BORDER=0></FONT></P>
-<P><FONT SIZE=4>Добавим переменную в таблицу:<BR><IMG SRC="images/mioc011.jpg" NAME="Графический объект1" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
-<P><FONT SIZE=4>Генерируем <SPAN LANG="en-US">BSP.</SPAN></FONT></P>
-<P><FONT SIZE=4>Изменим программу на следующую:<BR><IMG SRC="images/mioc012.jpg" NAME="mioc012.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
-<P><FONT SIZE=4>Создаём новую <SPAN LANG="en-US">BSP</SPAN> <SPAN LANG="en-US">(F8)</SPAN>,
-компилируем, загружаем в микроконтроллер.</FONT></P>
-<P><FONT SIZE=4>Нажимаем на кнопку - светодиод зажигается, отпускаем
-- тухнет.</FONT></P>
-<P><FONT SIZE=4>Вместо светодиода на другой порт можно подключить
-реле, вроде такого: 
+<P><FONT SIZE=4>Р”РѕР±Р°РІРёРј РїРµСЂРµРјРµРЅРЅСѓСЋ РІ С‚Р°Р±Р»РёС†Сѓ:<BR><IMG SRC="images/mioc011.jpg" NAME="Р“СЂР°С„РёС‡РµСЃРєРёР№ РѕР±СЉРµРєС‚1" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Р“РµРЅРµСЂРёСЂСѓРµРј <SPAN LANG="en-US">BSP.</SPAN></FONT></P>
+<P><FONT SIZE=4>РР·РјРµРЅРёРј РїСЂРѕРіСЂР°РјРјСѓ РЅР° СЃР»РµРґСѓСЋС‰СѓСЋ:<BR><IMG SRC="images/mioc012.jpg" NAME="mioc012.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>РЎРѕР·РґР°С‘Рј РЅРѕРІСѓСЋ <SPAN LANG="en-US">BSP</SPAN> <SPAN LANG="en-US">(F8)</SPAN>,
+РєРѕРјРїРёР»РёСЂСѓРµРј, Р·Р°РіСЂСѓР¶Р°РµРј РІ РјРёРєСЂРѕРєРѕРЅС‚СЂРѕР»Р»РµСЂ.</FONT></P>
+<P><FONT SIZE=4>РќР°Р¶РёРјР°РµРј РЅР° РєРЅРѕРїРєСѓ - СЃРІРµС‚РѕРґРёРѕРґ Р·Р°Р¶РёРіР°РµС‚СЃСЏ, РѕС‚РїСѓСЃРєР°РµРј
+- С‚СѓС…РЅРµС‚.</FONT></P>
+<P><FONT SIZE=4>Р’РјРµСЃС‚Рѕ СЃРІРµС‚РѕРґРёРѕРґР° РЅР° РґСЂСѓРіРѕР№ РїРѕСЂС‚ РјРѕР¶РЅРѕ РїРѕРґРєР»СЋС‡РёС‚СЊ
+СЂРµР»Рµ, РІСЂРѕРґРµ С‚Р°РєРѕРіРѕ: 
 <IMG SRC="images/relay.jpg" NAME="relay.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=87 BORDER=0></FONT></P>
 <P><BR>
 </P>
-<H2 CLASS="western"> Вывод сообщений на консоль</H2>
-<P><FONT SIZE=4>Нужно определить, что будет консолью.</FONT></P>
-<P><FONT SIZE=4>Возможны варианты:</FONT></P>
+<H2 CLASS="western"> Р’С‹РІРѕРґ СЃРѕРѕР±С‰РµРЅРёР№ РЅР° РєРѕРЅСЃРѕР»СЊ</H2>
+<P><FONT SIZE=4>РќСѓР¶РЅРѕ РѕРїСЂРµРґРµР»РёС‚СЊ, С‡С‚Рѕ Р±СѓРґРµС‚ РєРѕРЅСЃРѕР»СЊСЋ.</FONT></P>
+<P><FONT SIZE=4>Р’РѕР·РјРѕР¶РЅС‹ РІР°СЂРёР°РЅС‚С‹:</FONT></P>
 <UL>
-	<LI><P><FONT SIZE=4>адаптер USB-UART</FONT></P>
-	<LI><P><FONT SIZE=4>виртуальный COM-порт (&nbsp;кабель Micro-USB&nbsp;)</FONT></P>
+	<LI><P><FONT SIZE=4>Р°РґР°РїС‚РµСЂ USB-UART</FONT></P>
+	<LI><P><FONT SIZE=4>РІРёСЂС‚СѓР°Р»СЊРЅС‹Р№ COM-РїРѕСЂС‚ (&nbsp;РєР°Р±РµР»СЊ Micro-USB&nbsp;)</FONT></P>
 </UL>
-<P STYLE="margin-right: 11cm"><FONT SIZE=4>Если в конфигурации
-выбраны одновременно <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><SPAN STYLE="font-style: normal"><B>UART1</B></SPAN></SPAN></FONT><SPAN LANG="en-US">
-</SPAN>и <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><SPAN STYLE="font-style: normal"><B>USB
-as Console</B></SPAN></SPAN></FONT><SPAN LANG="en-US">, </SPAN>при
-этом <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><SPAN STYLE="font-style: normal"><B>USB
-VCP</B></SPAN></SPAN></FONT><SPAN LANG="en-US"> </SPAN>не выбран, то
-консоль будет назначена &quot;в никуда&quot;. Т.е. ругаться на
-функцию <SPAN LANG="en-US">print_str </SPAN>(&nbsp;или&nbsp;макрос&nbsp;print&nbsp;)
-не будет, но и вывода тоже не будет никакого. Такое же поведение
-будет если не выбрать ни один интерфейс, или выбрать <SPAN LANG="en-US">USB
-VCP, </SPAN>но не выбрать ни <SPAN LANG="en-US">UART1 </SPAN>ни <SPAN LANG="en-US">USB
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Р•СЃР»Рё РІ РєРѕРЅС„РёРіСѓСЂР°С†РёРё
+РІС‹Р±СЂР°РЅС‹ РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><SPAN STYLE="font-style: normal"><B>UART1</B></SPAN></SPAN></FONT><SPAN LANG="en-US">
+</SPAN>Рё <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><SPAN STYLE="font-style: normal"><B>USB
+as Console</B></SPAN></SPAN></FONT><SPAN LANG="en-US">, </SPAN>РїСЂРё
+СЌС‚РѕРј <FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US"><SPAN STYLE="font-style: normal"><B>USB
+VCP</B></SPAN></SPAN></FONT><SPAN LANG="en-US"> </SPAN>РЅРµ РІС‹Р±СЂР°РЅ, С‚Рѕ
+РєРѕРЅСЃРѕР»СЊ Р±СѓРґРµС‚ РЅР°Р·РЅР°С‡РµРЅР° &quot;РІ РЅРёРєСѓРґР°&quot;. Рў.Рµ. СЂСѓРіР°С‚СЊСЃСЏ РЅР°
+С„СѓРЅРєС†РёСЋ <SPAN LANG="en-US">print_str </SPAN>(&nbsp;РёР»Рё&nbsp;РјР°РєСЂРѕСЃ&nbsp;print&nbsp;)
+РЅРµ Р±СѓРґРµС‚, РЅРѕ Рё РІС‹РІРѕРґР° С‚РѕР¶Рµ РЅРµ Р±СѓРґРµС‚ РЅРёРєР°РєРѕРіРѕ. РўР°РєРѕРµ Р¶Рµ РїРѕРІРµРґРµРЅРёРµ
+Р±СѓРґРµС‚ РµСЃР»Рё РЅРµ РІС‹Р±СЂР°С‚СЊ РЅРё РѕРґРёРЅ РёРЅС‚РµСЂС„РµР№СЃ, РёР»Рё РІС‹Р±СЂР°С‚СЊ <SPAN LANG="en-US">USB
+VCP, </SPAN>РЅРѕ РЅРµ РІС‹Р±СЂР°С‚СЊ РЅРё <SPAN LANG="en-US">UART1 </SPAN>РЅРё <SPAN LANG="en-US">USB
 as Console</SPAN>.</FONT></P>
-<P><FONT SIZE=4>Конфигурация консоли:<BR><IMG SRC="images/mioc013.jpg" NAME="mioc013.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
-<P STYLE="margin-right: 11cm"><FONT SIZE=4>Подключим TettaTerm к
-COM-порту (&nbsp;консоли&nbsp;). Если загрузку прошивки производим
-через UART1, то не забываем отключать/подключать COM-порт. В
-TerraTerm &quot;горячие кнопки&quot; <SPAN LANG="en-US">Alt</SPAN>+I;
-<SPAN LANG="en-US">Alt</SPAN>+N Для варианта загрузки через ST-Link
-этого делать не требуется.</FONT></P>
-<P><FONT SIZE=4>Отредактируем программу:<BR><IMG SRC="images/mioc014.jpg" NAME="mioc014.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
-<P><FONT SIZE=4>Тепперь на консоли будет отображаться состояние
-кнопки.<BR><IMG SRC="images/mioc015.jpg" NAME="mioc015.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0>mioc01<SPAN LANG="en-US">5</SPAN>.jpg</FONT></P>
+<P><FONT SIZE=4>РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РєРѕРЅСЃРѕР»Рё:<BR><IMG SRC="images/mioc013.jpg" NAME="mioc013.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>РџРѕРґРєР»СЋС‡РёРј TettaTerm Рє
+COM-РїРѕСЂС‚Сѓ (&nbsp;РєРѕРЅСЃРѕР»Рё&nbsp;). Р•СЃР»Рё Р·Р°РіСЂСѓР·РєСѓ РїСЂРѕС€РёРІРєРё РїСЂРѕРёР·РІРѕРґРёРј
+С‡РµСЂРµР· UART1, С‚Рѕ РЅРµ Р·Р°Р±С‹РІР°РµРј РѕС‚РєР»СЋС‡Р°С‚СЊ/РїРѕРґРєР»СЋС‡Р°С‚СЊ COM-РїРѕСЂС‚. Р’
+TerraTerm &quot;РіРѕСЂСЏС‡РёРµ РєРЅРѕРїРєРё&quot; <SPAN LANG="en-US">Alt</SPAN>+I;
+<SPAN LANG="en-US">Alt</SPAN>+N Р”Р»СЏ РІР°СЂРёР°РЅС‚Р° Р·Р°РіСЂСѓР·РєРё С‡РµСЂРµР· ST-Link
+СЌС‚РѕРіРѕ РґРµР»Р°С‚СЊ РЅРµ С‚СЂРµР±СѓРµС‚СЃСЏ.</FONT></P>
+<P><FONT SIZE=4>РћС‚СЂРµРґР°РєС‚РёСЂСѓРµРј РїСЂРѕРіСЂР°РјРјСѓ:<BR><IMG SRC="images/mioc014.jpg" NAME="mioc014.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>РўРµРїРїРµСЂСЊ РЅР° РєРѕРЅСЃРѕР»Рё Р±СѓРґРµС‚ РѕС‚РѕР±СЂР°Р¶Р°С‚СЊСЃСЏ СЃРѕСЃС‚РѕСЏРЅРёРµ
+РєРЅРѕРїРєРё.<BR><IMG SRC="images/mioc015.jpg" NAME="mioc015.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0>mioc01<SPAN LANG="en-US">5</SPAN>.jpg</FONT></P>
 <P><BR>
 </P>
 <H2 CLASS="western"> DS18B20</H2>
-<P><FONT SIZE=4>Подключим к &quot;таблетке&quot; температурный датчик
+<P><FONT SIZE=4>РџРѕРґРєР»СЋС‡РёРј Рє &quot;С‚Р°Р±Р»РµС‚РєРµ&quot; С‚РµРјРїРµСЂР°С‚СѓСЂРЅС‹Р№ РґР°С‚С‡РёРє
 DS18B20.</FONT></P>
 <P><IMG SRC="images/ds18b20.jpg" NAME="ds18b20.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=393 BORDER=0></P>
-<P><FONT SIZE=4>Поместим в конфигурацию переменную:<BR><IMG SRC="images/mioc016.jpg" NAME="mioc016.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
-<P><FONT SIZE=4>Изменим программу на следующую:<BR><IMG SRC="images/mioc017.jpg" NAME="mioc017.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
-<P><FONT SIZE=4>Создаём новую конфигурацию, компилируем, загружаем в
-микроконтроллер.</FONT></P>
-<P><FONT SIZE=4>На консоли будет отображаться температура, измеряемая
-датчиком.<BR><IMG SRC="images/mioc018.jpg" NAME="mioc018.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0></FONT></P>
+<P><FONT SIZE=4>РџРѕРјРµСЃС‚РёРј РІ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ РїРµСЂРµРјРµРЅРЅСѓСЋ:<BR><IMG SRC="images/mioc016.jpg" NAME="mioc016.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>РР·РјРµРЅРёРј РїСЂРѕРіСЂР°РјРјСѓ РЅР° СЃР»РµРґСѓСЋС‰СѓСЋ:<BR><IMG SRC="images/mioc017.jpg" NAME="mioc017.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>РЎРѕР·РґР°С‘Рј РЅРѕРІСѓСЋ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ, РєРѕРјРїРёР»РёСЂСѓРµРј, Р·Р°РіСЂСѓР¶Р°РµРј РІ
+РјРёРєСЂРѕРєРѕРЅС‚СЂРѕР»Р»РµСЂ.</FONT></P>
+<P><FONT SIZE=4>РќР° РєРѕРЅСЃРѕР»Рё Р±СѓРґРµС‚ РѕС‚РѕР±СЂР°Р¶Р°С‚СЊСЃСЏ С‚РµРјРїРµСЂР°С‚СѓСЂР°, РёР·РјРµСЂСЏРµРјР°СЏ
+РґР°С‚С‡РёРєРѕРј.<BR><IMG SRC="images/mioc018.jpg" NAME="mioc018.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0></FONT></P>
 <P><BR>
 </P>
-<H2 CLASS="western"> АЦП</H2>
-<P><FONT SIZE=4>В качестве примера работы с АЦП можно использовать
-потенциометр<BR><IMG SRC="images/potentiometr.jpg" NAME="potentiometr.jpg" ALIGN=BOTTOM WIDTH=113 HEIGHT=115 BORDER=0></FONT></P>
-<P><FONT SIZE=4>или датчик влажности почвы<BR><IMG SRC="images/soil_measure.jpg" NAME="soil_measure.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=137 BORDER=0></FONT></P>
-<P><FONT SIZE=4>Остановимся на последнем:</FONT></P>
-<P><FONT SIZE=4>Конфигурируем порт:<BR><IMG SRC="images/mioc019.jpg" NAME="mioc019.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
-<P><FONT SIZE=4>Редактируем программу:<BR><IMG SRC="images/mioc020.jpg" NAME="mioc020.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
-<P><FONT SIZE=4>Компилируем, загружаем.</FONT></P>
-<P><FONT SIZE=4>В консоли наблюдаем:<BR><IMG SRC="images/mioc021.jpg" NAME="mioc021.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0></FONT></P>
+<H2 CLASS="western"> РђР¦Рџ</H2>
+<P><FONT SIZE=4>Р’ РєР°С‡РµСЃС‚РІРµ РїСЂРёРјРµСЂР° СЂР°Р±РѕС‚С‹ СЃ РђР¦Рџ РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ
+РїРѕС‚РµРЅС†РёРѕРјРµС‚СЂ<BR><IMG SRC="images/potentiometr.jpg" NAME="potentiometr.jpg" ALIGN=BOTTOM WIDTH=113 HEIGHT=115 BORDER=0></FONT></P>
+<P><FONT SIZE=4>РёР»Рё РґР°С‚С‡РёРє РІР»Р°Р¶РЅРѕСЃС‚Рё РїРѕС‡РІС‹<BR><IMG SRC="images/soil_measure.jpg" NAME="soil_measure.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=137 BORDER=0></FONT></P>
+<P><FONT SIZE=4>РћСЃС‚Р°РЅРѕРІРёРјСЃСЏ РЅР° РїРѕСЃР»РµРґРЅРµРј:</FONT></P>
+<P><FONT SIZE=4>РљРѕРЅС„РёРіСѓСЂРёСЂСѓРµРј РїРѕСЂС‚:<BR><IMG SRC="images/mioc019.jpg" NAME="mioc019.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Р РµРґР°РєС‚РёСЂСѓРµРј РїСЂРѕРіСЂР°РјРјСѓ:<BR><IMG SRC="images/mioc020.jpg" NAME="mioc020.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>РљРѕРјРїРёР»РёСЂСѓРµРј, Р·Р°РіСЂСѓР¶Р°РµРј.</FONT></P>
+<P><FONT SIZE=4>Р’ РєРѕРЅСЃРѕР»Рё РЅР°Р±Р»СЋРґР°РµРј:<BR><IMG SRC="images/mioc021.jpg" NAME="mioc021.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0></FONT></P>
 <P LANG="en-US" STYLE="margin-right: 11cm"><FONT SIZE=4>adc <SPAN LANG="ru-RU">-
-текущее показание АЦП, </SPAN>max <SPAN LANG="ru-RU">и </SPAN>min <SPAN LANG="ru-RU">-</SPAN>
-<SPAN LANG="ru-RU">зафиксированные минимальное и максимальное
-показания датчика, совсем сухой (0%) и совсем мокрый (100%).</SPAN></FONT></P>
-<P STYLE="margin-right: 11cm"><FONT SIZE=4>Совсем мокрый (100%) -
-опустим датчик в стакан с водой. Совсем сухой <SPAN LANG="en-US">(0%)
-</SPAN>- лежит на открытом воздухе.</FONT></P>
-<P STYLE="margin-right: 11cm"><FONT SIZE=4>По сути мы откалибровали
-датчик влажности от 0 до 100%. Максимальное и минимальное значения
-поместим в текст программы.<BR><IMG SRC="images/mioc022.jpg" NAME="mioc022.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
-<P><FONT SIZE=4>Результат работы. Датчик в цветочном горшке:<BR><IMG SRC="images/mioc023.jpg" NAME="mioc023.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0></FONT></P>
-<P><FONT SIZE=4>Данный проект - шаблон решения для полива растений.</FONT></P>
+С‚РµРєСѓС‰РµРµ РїРѕРєР°Р·Р°РЅРёРµ РђР¦Рџ, </SPAN>max <SPAN LANG="ru-RU">Рё </SPAN>min <SPAN LANG="ru-RU">-</SPAN>
+<SPAN LANG="ru-RU">Р·Р°С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹Рµ РјРёРЅРёРјР°Р»СЊРЅРѕРµ Рё РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ
+РїРѕРєР°Р·Р°РЅРёСЏ РґР°С‚С‡РёРєР°, СЃРѕРІСЃРµРј СЃСѓС…РѕР№ (0%) Рё СЃРѕРІСЃРµРј РјРѕРєСЂС‹Р№ (100%).</SPAN></FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>РЎРѕРІСЃРµРј РјРѕРєСЂС‹Р№ (100%) -
+РѕРїСѓСЃС‚РёРј РґР°С‚С‡РёРє РІ СЃС‚Р°РєР°РЅ СЃ РІРѕРґРѕР№. РЎРѕРІСЃРµРј СЃСѓС…РѕР№ <SPAN LANG="en-US">(0%)
+</SPAN>- Р»РµР¶РёС‚ РЅР° РѕС‚РєСЂС‹С‚РѕРј РІРѕР·РґСѓС…Рµ.</FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>РџРѕ СЃСѓС‚Рё РјС‹ РѕС‚РєР°Р»РёР±СЂРѕРІР°Р»Рё
+РґР°С‚С‡РёРє РІР»Р°Р¶РЅРѕСЃС‚Рё РѕС‚ 0 РґРѕ 100%. РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Рё РјРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёСЏ
+РїРѕРјРµСЃС‚РёРј РІ С‚РµРєСЃС‚ РїСЂРѕРіСЂР°РјРјС‹.<BR><IMG SRC="images/mioc022.jpg" NAME="mioc022.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Р РµР·СѓР»СЊС‚Р°С‚ СЂР°Р±РѕС‚С‹. Р”Р°С‚С‡РёРє РІ С†РІРµС‚РѕС‡РЅРѕРј РіРѕСЂС€РєРµ:<BR><IMG SRC="images/mioc023.jpg" NAME="mioc023.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Р”Р°РЅРЅС‹Р№ РїСЂРѕРµРєС‚ - С€Р°Р±Р»РѕРЅ СЂРµС€РµРЅРёСЏ РґР»СЏ РїРѕР»РёРІР° СЂР°СЃС‚РµРЅРёР№.</FONT></P>
 <P><BR>
 </P>
-<P><FONT SIZE=4><A HREF="../../programming_p1_ru.html">Оглавление</A></FONT></P>
+<P><FONT SIZE=4><A HREF="../../programming_p1_ru.html">РћРіР»Р°РІР»РµРЅРёРµ</A></FONT></P>
 <P><BR>
 </P>
 </BODY>
