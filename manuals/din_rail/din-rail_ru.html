@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Open-PLC</TITLE>
+	<link href="logo.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="logo.ico" rel="apple-touch-icon" sizes="">
+	<META NAME="CHANGEDBY" CONTENT="Alexander Suvorov">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 21cm 29.7cm; margin-left: 2cm; margin-right: 1cm; margin-top: 1cm; margin-bottom: 1cm }
+		P { margin-bottom: 0cm }
+		H1 { margin-left: 1.52cm; text-indent: -0.76cm; margin-top: 0cm; margin-bottom: 0cm; page-break-before: auto; page-break-after: avoid }
+		H1.western { font-family: "Times New Roman", serif; font-size: 22pt; font-weight: bold }
+		H1.cjk { font-family: "SimSun"; font-size: 16pt; font-weight: bold }
+		H1.ctl { font-family: "Mangal"; font-size: 16pt; font-weight: bold }
+		H2 { margin-left: 2.28cm; text-indent: -0.76cm; margin-top: 0cm; margin-bottom: 0cm; page-break-after: avoid }
+		H2.western { font-family: "Times New Roman", serif; font-size: 20pt; font-style: normal; font-weight: bold }
+		H2.cjk { font-family: "SimSun"; font-size: 14pt; font-style: italic; font-weight: bold }
+		H2.ctl { font-family: "Mangal"; font-size: 14pt; font-style: italic; font-weight: bold }
+		A:link { color: #000080; so-language: zxx; text-decoration: underline }
+		A:visited { color: #800000; so-language: zxx; text-decoration: underline }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="ru-RU" LINK="#000080" VLINK="#800000" BGCOLOR="#f0f8ff" DIR="LTR">
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=6*>
+	<COL WIDTH=250*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100% VALIGN=TOP>
+			<P ALIGN=LEFT STYLE="background: #cccccc"><IMG SRC="images/logo.png" NAME="logo.png" ALIGN=BOTTOM HSPACE=11 VSPACE=11 WIDTH=398 HEIGHT=76 BORDER=0></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=2%>
+			<P STYLE="background: #cccccc"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P ALIGN=CENTER STYLE="background: #b3b3b3"><FONT SIZE=6><B>DIN-рейка</B></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR>
+</P>
+<P><FONT SIZE=4><A HREF="../../manuals_p1_ru.html"><FONT SIZE=4><SPAN LANG="ru-RU">Оглавление</SPAN></FONT></A></FONT></P>
+<P><BR>
+</P>
+<H1 CLASS="western" ALIGN=CENTER STYLE="margin-right: 11cm"> Что
+такое DIN-рейка,<BR>как использовать её в своих проектах.</H1>
+<P><IMG SRC="images/a000f001.jpg" NAME="Графический объект1" ALIGN=BOTTOM WIDTH=351 HEIGHT=265 BORDER=0></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> Введение</H2>
+<P ALIGN=LEFT STYLE="margin-right: 11cm"><FONT SIZE=4>Из
+<I><B>wiki</B></I>:<BR>DIN-рейка - обобщённое название металлического
+профиля, применяемого в электротехнике. В зависимости от требований
+(вес, прочность, сила тока, проводимого через клеммы заземления)
+выпускается либо стальная гальванизированная, либо алюминиевая.
+Бывает сплошная или с регулярным шагом перфорации, также есть с
+предварительной насечкой для облегчения разделки на определённую
+длину.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-right: 11cm"><FONT SIZE=4>Используется
+для крепления различного модульного оборудования (автоматических
+выключателей, УЗО и др.) в электрических щитах, шкафах или
+установочных коробках. Использование реек, вкупе с минимизацией
+элементов, применяемых в электротехнических изделиях привело к
+появлению принципиально нового подхода в изготовлении аппаратуры - в
+компактных корпусах типового размера помещаются весьма сложные
+аппараты и приборы, подчас со встроенными микроконтроллерами.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-right: 11cm"><FONT SIZE=4>Данное
+определение почему то понимается что DIN-рейка это для промышленных и
+электрических нужд и никак иначе. Так же имеет место мнение, что
+DIN-рейка это дорого. Это ошибочные представления.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-right: 11cm"><FONT SIZE=4>На самом деле
+это наборы стандартных корпусов, удобное, универсальное,
+стандартизованное их крепление, наборы различных клемм,
+электрооборудования и пр.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-right: 11cm"><FONT SIZE=4>Корпуса для
+DIN-рейки выпускают многие производители промышленного оборудования и
+компании специализирующиеся на производстве корпусных изделий.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-right: 11cm"><BR>
+</P>
+<H2 CLASS="western"> Прототипирование</H2>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>После изготовления
+прототипов возникает вопрос: куда всё это монтировать? Используется
+всё, что под руку подвернулось.<BR>Например:<BR><IMG SRC="images/a000f002.jpg" NAME="Графический объект2" ALIGN=BOTTOM WIDTH=340 HEIGHT=227 BORDER=0>
+<IMG SRC="images/a000f003.jpg" NAME="Графический объект3" ALIGN=BOTTOM WIDTH=302 HEIGHT=227 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Рассмотрим другой подход к прототипированию.<BR>После
+анализа рынка серийно производимых корпусов для DIN-рейки<BR>выбираем
+корпуса компании Gainta. Это компромисс
+цена&nbsp;/&nbsp;качество&nbsp;/&nbsp;функционал.<BR>В частности это
+серия DxMG.<BR><IMG SRC="images/a000f004.jpg" NAME="Графический объект4" ALIGN=MIDDLE WIDTH=353 HEIGHT=265 BORDER=0>
+<IMG SRC="din-rail_ru_html_5f12bdb8.gif" NAME="Врезка3" ALT="Врезка3" ALIGN=MIDDLE></FONT></P>
+<P><FONT SIZE=4>Для каждого корпуса имеется макетная плата:<BR><IMG SRC="images/a000f005.jpg" NAME="Графический объект5" ALIGN=BOTTOM WIDTH=393 HEIGHT=265 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Чаще всего применяемый размер корпуса - D3MG, <SPAN LANG="ru-RU">или
+</SPAN>трёх-юнитовый корпус.<BR>Один юнит это размер автомата, что
+установлен в электрических щитках.<BR><IMG SRC="images/switch.jpg" NAME="switch" ALIGN=BOTTOM WIDTH=265 HEIGHT=265 BORDER=0></FONT></P>
+<P><FONT SIZE=4>трёх-юнитовый корпус:<BR><IMG SRC="images/a000f006.jpg" NAME="Графический объект31" ALIGN=BOTTOM WIDTH=351 HEIGHT=265 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Макетная плата для этого корпуса:<BR><IMG SRC="images/a000f009.jpg" NAME="Графический объект7" ALIGN=BOTTOM WIDTH=351 HEIGHT=159 BORDER=0></FONT></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> Модули проекта</H2>
+<P><FONT SIZE=4>Для корпуса D3MG уже разработаны модули в
+промышленном исполнении.<BR>Например:<BR><IMG SRC="images/a000f010.jpg" NAME="Графический объект8" ALIGN=MIDDLE WIDTH=214 HEIGHT=265 BORDER=0>
+<IMG SRC="images/a000f011.jpg" NAME="Графический объект9" ALIGN=MIDDLE WIDTH=211 HEIGHT=265 BORDER=0>
+<IMG SRC="din-rail_ru_html_17a8675c.gif" NAME="Врезка1" ALT="Врезка1" ALIGN=MIDDLE></FONT></P>
+<P><BR>
+</P>
+<P><IMG SRC="images/a000f012.jpg" NAME="Графический объект10" ALIGN=MIDDLE WIDTH=257 HEIGHT=265 BORDER=0>
+<IMG SRC="images/a000f013.jpg" NAME="Графический объект11" ALIGN=MIDDLE WIDTH=256 HEIGHT=265 BORDER=0>
+<IMG SRC="din-rail_ru_html_6c2b3702.gif" NAME="Врезка2" ALT="Врезка2" ALIGN=MIDDLE></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> Монтаж модулей</H2>
+<P><FONT SIZE=4>Существует очень много вариантов крепления DIN-рейки
+и устройств на ней.<BR>Модули на DIN-рейке можно монтировать на любую
+поверхность, например на стену.<BR>Рейку при этом нужно обрезать по
+габаритам корпуса.<BR>Пример крепления модуля GPIO:<BR><IMG SRC="images/a000f014.jpg" NAME="Графический объект12" ALIGN=BOTTOM WIDTH=343 HEIGHT=265 BORDER=0>
+<IMG SRC="images/a000f015.jpg" NAME="Графический объект13" ALIGN=BOTTOM WIDTH=320 HEIGHT=265 BORDER=0></FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Данное крепление позволяет
+выполнять легкий и быстрый монтаж/демонтаж или замену модуля.</FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Устройства на DIN-рейке
+можно устанавливать в 19<SPAN LANG="en-US">&quot;</SPAN> <SPAN LANG="ru-RU">шкаф</SPAN>.
+Крепление рейки для шкафа:<BR><IMG SRC="images/a000f016.jpg" NAME="Графический объект14" ALIGN=BOTTOM WIDTH=371 HEIGHT=210 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Блок устройств для установки в 19<SPAN LANG="en-US">&rdquo;
+ш</SPAN><SPAN LANG="ru-RU">каф</SPAN>:<BR><IMG SRC="images/a000f017.jpg" NAME="Графический объект15" ALIGN=BOTTOM WIDTH=371 HEIGHT=265 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Различные устройства:<BR><IMG SRC="images/a000f018.jpg" NAME="Графический объект16" ALIGN=BOTTOM WIDTH=371 HEIGHT=170 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Установка в разные типы шкафов:<BR><IMG SRC="images/a000f019.jpg" NAME="Графический объект17" ALIGN=BOTTOM WIDTH=418 HEIGHT=265 BORDER=0><BR><IMG SRC="images/a000f020.jpg" NAME="Графический объект18" ALIGN=BOTTOM WIDTH=266 HEIGHT=265 BORDER=0>
+<IMG SRC="images/a000f021.jpg" NAME="Графический объект19" ALIGN=BOTTOM WIDTH=198 HEIGHT=265 BORDER=0></FONT></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> Разные типы корпусов.</H2>
+<P><FONT SIZE=4>Существуют разработанные и серийно выпускаемые
+корпуса для различных плат и устройств.<BR>Например корпуса для
+Raspberry PI:<BR><SPAN LANG="ru-RU"><IMG SRC="images/a000f022.jpg" NAME="Графический объект20" ALIGN=BOTTOM WIDTH=242 HEIGHT=265 BORDER=0></SPAN><SPAN LANG="ru-RU">
+</SPAN><SPAN LANG="ru-RU">
+<IMG SRC="images/a000f023.jpg" NAME="Графический объект21" ALIGN=BOTTOM WIDTH=322 HEIGHT=265 BORDER=0></SPAN></FONT></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> Другие примеры</H2>
+<P><FONT SIZE=4>Аналог <SPAN LANG="en-US">Raspberry &ndash; NanoPI
+Neo </SPAN>помещенный в корпус <SPAN LANG="en-US">D3MG.<BR></SPAN>Собрано
+на макетных платах.<BR><IMG SRC="images/a000f024.jpg" NAME="Графический объект22" ALIGN=MIDDLE WIDTH=223 HEIGHT=227 BORDER=0>
+<IMG SRC="images/a000f025.jpg" NAME="Графический объект23" ALIGN=MIDDLE WIDTH=378 HEIGHT=227 BORDER=0><BR><IMG SRC="images/a000f026.jpg" NAME="Графический объект24" ALIGN=MIDDLE WIDTH=333 HEIGHT=227 BORDER=0>
+<IMG SRC="images/a000f027.jpg" NAME="Графический объект25" ALIGN=MIDDLE WIDTH=191 HEIGHT=227 BORDER=0><BR><IMG SRC="images/a000f028.jpg" NAME="Графический объект26" ALIGN=MIDDLE WIDTH=356 HEIGHT=227 BORDER=0>
+<IMG SRC="images/a000f029.jpg" NAME="Графический объект27" ALIGN=MIDDLE WIDTH=217 HEIGHT=227 BORDER=0></FONT></P>
+<P><FONT SIZE=4>В корпусах <SPAN LANG="en-US">DxMG </SPAN>можно
+разместить несколько печатных плат.</FONT></P>
+<P><FONT SIZE=4>Пример контроллера на двух печатных платах в корпусе
+<SPAN LANG="en-US">D9MG</SPAN>:<BR><IMG SRC="images/a000f030.png" NAME="Графический объект28" ALIGN=MIDDLE WIDTH=339 HEIGHT=227 BORDER=0><IMG SRC="images/a000f032.png" NAME="Графический объект30" ALIGN=MIDDLE WIDTH=287 HEIGHT=227 BORDER=0></FONT></P>
+<P><BR>
+</P>
+<P><FONT SIZE=4><A HREF="../../manuals_p1_ru.html"><SPAN LANG="ru-RU">Оглавление</SPAN></A></FONT></P>
+<P><BR>
+</P>
+</BODY>
+</HTML>
