@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1251">
+	<title>Open-PLC</title>
+	<link href="logo.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="logo.ico" rel="apple-touch-icon" sizes="">
+	<META NAME="CHANGEDBY" CONTENT="Alexander Suvorov">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 21cm 29.7cm }
+		P { margin-bottom: 0cm }
+		H2 { margin-left: 2.28cm; text-indent: -0.76cm; margin-top: 0cm; margin-bottom: 0cm; page-break-after: avoid }
+		H2.western { font-family: "Times New Roman", serif; font-size: 20pt; font-style: normal; font-weight: bold }
+		H2.cjk { font-family: "SimSun"; font-size: 14pt; font-style: italic; font-weight: bold }
+		H2.ctl { font-family: "Mangal"; font-size: 14pt; font-style: italic; font-weight: bold }
+		A:link { color: #000080; so-language: zxx; text-decoration: underline }
+		A:visited { color: #800000; so-language: zxx; text-decoration: underline }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="ru-RU" LINK="#000080" VLINK="#800000" BGCOLOR="#f0f8ff" DIR="LTR">
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=6*>
+	<COL WIDTH=250*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100% VALIGN=TOP>
+			<P ALIGN=LEFT STYLE="background: #cccccc"><IMG SRC="images/logo.png" NAME="f001" ALIGN=BOTTOM WIDTH=398 HEIGHT=76 BORDER=0></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=2%>
+			<P STYLE="background: #cccccc"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P ALIGN=CENTER STYLE="background: #b3b3b3"><FONT SIZE=6><B>Прошивка
+			микроконтроллера</B></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR>
+</P>
+<P><FONT SIZE=4><A HREF="../../programming_p1_ru.html">Оглавление</A></FONT></P>
+<P><BR>
+</P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Первый вопрос, который
+возникает при знакомстве с контроллерами STM32103C8T6, это как залить
+&quot;прошивку&quot; в микроконтроллер?</FONT></P>
+<P><FONT SIZE=4>Существует три варианта:</FONT></P>
+<OL>
+	<LI><P><FONT SIZE=4>используя UART</FONT></P>
+	<LI><P><FONT SIZE=4>используя GTAG</FONT></P>
+	<LI><P><FONT SIZE=4>написать собственный загрузчик</FONT></P>
+</OL>
+<P><BR>
+</P>
+<H2 CLASS="western"> Оборудование</H2>
+<UL>
+	<LI><P><FONT SIZE=4>для варианта UART потребуется адаптер USB-UART </FONT><FONT SIZE=4>
+	<IMG SRC="images/uart.png" NAME="uart.png" ALIGN=MIDDLE WIDTH=113 HEIGHT=44 BORDER=0></FONT></P>
+	<LI><P><FONT SIZE=4>для варианта JTAG потребуется ST-LINK/V2 </FONT><FONT SIZE=4>
+	<IMG SRC="images/st_link.png" NAME="st_link.png" ALIGN=MIDDLE WIDTH=113 HEIGHT=116 BORDER=0></FONT></P>
+</UL>
+<P><BR>
+</P>
+<H2 CLASS="western"> Программы</H2>
+<UL>
+	<LI><P><FONT SIZE=4>для варианта UART - <A HREF="https://www.st.com/en/development-tools/flasher-stm32.html">Flash
+	Loader Demonstrator</A></FONT></P>
+	<LI><P><FONT SIZE=4>для варианта JTAG - <A HREF="https://www.st.com/en/development-tools/stsw-link004.html">STM32
+	ST-LINK Utility</A></FONT></P>
+</UL>
+<P><BR>
+</P>
+<H2 CLASS="western"> Заливка &quot;прошивки&quot; с использованием
+UART</H2>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><FONT SIZE=4>Использование
+UART- самый простой вариант прошивки. Утилита &quot;Flash Loader
+Demonstrator&quot; бесплатна и её можно скачать как с официального
+сайта, так и отсюда (link).</FONT></P>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><FONT SIZE=4>В системной
+области памяти микроконтроллера зашит bootloader. Именно он и
+позволяет записать прошивку во flash-память через последовательный
+интерфейс.</FONT></P>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><FONT SIZE=4>Детально
+<A HREF="https://www.st.com/content/ccc/resource/technical/document/application_note/b9/9b/16/3a/12/1e/40/0c/CD00167594.pdf/files/CD00167594.pdf/jcr:content/translations/en.CD00167594.pdf">bootloader
+описан в документе AN2606</A> (&nbsp;CD00167594.pdf&nbsp;), а
+используемый им протокол - в документе <A HREF="https://www.st.com/content/ccc/resource/technical/document/application_note/51/5f/03/1e/bd/9b/45/be/CD00264342.pdf/files/CD00264342.pdf/jcr:content/translations/en.CD00264342.pdf">AN3155</A>
+(&nbsp;CD00264342.pdf&nbsp;). Это для тех, кто хочет исчерпывающей
+информации, а мы рассмотрим процесс прошивки через bootloader
+вкратце.</FONT></P>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><FONT SIZE=4>Для начала
+вам нужно установить себе на компьютер утилиту &quot;Flash Loader
+Demonstrator&quot;.</FONT></P>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><FONT SIZE=4>Далее, нужно
+соединить контроллер с компьютером через UART1. STM32F103C8T6 имеет
+48&nbsp;-&nbsp;выводный корпус, в котором UART1 выведен на ноги
+30&nbsp;-&nbsp;PA9&nbsp;-&nbsp;(Tx) и 31&nbsp;-&nbsp;PA10&nbsp;-&nbsp;(Rx).
+Подключить +5<SPAN LANG="en-US">V </SPAN>и <SPAN LANG="en-US">GND</SPAN>
+к микроконтроллеру.</FONT></P>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><FONT SIZE=4>Обратите
+внимание, что в контроллере используется UART с уровнями 0/+3,3V, а
+не 0/+5V, как у Arduino.</FONT></P>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><FONT SIZE=4>&quot;Ногу&quot;
+Tx контроллера нужно соединить с &quot;ногой&quot; Rx адаптера
+USB&nbsp;-&nbsp;UART, а &quot;ногу&quot; Rx контроллера - с ногой Tx
+адаптера. Кроме этого, контроллер нужно запитать и обеспечить нужные
+уровни на ногах BOOT0 (&nbsp;pin 44&nbsp;), BOOT1 (&nbsp;PB2&nbsp;-&nbsp;pin
+20&nbsp;). Для запуска bootloadera ногу BOOT1 нужно подтянуть к
+&quot;земле&quot; или <SPAN LANG="en-US">GND</SPAN>, а BOOT0 - к
+&quot;питанию&quot; 3.3<SPAN LANG="en-US">V</SPAN>, для этого на
+контроллере есть перемычки BOOT0 и BOOT1. Или проще: поместить
+перемычку <SPAN LANG="en-US">BOOT0 </SPAN>в положение &quot;1&quot;.
+Нажать и отпустить &quot;Reset&quot;, после этого котроллер входит в
+режим загрузки.</FONT></P>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><FONT SIZE=4>Далее
+пользуемся утилитой &quot;Flash Loader Demonstrator&quot;. Откроется
+страничка, на которой нужно выбрать com-порт, скорость обмена.</FONT></P>
+<P ALIGN=CENTER STYLE="margin-right: 11cm"><FONT SIZE=4>Чётность и
+количество бит данных уже настроены как надо, скорость можно менять -
+контроллер в процессе инициализации обмена настраивается на выбранную
+скорость автоматически, COM-порт нужно выбрать тот, который создался
+при подключении USB-to-COM адаптера к компьютеру. После того, как всё
+настроили - жмём &quot;Next&quot;.<BR><IMG SRC="images/fld01.jpg" NAME="fld01.jpg" ALIGN=BOTTOM WIDTH=378 HEIGHT=482 BORDER=0></FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>О том, что всё нормально и
+соединиться с контроллером удалось, нам сообщит зелёный сигнал
+светофора на следующей страничке. Если связь не установится - на эту
+страничку нас вообще не пустят, сообщив, что контроллер не отвечает.</FONT></P>
+<P ALIGN=CENTER STYLE="margin-right: 11cm"><FONT SIZE=4>При
+установлении связи программа автоматически определит сколько у
+контроллера flash-памяти и защищена ли эта память от чтения. Если
+память защищена, то нажав кнопку &quot;Remove protection&quot; защиту
+можно снять, но при этом содержимое памяти будет стёрто (предыдущая
+записанная туда прошивка уничтожится). Жмём &quot;Next&quot;.<BR><IMG SRC="images/fld02.jpg" NAME="fld02.jpg" ALIGN=BOTTOM WIDTH=378 HEIGHT=482 BORDER=0></FONT></P>
+<P ALIGN=CENTER STYLE="margin-right: 11cm"><FONT SIZE=4>В следующем
+окне нам предлагают выбрать тип микроконтроллера (&nbsp;хотя
+непонятно зачем, - он и так автоматически определяется&nbsp;), а
+также показывают для нашего контроллера PID, карту flash-памяти, и
+версию bootloader-а. Просто жмём &quot;Next&quot;.<BR><IMG SRC="images/fld03.jpg" NAME="fld03.jpg" ALIGN=BOTTOM WIDTH=378 HEIGHT=482 BORDER=0></FONT></P>
+<P ALIGN=CENTER STYLE="margin-right: 11cm"><FONT SIZE=4>В следующем
+окне нужно выбрать, что мы собственно хотим с нашим контроллером
+делать. Тут возможны следующие варианты: &quot;Erase&quot;
+(&nbsp;стереть&nbsp;), &quot;Download to device&quot; (&nbsp;загрузить
+в контроллер прошивку&nbsp;), &quot;Upload from device&quot;
+(&nbsp;считать прошивку с контроллера&nbsp;), &quot;Enable&nbsp;/&nbsp;Disable
+Flash protection&quot; (&nbsp;включить&nbsp;/&nbsp;выключить защиту
+flash-памяти&nbsp;), Edit option bytes (&nbsp;изменить байты опций&nbsp;).
+Соответственно, если мы хотим залить &quot;прошивку&quot; - выбираем
+&quot;Download to device&quot;, потом жмём на квадрат с тремя точками
+и выбираем в проводнике файл с прошивкой, которую надо залить, после
+чего опять жмём &quot;Next&quot;.<BR><IMG SRC="images/fld04.jpg" NAME="fld04.jpg" ALIGN=BOTTOM WIDTH=378 HEIGHT=482 BORDER=0></FONT></P>
+<P ALIGN=CENTER STYLE="margin-right: 11cm"><FONT SIZE=4>На следующей
+странице внизу появится прогресс-бар, в котором будет показан ход
+выполнения процедуры загрузки.<BR><IMG SRC="images/fld05.jpg" NAME="fld05.jpg" ALIGN=BOTTOM WIDTH=378 HEIGHT=482 BORDER=0></FONT></P>
+<P ALIGN=CENTER STYLE="margin-right: 11cm"><FONT SIZE=4>После того,
+как вся прошивка будет загружена в контроллер, этот прогресс-бар
+станет зелёным и в нём белыми буквами будет написано: &quot;Download
+operation finished successfully&quot; (&nbsp;операция загрузки
+успешно завершена&nbsp;).Далее, можно нажать кнопку &quot;Close&quot;
+чтобы закрыть &quot;Flash Loader Demonstrator&quot; или &quot;Back&quot;,
+чтобы вернуться на стартовую страничку.<BR><IMG SRC="images/fld06.jpg" NAME="fld06.jpg" ALIGN=BOTTOM WIDTH=378 HEIGHT=482 BORDER=0></FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Вернуть перемычки в
+состояние &quot;0&quot; и нажать &quot;Reset&quot;, чтобы программа
+начала выполняться.</FONT></P>
+<P STYLE="margin-right: 11cm"><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-left: 0cm; margin-right: 11cm; text-indent: 0cm">
+ Заливка &quot;прошивки&quot; с использованием JTAG SWD</H2>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><FONT SIZE=4>В этом
+случае вам нужно установить себе на компьютер утилиту &quot;STM32
+ST-LINK Utility&quot; и подключить ST-LINK/V2, подать питание на
+плату микроконтроллера. Рекомендуется использовать питание <SPAN LANG="en-US">5V.</SPAN></FONT></P>
+<P ALIGN=CENTER STYLE="margin-right: 11cm"><FONT SIZE=4>После запуска
+STM32 ST-LINK откроется стартовая страничка программы.<BR><IMG SRC="images/l01.jpg" NAME="l01.jpg" ALIGN=BOTTOM WIDTH=567 HEIGHT=491 BORDER=0></FONT></P>
+<P ALIGN=CENTER STYLE="margin-right: 11cm"><FONT SIZE=4>Нажать кнопку
+&quot;Connect to the target&quot;. Микроконтроллер должен
+определиться автоматически.<BR><IMG SRC="images/l02.jpg" NAME="l02.jpg" ALIGN=BOTTOM WIDTH=567 HEIGHT=492 BORDER=0></FONT></P>
+<P ALIGN=CENTER STYLE="margin-right: 11cm"><FONT SIZE=4>Нажимаем
+кнопку &quot;Open file&quot;, в открывшемся окне выбираем нужный
+файл.<BR><IMG SRC="images/l03.jpg" NAME="l03.jpg" ALIGN=BOTTOM WIDTH=567 HEIGHT=492 BORDER=0></FONT></P>
+<P ALIGN=CENTER STYLE="margin-right: 11cm"><FONT SIZE=4>Далее в меню
+выбираем &quot;Target&quot;&nbsp;-&gt;&nbsp;&quot;Program &amp;
+Verify&quot;... (&nbsp;CTRL+P&nbsp;)<BR><IMG SRC="images/l04.jpg" NAME="l04.jpg" ALIGN=BOTTOM WIDTH=567 HEIGHT=492 BORDER=0></FONT></P>
+<P ALIGN=CENTER STYLE="margin-right: 11cm"><FONT SIZE=4>В открывшемся
+окне &quot;Download&quot; нажимаем &quot;Start&quot;. Программа
+должна загрузиться и в случае, если установлен флажок &quot;Reset
+after programming&quot; стартовать автоматически.<BR><IMG SRC="images/l05.jpg" NAME="l05.jpg" ALIGN=BOTTOM WIDTH=567 HEIGHT=493 BORDER=0></FONT></P>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><FONT SIZE=4>В случае,
+если при попытке коннекта микроконтроллер не определился, то одна из
+вероятных причин - это ремаппинг &quot;ног&quot; JTAG. В этом случае
+последовательность действий следующая:</FONT></P>
+<UL>
+	<LI><P><FONT SIZE=4>Нажать и удерживать &quot;Reset&quot; на плате
+	микроконтроллера.</FONT></P>
+	<LI><P><FONT SIZE=4>Нажать кнопку &quot;Connect to the target&quot;,
+	подождать 1 секунду и отпустить &quot;Reset&quot;.</FONT></P>
+</UL>
+<P><BR>
+</P>
+<P><FONT SIZE=4><A HREF="../../programming_p1_ru.html">Оглавление</A></FONT></P>
+<P><BR>
+</P>
+</BODY>
+</HTML>
