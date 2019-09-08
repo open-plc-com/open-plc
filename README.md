@@ -5,5 +5,4 @@ The goal of the project is to create systems from simple "DIY" to distributed in
 
 The project is open source, both for hardware and for software.
 
-
-site: open-plc.com
+[ссылка](https://open-plc-com.github.io/open-plc/ru/index.html "open-plc.com")
