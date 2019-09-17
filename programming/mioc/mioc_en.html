@@ -1,0 +1,344 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Open-PLC</TITLE>
+	<LINK HREF="images/logo.ico" REL="shortcut icon" TYPE="image/x-icon">
+	<LINK HREF="images/logo.ico" REL="apple-touch-icon" SIZES="32x32">
+	<META NAME="CHANGEDBY" CONTENT="Alexander Suvorov">
+	<META NAME="CHANGED" CONTENT="20190915;16452373">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 21cm 29.7cm }
+		P { margin-bottom: 0cm }
+		H2 { margin-left: 2.28cm; text-indent: -0.76cm; margin-top: 0cm; margin-bottom: 0cm; page-break-after: avoid }
+		H2.western { font-family: "Times New Roman", serif; font-size: 20pt; font-style: normal; font-weight: bold }
+		H2.cjk { font-family: "SimSun"; font-size: 14pt; font-style: italic; font-weight: bold }
+		H2.ctl { font-family: "Mangal"; font-size: 14pt; font-style: italic; font-weight: bold }
+		H3 { margin-left: 3.04cm; text-indent: -0.76cm; margin-top: 0cm; margin-bottom: 0cm; page-break-after: avoid }
+		H3.western { font-family: "Times New Roman", serif; font-size: 18pt; font-weight: bold }
+		H3.cjk { font-family: "SimSun"; font-size: 14pt; font-weight: bold }
+		H3.ctl { font-family: "Mangal"; font-size: 14pt; font-weight: bold }
+		EM { font-style: italic }
+		A:link { color: #000080; so-language: zxx; text-decoration: underline }
+		A:visited { color: #800000; so-language: zxx; text-decoration: underline }
+		STRONG { font-weight: bold }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="ru-RU" LINK="#000080" VLINK="#800000" BGCOLOR="#f0f8ff" DIR="LTR">
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=6*>
+	<COL WIDTH=250*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100% VALIGN=TOP>
+			<P ALIGN=LEFT STYLE="background: #cccccc"><IMG SRC="images/logo.png" NAME="f001" ALIGN=BOTTOM HSPACE=11 VSPACE=11 WIDTH=398 HEIGHT=76 BORDER=0></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=2%>
+			<P STYLE="background: #cccccc"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P ALIGN=CENTER STYLE="background: #b3b3b3"><FONT SIZE=6><B><STRONG><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=6 STYLE="font-size: 26pt"><SPAN STYLE="font-style: normal">Program
+			for creating a firmware template</SPAN></FONT></FONT></FONT></STRONG><STRONG><FONT COLOR="#000000"><FONT FACE="Arial"><FONT SIZE=4 STYLE="font-size: 14pt"><SPAN STYLE="font-style: normal"><BR></SPAN></FONT></FONT></FONT></STRONG><STRONG><FONT COLOR="#000000"><FONT FACE="Arial"><FONT SIZE=4 STYLE="font-size: 16pt"><SPAN STYLE="font-style: normal">The
+			simplest programming of the STM32F103C8 microcontroller</SPAN></FONT></FONT></FONT></STRONG></B></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR>
+</P>
+<P><FONT SIZE=4><A HREF="../../programming_p1_ru.html">Table of
+contents</A></FONT></P>
+<P><BR>
+</P>
+<P><FONT SIZE=4>Purpose of creating this program::</FONT></P>
+<UL>
+	<LI><P><FONT SIZE=4>make microcontroller programming simple</FONT></P>
+	<LI><P LANG="en-US"><FONT SIZE=4>remove restrictions on the use of
+	MK resources inherent in Arduino</FONT></P>
+	<LI><P><FONT SIZE=4>easy integration of your own program code</FONT></P>
+</UL>
+<P><BR>
+</P>
+<H2 CLASS="western"> What is needed to work with the program:</H2>
+<UL>
+	<UL>
+		<UL>
+			<LI><P><FONT SIZE=4>Hardware</FONT></P>
+			<LI><P><FONT SIZE=4>Software</FONT></P>
+		</UL>
+	</UL>
+</UL>
+<P><BR>
+</P>
+<H3 CLASS="western"> <FONT SIZE=5>Hardware</FONT></H3>
+<UL>
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4><SPAN LANG="ru-RU">Of
+	course, first of all the controller itself. &quot;Blue Pill&quot;: </SPAN></FONT><FONT SIZE=4><SPAN LANG="ru-RU">
+	<IMG SRC="images/blue_pill.jpg" NAME="blue_pill.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=63 BORDER=0></SPAN></FONT></P>
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4>USB-UART </FONT><FONT SIZE=4><SPAN LANG="en-US">adapter</SPAN></FONT><FONT SIZE=4>:
+	</FONT><FONT SIZE=4>
+	<IMG SRC="images/uart.jpg" NAME="uart.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=76 BORDER=0></FONT></P>
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4>Micro-USB </FONT><FONT SIZE=4><SPAN LANG="en-US">cable</SPAN></FONT><FONT SIZE=4>:
+	</FONT><FONT SIZE=4>
+	<IMG SRC="images/usb.jpg" NAME="usb.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=110 BORDER=0></FONT></P>
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4>a set of wires for
+	connecting components to each other: </FONT><FONT SIZE=4>
+	<IMG SRC="images/wires.jpg" NAME="wires.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=165 BORDER=0></FONT></P>
+	<LI><P STYLE="margin-right: 11cm"><FONT SIZE=4><SPAN LANG="ru-RU">For
+	faster, in comparison with UART, downloading the &quot;firmware&quot;
+	and debugging programs, it is recommended to use the ST-Link V2
+	programmer, for example this: </SPAN></FONT><FONT SIZE=4><SPAN LANG="ru-RU">
+	<IMG SRC="images/st_link.jpg" NAME="st_link.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=113 BORDER=0></SPAN></FONT></P>
+</UL>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>All used parts /
+components can be purchased on <A HREF="https://ru.aliexpress.com/">aliexpress.com</A>.</FONT></P>
+<P STYLE="margin-right: 11cm"><BR>
+</P>
+<H3 CLASS="western"> <FONT SIZE=5>Software</FONT></H3>
+<UL>
+	<UL>
+		<UL>
+			<LI><P><A HREF="https://www.st.com/en/development-tools/flasher-stm32.html"><FONT SIZE=4><SPAN LANG="ru-RU">STM32
+			Flash loader demonstrator </SPAN></FONT></A><A HREF="https://www.st.com/en/development-tools/flasher-stm32.html"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><SPAN LANG="ru-RU">(</SPAN></FONT></FONT></A><FONT COLOR="#002052"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><SPAN LANG="ru-RU"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">FLASHER-STM32</SPAN></SPAN></SPAN></FONT></FONT></FONT><A HREF="https://www.st.com/en/development-tools/flasher-stm32.html"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><SPAN LANG="ru-RU">)</SPAN></FONT></FONT></A></P>
+			<LI><P ALIGN=LEFT><FONT SIZE=4><A HREF="https://www.st.com/en/development-tools/stsw-stm32102.html">STM32
+			Virtual COM Port Driver</A><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><SPAN LANG="ru-RU">
+			</SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><SPAN LANG="ru-RU">(</SPAN></FONT><FONT COLOR="#002052"><FONT FACE="Times New Roman, serif"><SPAN LANG="ru-RU"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">STSW-STM32102</SPAN></SPAN></SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><SPAN LANG="ru-RU">)</SPAN></FONT></FONT></P>
+			<LI><P><FONT SIZE=4><A HREF="https://www.st.com/en/development-tools/stsw-link004.html">STM32
+			ST-LINK utility</A><FONT COLOR="#000000"><SPAN LANG="ru-RU">
+			</SPAN></FONT><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">(</SPAN></FONT><FONT COLOR="#002052"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">STSW-LINK004</SPAN></SPAN></SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">)</SPAN></FONT></FONT></P>
+			<LI><P><FONT SIZE=4><A HREF="https://www.embitz.org/">www.embitz.org</A><SPAN LANG="ru-RU">
+			</SPAN><SPAN LANG="en-US">IDE</SPAN></FONT></P>
+			<LI><P><FONT SIZE=4><A HREF="https://github.com/open-plc-com/MIOC/blob/master/bin/mioc_exe.7z">MIOC</A>
+			- program - configurator. Creating a firmware template</FONT></P>
+			<LI><P><FONT SIZE=4><A HREF="https://osdn.net/projects/ttssh2/releases/">terraterm</A>
+			<SPAN LANG="en-US">- terminal emulator</SPAN></FONT></P>
+		</UL>
+	</UL>
+</UL>
+<P><BR>
+</P>
+<H2 CLASS="western"> What is a module?</H2>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><FONT SIZE=4>A module is
+a combination of hardware and software. The hardware is the
+STM32F103C8T6 &ldquo;Blue Pill&rdquo;, the software is the &ldquo;firmware
+template&rdquo; created using the <A HREF="https://github.com/open-plc-com/MIOC/blob/master/bin/mioc.exe">MIOC</A>
+program. This program is <A HREF="https://github.com/open-plc-com/MIOC/tree/master/src">OpenSource</A>.</FONT></P>
+<P ALIGN=JUSTIFY STYLE="margin-right: 11cm"><BR>
+</P>
+<H2 CLASS="western"> Microcontroller ports</H2>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>The microcontroller has
+pins or legs. Some of them are power of microcontroller, some have a
+special purpose (for example, Reset), some are general-purpose input
+/ output interface (GPIO).</FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Ports are grouped as (A;
+B; C ...). Each group contains up to 16 ports, numbered from 0 to 15.
+As a result, the port numbering looks like PA0, PA1, &hellip;</FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Ports are used for
+communication between the components of the module, for example, a
+microprocessor and various peripheral devices. Ports can act as
+input, output, and bidirectional.</FONT></P>
+<P><FONT SIZE=4>The &ldquo;Blue Pill&rdquo; board have a marked with
+ports.</FONT></P>
+<P><BR>
+</P>
+<H3 CLASS="western"> GPIO - General Purpose I / O Interface</H3>
+<P><FONT SIZE=4>The main types of ports the IO module are presented
+in the table:</FONT></P>
+<TABLE WIDTH=764 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=232>
+	<COL WIDTH=514>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">AIN</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4>analog input</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">IN_FLOATING</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4>entrance without <SPAN LANG="en-US">pulling</SPAN>
+			(&nbsp;Float&nbsp;)</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">IPD</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4>pull-down entrance (&nbsp;Pull-down&nbsp;)</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">IPU</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4>pull-<SPAN LANG="en-US">up</SPAN> entrance
+			(&nbsp;Pull-up&nbsp;)</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">Out_OD</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4>open drain ouput (&nbsp;Open Drain&nbsp;)</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">Out_PP</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4>two-state output (&nbsp;Push-Pull&nbsp;)</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">AF_OD</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4>open drain output for Alternate Function. Used
+			when pins are controlled by peripherals that can be used on this
+			pin. For example, USART, I2C, and the like.</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=232>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">GPIO</SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU">Mode</SPAN></FONT></EM><FONT SIZE=4><SPAN LANG="ru-RU">AF</SPAN></FONT><FONT SIZE=4><SPAN LANG="ru-RU"><SPAN STYLE="font-style: normal">_</SPAN></SPAN></FONT><EM><FONT SIZE=4><SPAN LANG="ru-RU"><SPAN STYLE="font-style: normal">PP</SPAN></SPAN></FONT></EM></P>
+		</TD>
+		<TD WIDTH=514>
+			<P><FONT SIZE=4><SPAN LANG="ru-RU">same as GPIO_</SPAN></FONT><FONT SIZE=4><SPAN LANG="ru-RU"><I>Mode</I></SPAN></FONT><FONT SIZE=4><SPAN LANG="ru-RU">AF_OD,
+			but with two states</SPAN></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><FONT SIZE=4>As sensors, actuators we will use various devices
+from Arduino.</FONT></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> MIOC (Module Input-Output Configurator) Program</H2>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Using this program, we
+create / configure the firmware template (project for Embitz; Keil)
+of the IO module. The program does not require of installation.
+Download, run. Using this program, we create global variables that we
+will use in our firmware. Variables can be associated with ports.</FONT></P>
+<P><FONT SIZE=4>First run window:<BR><IMG SRC="images/mioc001.jpg" NAME="mioc001 .jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Create a project:<BR><IMG SRC="images/mioc002.jpg" NAME="mioc002.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><IMG SRC="images/mioc003.jpg" NAME="mioc003.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></P>
+<P><IMG SRC="images/mioc004.jpg" NAME="mioc004.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></P>
+<P><IMG SRC="images/mioc005.jpg" NAME="mioc005.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> The first program is &quot;hello world&quot; for
+the microcontroller</H2>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Blink the LED, which is on
+the &quot;blue pill&quot;. This LED is connected to the PC13 port.</FONT></P>
+<P><FONT SIZE=4>Add row to variable table<BR><IMG SRC="images/mioc006.jpg" NAME="mioc006.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><IMG SRC="images/mioc007.jpg" NAME="mioc007.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></P>
+<P><FONT SIZE=4>Generate BSP code (F8 button)<BR><IMG SRC="images/mioc008.jpg" NAME="mioc008.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4><SPAN LANG="en-US"><SPAN STYLE="font-weight: normal">Further,
+each time, after a project change</SPAN></SPAN><SPAN LANG="en-US"><B>,
+the generation of BSP is mandatory!</B></SPAN></FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Open the created project
+in the development environment of EmBitz or Keil. EmBitz is still a
+temporary solution, it seems the author abandoned this project.
+Apparently in the future, the project will use Code::Blocks.</FONT></P>
+<P><FONT SIZE=4>In the main.c file, write the following:<BR><IMG SRC="images/mioc009.jpg" NAME="mioc009.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=408 BORDER=0></FONT></P>
+<P><FONT SIZE=4>(To increase the size of the image, open it in a new
+tab)</FONT></P>
+<P><FONT SIZE=4>In EmBitz, press <B>F2</B>, after the information
+window appears, press <B>F7</B>, compilation will be
+performed.<BR>Pressing <B>F2</B> again will hide the information
+bookmarks.<BR><IMG SRC="images/mioc010.jpg" NAME="mioc010.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Download to the microcontroller, look how it works.</FONT></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> <SPAN LANG="en-US">Button</SPAN></H2>
+<P><FONT SIZE=4>Add a button, for example this: 
+<IMG SRC="images/button.jpg" NAME="button.jpg" ALIGN=MIDDLE WIDTH=38 HEIGHT=44 BORDER=0></FONT></P>
+<P><FONT SIZE=4>wiring diagram 
+<IMG SRC="images/button_sch.jpg" NAME="button_sch.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=100 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Add a variable to the table:<BR><IMG SRC="images/mioc011.jpg" NAME="mioc011.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P LANG="en-US"><FONT SIZE=4>To generate BSP.</FONT></P>
+<P><FONT SIZE=4>Change the program to the following:<BR><IMG SRC="images/mioc012.jpg" NAME="mioc012.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>We create a new BSP (F8), compile it, load it into
+the microcontroller.</FONT></P>
+<P><FONT SIZE=4>We press the button - the LED lights up, release - it
+goes out.</FONT></P>
+<P><FONT SIZE=4>Instead of an LED on another port, you can connect a
+relay, like this: 
+<IMG SRC="images/relay.jpg" NAME="relay.jpg" ALIGN=MIDDLE WIDTH=113 HEIGHT=87 BORDER=0></FONT></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> Output messages to the console</H2>
+<P><FONT SIZE=4>You need to determine what will be the console.</FONT></P>
+<P><FONT SIZE=4>The options are:</FONT></P>
+<UL>
+	<LI><P><FONT SIZE=4>USB-UART adapter</FONT></P>
+	<LI><P><FONT SIZE=4>virtual COM port (Micro-USB cable)</FONT></P>
+</UL>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>If both UART1 and USB as
+Console are selected in the configuration, and USB VCP is not
+selected, the console will be assigned to nowhere. Those. there will
+be no swearing at the print_str function (or the print macro), but
+there will be no output either. The same behavior will be if you do
+not select any interface, or select USB VCP, but do not select either
+UART1 or USB as Console.</FONT></P>
+<P><FONT SIZE=4><SPAN LANG="ru-RU">Console Configuration:<BR></SPAN><SPAN LANG="ru-RU"><IMG SRC="images/mioc013.jpg" NAME="mioc013.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></SPAN></FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Connect TettaTerm to the
+COM port (console). If we download the firmware via UART1, then do
+not forget to disconnect / connect the COM port. TerraTerm hotkeys
+Alt + I; Alt + N This is not required for the boot option via
+ST-Link.</FONT></P>
+<P><FONT SIZE=4>Edit the program:<BR><IMG SRC="images/mioc014.jpg" NAME="mioc014.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>The console will now display the status of the
+button.<BR><IMG SRC="images/mioc015.jpg" NAME="mioc015.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0></FONT></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> DS18B20</H2>
+<P><FONT SIZE=4>Connect the DS18B20 temperature sensor to the &quot;Blue
+Pill&quot;:<BR><IMG SRC="images/ds18b20.jpg" NAME="ds18b20.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=393 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Put the variable in the configuration:<BR><IMG SRC="images/mioc016.jpg" NAME="mioc016.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Change the program to the following:<BR><IMG SRC="images/mioc017.jpg" NAME="mioc017.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Create a new configuration, compile, load it into the
+microcontroller.</FONT></P>
+<P><FONT SIZE=4>The console will display the temperature measured by
+the sensor.<BR><IMG SRC="images/mioc018.jpg" NAME="mioc018.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0></FONT></P>
+<P><BR>
+</P>
+<H2 CLASS="western"> <SPAN LANG="en-US">ADC</SPAN></H2>
+<P><FONT SIZE=4>As an example of working with the ADC, you can use
+the potentiometer<BR><IMG SRC="images/potentiometr.jpg" NAME="potentiometr.jpg" ALIGN=BOTTOM WIDTH=113 HEIGHT=115 BORDER=0></FONT></P>
+<P><FONT SIZE=4>or soil moisture sensor<BR><IMG SRC="images/soil_measure.jpg" NAME="soil_measure.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=137 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Let us dwell on the last one:</FONT></P>
+<P><FONT SIZE=4>Configure the port:<BR><IMG SRC="images/mioc019.jpg" NAME="mioc019.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Editing the program:<BR><IMG SRC="images/mioc020.jpg" NAME="mioc020.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>Compile, load.</FONT></P>
+<P><FONT SIZE=4>In the console we observe:<BR><IMG SRC="images/mioc021.jpg" NAME="mioc021.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0></FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>adc - current ADC reading,
+max and min - recorded minimum and maximum sensor readings,
+completely dry (0%) and very wet (100%).</FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>Very wet (100%) - put the
+sensor in a glass of water. Very dry (0%) - lies in the open air.</FONT></P>
+<P STYLE="margin-right: 11cm"><FONT SIZE=4>In fact, we calibrated the
+humidity sensor from 0 to 100%. The maximum and minimum values &#8203;&#8203;are
+placed in the program text.<BR><IMG SRC="images/mioc022.jpg" NAME="mioc022.jpg" ALIGN=BOTTOM WIDTH=643 HEIGHT=484 BORDER=0></FONT></P>
+<P><FONT SIZE=4>The result of the work. Sensor in a flower pot:<BR><IMG SRC="images/mioc023.jpg" NAME="mioc023.jpg" ALIGN=BOTTOM WIDTH=265 HEIGHT=199 BORDER=0></FONT></P>
+<P><FONT SIZE=4>This project is a solution template for watering
+plants.</FONT></P>
+<P><BR>
+</P>
+<P><FONT SIZE=4><A HREF="../../programming_p1_ru.html">Table of
+contents</A></FONT></P>
+<P><BR>
+</P>
+</BODY>
+</HTML>
