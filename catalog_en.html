@@ -1,0 +1,115 @@
+<!doctype html> <html lang="en"> <head> <meta charset="utf-8">
+<title>Open-PLC</title> <link href="logo.ico" rel="shortcut icon"
+type="image/x-icon"> <link href="logo.ico" rel="apple-touch-icon" sizes="">
+<style> html, body { width: 100%; height: 100%; } body { background-color:
+#F0F8FF; color: #000000; font-family: Arial; font-weight: normal; font-size:
+13px; line-height: 1.1875; margin: 0; padding: 0; } a { color: #0000FF;
+text-decoration: underline; } a:visited { color: #800080; } a:active { color:
+#E6E6E6; } a:hover { color: #0000FF; text-decoration: underline; }
+#indexText2 { background-color: transparent; background-image: none; border:
+0px #000000 solid; padding: 0; margin: 0; text-align: center; } #indexText2
+div { text-align: center; } #Layer01 { background-color: #CCCCCC;
+background-image: none; } #Layer02 { background-color: #B3B3B3;
+background-image: none; } #MainMenu { border: 0px #B3B3B3 solid;
+background-color: #B3B3B3; } #MainMenu ul { list-style-type: none; margin:
+0; padding: 0; } #MainMenu li { float: left; margin: 0; padding: 0px 4px 0px
+0px; } #MainMenu a { display: block; float: left; color: #333333; border:
+1px #000000 solid; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+border-radius: 5px; background-color: #B3B3B3; background-color:
+rgba(179,179,179,0.70); background:
+-moz-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+background: -webkit-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0
+100%); background: -o-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0
+100%); background: -ms-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0
+100%); background: linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0
+100%); font-family: Arial; font-weight: bold; font-size: 16px; font-style:
+italic; text-decoration: none; height: 26px; line-height: 26px; padding: 0px
+5px 0px 5px; vertical-align: middle; text-align: center; } #MainMenu
+li:hover a, #MainMenu a:hover, #MainMenu .active { color: #FFFFFF;
+background-color: #337AB7; background: -moz-linear-gradient(bottom,#337AB7
+0%,#EEEEEE 100%); background: -webkit-linear-gradient(bottom,#337AB7 0%,#EEEEEE
+100%); background: -o-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+background: -ms-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%); background:
+linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%); border: 1px #2E6DA4 solid; }
+#MainMenu li.firstmain { padding-left: 0px; } #MainMenu li.lastmain {
+padding-right: 0px; } #MainMenu br { clear: both; font-size: 1px; height: 0;
+line-height: 0; } #Layer021 { background-color: #F0F8FF; background-image:
+none; } #Layer022 { background-color: #CCCCCC; background-image: none; }
+#Logo_Image { border: 0px #000000 solid; padding: 0px 0px 0px 0px; left: 0;
+top: 0; width: 100%; height: 100%; } #Layer03 { background-color: #F0F8FF;
+background-image: none; border: 1px transparent solid; } #PageMenu1 {
+border: 0px #C0C0C0 solid; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+border-radius: 5px; background-color: transparent; } #PageMenu1 ul {
+list-style-type: none; margin: 0; padding: 0; } #PageMenu1 li { float: left;
+margin: 0; padding: 0px 4px 0px 0px; width: 28px; } #PageMenu1 a { display:
+block; float: left; color: #333333; border: 1px #CCCCCC solid;
+-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+background-color: #FFFFFF; background-image: none; font-family: "Times New
+Roman"; font-weight: bold; font-size: 16px; font-style: normal;
+text-decoration: none; width: 16px; height: 26px; padding: 0px 5px 0px 5px;
+vertical-align: middle; line-height: 26px; text-align: center; } #PageMenu1
+li:hover a, #PageMenu1 a:hover, #PageMenu1 .active { color: #FFFFFF;
+background-color: #337AB7; background-image: none; border: 1px #2E6DA4 solid; }
+#PageMenu1 li.firstmain { padding-left: 0px; } #PageMenu1 li.lastmain {
+padding-right: 0px; } #PageMenu1 br { clear: both; font-size: 1px; height:
+0; line-height: 0; } #PageText1 { background-color: transparent;
+background-image: none; border: 0px #000000 solid; padding: 0; margin: 0;
+text-align: left; } #PageText1 div { text-align: left; } #Shape1 {
+border-width: 0; } #p1_s1_img { border: 0px #000000 solid; padding: 0px 0px 0px
+0px; left: 0; top: 0; width: 100%; height: 100%; } #Shape3 { border-width: 0; }
+#Shape4 { border-width: 0; } #Shape2 { border-width: 0; } #p1_s1_txt_1 {
+background-color: transparent; background-image: none; border: 0px #000000
+solid; padding: 0; margin: 0; text-align: center; } #p1_s1_txt_1 div {
+text-align: center; } #p1_s1_txt_3 { background-color: transparent;
+background-image: none; border: 0px #000000 solid; padding: 0; margin: 0;
+text-align: center; } #p1_s1_txt_3 div { text-align: center; }
+#p1_s1_txt_2 { background-color: transparent; background-image: none;
+border: 0px #000000 solid; padding: 0; margin: 0; text-align: center; }
+#p1_s1_txt_2 div { text-align: center; } </style> </head>
+<body>
+<div id="Layer01" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:102px;float:left;clear:left;display:block;z-index:14;">
+<div id="Logo_Image" style="position:absolute;left:9px;top:8px;width:395px;height:77px;z-index:0;">
+<img src="images/logo.png" id="Logo_Image" alt=""></div>
+</div>
+<div id="Layer02" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;;height:52px;float:left;clear:left;display:block;z-index:15;">
+<div id="Layer021" style="position:absolute;text-align:left;left:0px;top:12px;width:52px;height:40px;z-index:1;">
+</div>
+<div id="Layer022" style="position:absolute;text-align:left;left:0px;top:0px;width:52px;height:12px;z-index:2;">
+</div>
+<div id="MainMenu" style="position:absolute;left:70px;top:12px;width:954px;height:28px;z-index:3;">
+<ul>
+<li class="firstmain"><a href="./index_en.html" target="_self" title="Home">Home</a>
+</li>
+<li><a class="active" href="./catalog_en.html" target="_self" title="Catalog">Catalog</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="Layer03" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:16;">
+<div id="PageText1" style="position:absolute;left:51px;top:17px;width:42px;height:21px;visibility:hidden;z-index:4;text-align:left;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">Стр.</span></div>
+<div id="PageMenu1" style="position:absolute;left:93px;top:13px;width:300px;height:28px;visibility:hidden;z-index:5;">
+<ul>
+<li class="firstmain"><a href="./manuals_p1_en.html" target="_self">1</a>
+</li>
+</ul>
+</div>
+<div id="Shape1" style="position:absolute;left:51px;top:65px;width:300px;height:347px;z-index:6;">
+<img src="images/img0007.png" id="Shape1" alt="" style="width:300px;height:347px;"></div>
+<div id="p1_s1_img" style="position:absolute;left:101px;top:114px;width:200px;height:91px;z-index:7;">
+<img src="images/green_pill.png" id="p1_s1_img" alt=""></div>
+<div id="p1_s1_txt_1" style="position:absolute;left:72px;top:264px;width:250px;height:44px;text-align:center;z-index:8;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;"><strong>STM32F303CBT6<br>GreenPill</strong></span></div>
+<div id="p1_s1_txt_2" style="position:absolute;left:72px;top:351px;width:250px;height:21px;visibility:hidden;text-align:center;z-index:9;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">STM32F303CBT6</span></div>
+<div id="p1_s1_txt_3" style="position:absolute;left:72px;top:380px;width:250px;height:21px;visibility:hidden;text-align:center;z-index:10;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;">STM32F303CBT6</span></div>
+<div id="Shape2" style="position:absolute;left:396px;top:65px;width:300px;height:347px;visibility:hidden;z-index:11;">
+<img src="images/img0009.png" id="Shape2" alt="" style="width:300px;height:347px;"></div>
+<div id="Shape3" style="position:absolute;left:51px;top:452px;width:300px;height:347px;visibility:hidden;z-index:12;">
+<img src="images/img0008.png" id="Shape3" alt="" style="width:300px;height:347px;"></div>
+<div id="Shape4" style="position:absolute;left:396px;top:452px;width:300px;height:347px;visibility:hidden;z-index:13;">
+<img src="images/img0010.png" id="Shape4" alt="" style="width:300px;height:347px;"></div>
+</div>
+</body>
+</html>
