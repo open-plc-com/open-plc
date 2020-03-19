@@ -1,180 +1,547 @@
-<!doctype html> <html lang="en"> <head> <meta charset="utf-8">
-<title>Open-PLC</title> <link href="logo.ico" rel="shortcut icon"
-type="image/x-icon"> <link href="logo.ico" rel="apple-touch-icon" sizes="">
-<style> html, body { width: 100%; height: 100%; } body { background-color:
-transparent; color: #000000; font-family: Arial; font-weight: normal;
-font-size: 13px; line-height: 1.1875; margin: 0; padding: 0; } a { color:
-#0000FF; text-decoration: underline; } a:visited { color: #800080; } a:active {
-color: #E6E6E6; } a:hover { color: #0000FF; text-decoration: underline; }
-#Shape041 { border-width: 0; } #wb_Text031 { background-color: transparent;
-background-image: none; border: 0px #000000 solid; padding: 0; margin: 0;
-text-align: center; } #wb_Text031 div { text-align: center; } #Layer01 {
-background-color: #CCCCCC; background-image: none; } #Layer02 {
-background-color: transparent; background-image: none; } #Layer03 {
-background-color: transparent; background-image: none; border: 1px transparent
-solid; } #Layer04 { background-color: transparent; background-image: none;
-border: 1px transparent solid; } #Layer022 { background-color: transparent;
-background-image: none; } #Layer023 { background-color: #CCCCCC;
-background-image: none; } #Layer05 { background-color: transparent;
-background-image: none; border: 1px transparent solid; } #Layer06 {
-background-color: #E1E1E1; background-image: none; border: 1px #CCCCCC solid; }
-#Logo_Image { border: 0px #000000 solid; padding: 0px 0px 0px 0px; left: 0;
-top: 0; width: 100%; height: 100%; } #Shape031 { border-width: 0; } #Text041 {
-background-color: transparent; background-image: none; border: 0px #000000
-solid; padding: 0; margin: 0; text-align: left; } #Text041 div { text-align:
-left; } #Text042 { background-color: transparent; background-image: none;
-border: 0px #000000 solid; padding: 0; margin: 0; text-align: left; } #Text042
-div { text-align: left; } #Text043 { background-color: transparent;
-background-image: none; border: 0px #000000 solid; padding: 0; margin: 0;
-text-align: left; } #Text043 div { text-align: left; } #Text044 {
-background-color: transparent; background-image: none; border: 0px #000000
-solid; padding: 0; margin: 0; text-align: left; } #Text044 div { text-align:
-left; } #Text046 { background-color: transparent; background-image: none;
-border: 0px #000000 solid; padding: 0; margin: 0; text-align: left; } #Text046
-div { text-align: left; } #Text045 { background-color: transparent;
-background-image: none; border: 0px #000000 solid; padding: 0; margin: 0;
-text-align: left; } #Text045 div { text-align: left; } #Text047 {
-background-color: transparent; background-image: none; border: 0px #000000
-solid; padding: 0; margin: 0; text-align: left; } #Text047 div { text-align:
-left; } #Text032 { background-color: transparent; background-image: none;
-border: 0px #000000 solid; padding: 0; margin: 0; text-align: left; } #Text032
-div { text-align: left; } #Shape051 { border-width: 0; } #Text051 {
-background-color: transparent; background-image: none; border: 0px #000000
-solid; padding: 0; margin: 0; text-align: left; } #Text051 div { text-align:
-left; } #Text19 { background-color: transparent; background-image: none;
-border: 0px #000000 solid; padding: 0; margin: 0; text-align: left; } #Text19
-div { text-align: left; } #MainMenu { border: 0px #B3B3B3 solid;
-background-color: transparent; } #MainMenu ul { list-style-type: none; margin:
-0; padding: 0; } #MainMenu li { float: left; margin: 0; padding: 0px 4px 0px
-0px; } #MainMenu a { display: block; float: left; color: #333333; border: 1px
-#000000 solid; -moz-border-radius: 5px; -webkit-border-radius: 5px;
-border-radius: 5px; background-color: #B3B3B3; background-color:
-rgba(179,179,179,0.70); background:
--moz-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
-background: -webkit-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0
-100%); background: -o-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0
-100%); background: -ms-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0
-100%); background: linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0
-100%); font-family: Arial; font-weight: bold; font-size: 16px; font-style:
-italic; text-decoration: none; height: 26px; line-height: 26px; padding: 0px
-5px 0px 5px; vertical-align: middle; text-align: center; } #MainMenu li:hover
-a, #MainMenu a:hover, #MainMenu .active { color: #FFFFFF; background-color:
-#337AB7; background: -moz-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
-background: -webkit-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
-background: -o-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%); background:
--ms-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%); background:
-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%); border: 1px #2E6DA4 solid; }
-#MainMenu li.firstmain { padding-left: 0px; } #MainMenu li.lastmain {
-padding-right: 0px; } #MainMenu br { clear: both; font-size: 1px; height: 0;
-line-height: 0; } #Layer021 { background-color: #B3B3B3; background-image:
-none; } #Text033 { background-color: transparent; background-image: none;
-border: 0px #000000 solid; padding: 0; margin: 0; text-align: left; } #Text033
-div { text-align: left; } #Image031 { border: 0px #000000 solid; padding: 0px
-0px 0px 0px; left: 0; top: 0; width: 100%; height: 100%; } #Colors {
-background-color: transparent; background-image: none; border: 0px #000000
-solid; padding: 0; margin: 0; text-align: left; } #Colors div { text-align:
-left; } #NavigationBar1 ul.navbar { list-style: none; margin: 0; padding: 0; }
-#NavigationBar1 ul.navbar li { height: 30px; width: 100px; margin: 0 0 4px 0;
-vertical-align: bottom; } #NavigationBar1 ul.navbar li a { display: block;
-position: relative; } #NavigationBar1 ul.navbar li a img { position: absolute;
-left: 0; z-index: 1; border-width: 0; } #NavigationBar1 ul.navbar li span {
-display: block; height: 30px; width: 100px; position: absolute; z-index: 2; }
-#NavigationBar1 ul li a.active span { visibility: hidden !important; }
-#NavigationBar1 ul li a.active .hover { visibility: visible !important; }
-#NavigationBar1 a .hover { visibility: hidden; } #NavigationBar1 a:hover .hover
-{ visibility: visible; } #NavigationBar1 a:hover span { visibility: hidden; }
-#NavigationBar1 ul li a.active img { } #NavigationBar1 { margin: 10px 0px 0px
-0px; } #NavigationBar1.affix { top: 0 !important; position: fixed !important;
-left: 50% !important; margin-left: -502px; } #Image041 { border: 0px #000000
-solid; padding: 0px 0px 0px 0px; left: 0; top: 0; width: 100%; height: 100%; }
-</style> <script src="jquery-1.12.4.min.js"></script> <script
-src="affix.min.js"></script> <script src="scrollspy.min.js"></script> <script>
-$(document).ready(function() { $("#NavigationBar1").affix({offset:{top:
-$("#NavigationBar1").offset().top}}); }); </script> <style> #NavigationBar1,
-#NavigationBar1.affix { left: 10px !important; margin-left: 0; z-index: 999
-!important; } </style> </head> <body data-spy="scroll"> <div
-id="NavigationBar1"
-style="position:absolute;left:10px;top:160px;width:100px;height:136px;z-index:28;">
-<ul class="navbar"> <li><a href="#Home"><img alt=""
-src="images/img0003_over.png" class="hover"><span><img alt=""
-src="images/img0003.png"></span></a></li> <li><a href="#Page1"><img alt=""
-src="images/img0012_over.png" class="hover"><span><img alt=""
-src="images/img0012.png"></span></a></li> <li><a href="#Page2"><img alt=""
-src="images/img0013_over.png" class="hover"><span><img alt=""
-src="images/img0013.png"></span></a></li> <li><a href="#Contacts"><img alt=""
-src="images/img0005_over.png" class="hover"><span><img alt=""
-src="images/img0005.png"></span></a></li> </ul> </div> <div id="Layer01"
-style="position:relative;text-align:left;margin:0px 0px 0px
-0px;width:100%;height:102px;float:left;clear:left;display:block;z-index:29;">
-<div id="Home"
-style="position:absolute;left:0px;top:0px;width:20px;height:20px;visibility:hidden;z-index:0;">
-<a id="Home" style="visibility:hidden">&nbsp;</a> </div> <div id="Logo_Image"
-style="position:absolute;left:9px;top:8px;width:395px;height:77px;z-index:1;">
-<img src="images/logo.png" id="Logo_Image" alt=""></div> </div> <div
-id="Layer02" style="position:relative;text-align:left;margin:0px 0px 0px
-0px;width:100%;;height:52px;float:left;clear:left;display:none;z-index:30;">
-<div id="Layer021"
-style="position:absolute;text-align:left;visibility:hidden;left:52px;right:0px;top:0px;height:52px;z-index:2;">
-</div> <div id="Layer022"
-style="position:absolute;text-align:left;visibility:hidden;left:0px;top:12px;width:52px;height:40px;z-index:3;">
-</div> <div id="Layer023"
-style="position:absolute;text-align:left;visibility:hidden;left:0px;top:0px;width:52px;height:12px;z-index:4;">
-</div> <div id="MainMenu"
-style="position:absolute;left:70px;top:12px;width:1024px;height:28px;z-index:5;">
-<ul> <li class="firstmain"><a class="active" href="./index_en.html"
-target="_self">Home</a> </li> <li><a href="./catalog_p1_en.html"
-target="_self">Catalog</a> </li> </ul> </div> </div>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Open-PLC</title>
+<link href="logo.ico" rel="shortcut icon" type="image/x-icon">
+<link href="logo.ico" rel="apple-touch-icon" sizes="">
+<style>
+html, body
+{
+   width: 100%;
+   height: 100%;
+}
+body
+{
+   background-color: #FFFFFF;
+   background-image: url(images/main_background.jpg);
+   background-attachment: fixed;
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #E6E6E6;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+#Shape041
+{
+   border-width: 0;
+}
+#wb_Text031 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text031 div
+{
+   text-align: center;
+}
+#Layer01
+{
+   background-color: #CCCCCC;
+   background-image: none;
+}
+#Layer02
+{
+   background-color: transparent;
+   background-image: none;
+}
+#Layer03
+{
+   background-color: transparent;
+   background-image: none;
+   border: 1px transparent solid;
+}
+#Layer04
+{
+   background-color: transparent;
+   background-image: none;
+   border: 1px transparent solid;
+}
+#Layer022
+{
+   background-color: transparent;
+   background-image: none;
+}
+#Layer023
+{
+   background-color: #CCCCCC;
+   background-image: none;
+}
+#Layer05
+{
+   background-color: transparent;
+   background-image: none;
+   border: 1px transparent solid;
+}
+#Layer06
+{
+   background-color: #E1E1E1;
+   background-image: none;
+   border: 1px #CCCCCC solid;
+}
+#Logo_Image
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#Shape031
+{
+   border-width: 0;
+}
+#wb_Text041 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text041 div
+{
+   text-align: left;
+}
+#wb_Text042 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text042 div
+{
+   text-align: left;
+}
+#wb_Text043 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text043 div
+{
+   text-align: left;
+}
+#wb_Text044 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text044 div
+{
+   text-align: left;
+}
+#wb_Text046 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text046 div
+{
+   text-align: left;
+}
+#wb_Text045 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text045 div
+{
+   text-align: left;
+}
+#wb_Text047 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text047 div
+{
+   text-align: left;
+}
+#wb_Text032 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text032 div
+{
+   text-align: left;
+}
+#Shape051
+{
+   border-width: 0;
+}
+#wb_Text051 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text051 div
+{
+   text-align: left;
+}
+#wb_Text19 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text19 div
+{
+   text-align: left;
+}
+#wb_MainMenu
+{
+   border: 0px #B3B3B3 solid;
+   background-color: transparent;
+}
+#wb_MainMenu ul
+{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+#wb_MainMenu li
+{
+   float: left;
+   margin: 0;
+   padding: 0px 4px 0px 0px;
+}
+#wb_MainMenu a
+{
+   display: block;
+   float: left;
+   color: #333333;
+   border: 1px #000000 solid;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+   background-color: #B3B3B3;
+   background-color: rgba(179,179,179,0.70);
+   background: -moz-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: -webkit-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: -o-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: -ms-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 16px;
+   font-style: italic;
+   text-decoration: none;
+   height: 26px;
+   line-height: 26px;
+   padding: 0px 5px 0px 5px;
+   vertical-align: middle;
+   text-align: center;
+}
+#wb_MainMenu li:hover a, #wb_MainMenu a:hover, #wb_MainMenu .active
+{
+   color: #FFFFFF;
+   background-color: #337AB7;
+   background: -moz-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: -webkit-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: -o-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: -ms-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   border: 1px #2E6DA4 solid;
+}
+#wb_MainMenu li.firstmain
+{
+   padding-left: 0px;
+}
+#wb_MainMenu li.lastmain
+{
+   padding-right: 0px;
+}
+#wb_MainMenu br
+{
+   clear: both;
+   font-size: 1px;
+   height: 0;
+   line-height: 0;
+}
+#Layer021
+{
+   background-color: #B3B3B3;
+   background-image: none;
+}
+#wb_Text033 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text033 div
+{
+   text-align: left;
+}
+#Image031
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_Colors 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Colors div
+{
+   text-align: left;
+}
+#NavigationBar1 ul.navbar
+{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+#NavigationBar1 ul.navbar li
+{
+   height: 30px;
+   width: 100px;
+   margin: 0 0 4px 0;
+   vertical-align: bottom;
+}
+#NavigationBar1 ul.navbar li a
+{
+   display: block;
+   position: relative;
+}
+#NavigationBar1 ul.navbar li a img
+{
+   position: absolute;
+   left: 0;
+   z-index: 1;
+   border-width: 0;
+}
+#NavigationBar1 ul.navbar li span
+{
+   display: block;
+   height: 30px;
+   width: 100px;
+   position: absolute;
+   z-index: 2;
+}
+#NavigationBar1 ul li a.active span
+{
+   visibility: hidden !important;
+}
+#NavigationBar1 ul li a.active .hover
+{
+   visibility: visible !important;
+}
+#NavigationBar1 a .hover
+{
+   visibility: hidden;
+}
+#NavigationBar1 a:hover .hover
+{
+   visibility: visible;
+}
+#NavigationBar1 a:hover span
+{
+   visibility: hidden;
+}
+#NavigationBar1 ul li a.active img
+{
+}
+#NavigationBar1
+{
+   margin: 10px 0px 0px 0px;
+}
+#NavigationBar1.affix
+{
+   top: 0 !important;
+   position: fixed !important;
+   left: 50% !important;
+   margin-left: -502px;
+}
+#Image041
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+</style>
+<script src="jquery-1.12.4.min.js"></script>
+<script src="affix.min.js"></script>
+<script src="scrollspy.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#NavigationBar1").affix({offset:{top: $("#NavigationBar1").offset().top}});
+});
+</script>
+<style>
+#NavigationBar1, #NavigationBar1.affix
+{
+   left: 10px !important;
+   margin-left: 0;
+   z-index: 999 !important;
+}
+</style>
+</head>
+<body data-spy="scroll">
+
+<div id="NavigationBar1" style="position:absolute;left:10px;top:160px;width:100px;height:136px;z-index:28;">
+<ul class="navbar">
+<li><a href="#Home"><img alt="" src="images/img0003_over.png" class="hover"><span><img alt="" src="images/img0003.png"></span></a></li>
+<li><a href="#Page1"><img alt="" src="images/img0012_over.png" class="hover"><span><img alt="" src="images/img0012.png"></span></a></li>
+<li><a href="#Page2"><img alt="" src="images/img0013_over.png" class="hover"><span><img alt="" src="images/img0013.png"></span></a></li>
+<li><a href="#Contacts"><img alt="" src="images/img0005_over.png" class="hover"><span><img alt="" src="images/img0005.png"></span></a></li>
+</ul>
+</div>
+<div id="Layer01" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:102px;float:left;clear:left;display:block;z-index:29;">
+<div id="wb_Home" style="position:absolute;left:0px;top:0px;width:20px;height:20px;visibility:hidden;z-index:0;">
+<a id="Home" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="wb_Logo_Image" style="position:absolute;left:9px;top:8px;width:395px;height:77px;z-index:1;">
+<img src="images/logo.png" id="Logo_Image" alt=""></div>
+</div>
+<div id="Layer02" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;;height:52px;float:left;clear:left;display:block;z-index:30;">
+<div id="Layer021" style="position:absolute;text-align:left;left:52px;right:0px;top:0px;height:52px;z-index:2;">
+</div>
+<div id="Layer022" style="position:absolute;text-align:left;left:0px;top:12px;width:52px;height:40px;z-index:3;">
+</div>
+<div id="Layer023" style="position:absolute;text-align:left;left:0px;top:0px;width:52px;height:12px;z-index:4;">
+</div>
+<div id="wb_MainMenu" style="position:absolute;left:70px;top:12px;width:1024px;height:28px;visibility:hidden;z-index:5;">
+<ul>
+<li class="firstmain"><a class="active" href="./index_en.html" target="_self">Home</a>
+</li>
+<li><a href="./catalog_p1_en.html" target="_self">Catalog</a>
+</li>
+</ul>
+</div>
+</div>
 <div id="Layer03" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:31;">
-<div id="Shape031" style="position:absolute;left:139px;top:9px;width:680px;height:536px;z-index:6;">
+<div id="wb_Shape031" style="position:absolute;left:139px;top:9px;width:680px;height:536px;z-index:6;">
 <img src="images/img0001.png" id="Shape031" alt="" style="width:680px;height:536px;"></div>
-<div id="Text031" style="position:absolute;left:169px;top:35px;width:620px;height:24px;text-align:center;z-index:7;">
+<div id="wb_Text031" style="position:absolute;left:169px;top:35px;width:620px;height:24px;text-align:center;z-index:7;">
 <span style="color:#000000;font-family:'Times New Roman';font-size:21px;"><strong><em>Target of the project:</em></strong></span></div>
-<div id="Text032" style="position:absolute;left:169px;top:76px;width:620px;height:210px;z-index:8;text-align:left;">
+<div id="wb_Text032" style="position:absolute;left:169px;top:76px;width:620px;height:210px;z-index:8;text-align:left;">
 <span style="color:#000000;font-family:Calibri;font-size:19px;">&nbsp;&nbsp;&nbsp; </span><span style="color:#000000;font-family:'Times New Roman';font-size:19px;">The main goal of the project is to enable the user to design their own evaluation boards, modules, and controllers of various difficulty levels. The ability to use modules and controllers in a wide range of tasks, such as automation, security systems, IoT, smart home projects, education, etc.<br><br></span><span style="color:#000000;font-family:Calibri;font-size:19px;">&nbsp;&nbsp;&nbsp; </span><span style="color:#000000;font-family:'Times New Roman';font-size:19px;">The project is open source. Microcontrollers of the STM32F103, STM32F303 series are used<br><br></span><span style="color:#000000;font-family:Calibri;font-size:19px;">&nbsp;&nbsp;&nbsp; </span><span style="color:#000000;font-family:'Times New Roman';font-size:19px;">You can start getting acquainted / programming with the well-known<br>&quot;blue pill&quot;.</span></div>
-<div id="Text033" style="position:absolute;left:169px;top:465px;width:620px;height:42px;z-index:9;text-align:left;">
+<div id="wb_Text033" style="position:absolute;left:169px;top:465px;width:620px;height:42px;z-index:9;text-align:left;">
 <span style="color:#000000;font-family:'Times New Roman';font-size:19px;">&nbsp;&nbsp;&nbsp; The module is assembled from the necessary set of PCB. Various sensors / actuators from Arduino can be used.</span></div>
-<div id="Image031" style="position:absolute;left:350px;top:315px;width:258px;height:112px;z-index:10;">
+<div id="wb_Image031" style="position:absolute;left:350px;top:315px;width:258px;height:112px;z-index:10;">
 <img src="images/blue_pill.jpg" id="Image031" alt=""></div>
 </div>
 <div id="Layer04" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:32;">
-<div id="Page1" style="position:absolute;left:9px;top:9px;width:19px;height:18px;visibility:hidden;z-index:11;">
+<div id="wb_Page1" style="position:absolute;left:9px;top:9px;width:19px;height:18px;visibility:hidden;z-index:11;">
 <a id="Page1" style="visibility:hidden">&nbsp;</a>
 </div>
-<div id="Shape041" style="position:absolute;left:139px;top:15px;width:680px;height:724px;z-index:12;">
+<div id="wb_Shape041" style="position:absolute;left:139px;top:15px;width:680px;height:724px;z-index:12;">
 <img src="images/img0002.png" id="Shape041" alt="" style="width:680px;height:724px;"></div>
-<div id="Text041" style="position:absolute;left:169px;top:37px;width:620px;height:174px;z-index:13;text-align:left;">
+<div id="wb_Text041" style="position:absolute;left:169px;top:37px;width:620px;height:174px;z-index:13;text-align:left;">
 <span style="color:#000000;font-family:'Times New Roman';font-size:19px;">The </span><span style="color:#000000;font-family:Calibri;font-size:19px;">modules</span><span style="color:#000000;font-family:'Times New Roman';font-size:19px;"> can be used to solve various tasks, for example, &quot;smart house&quot;, IoT, industrial automation, ...<br><br>The </span><span style="color:#000000;font-family:Calibri;font-size:19px;">project</span><span style="color:#000000;font-family:'Times New Roman';font-size:19px;"> has an open architecture that makes it easy to integrate with various solutions, both hardware and software.<br><br>The components of the module are designed for installation in a </span><span style="color:#000000;font-family:Calibri;font-size:19px;">enclosure</span><span style="color:#000000;font-family:'Times New Roman';font-size:19px;"> box on a DIN rail.</span></div>
-<div id="Text042" style="position:absolute;left:169px;top:396px;width:640px;height:21px;z-index:14;text-align:left;">
+<div id="wb_Text042" style="position:absolute;left:169px;top:396px;width:640px;height:21px;z-index:14;text-align:left;">
 <span style="color:#000000;font-family:'Times New Roman';font-size:19px;">A system module is a collection of hardware and software components.</span></div>
-<div id="Text043" style="position:absolute;left:169px;top:436px;width:620px;height:42px;z-index:15;text-align:left;">
+<div id="wb_Text043" style="position:absolute;left:169px;top:436px;width:620px;height:42px;z-index:15;text-align:left;">
 <span style="color:#000000;font-family:'Times New Roman';font-size:19px;">The master module can be anything from a simple microcontroller to a computer with an operating system:</span></div>
-<div id="Text044" style="position:absolute;left:209px;top:486px;width:640px;height:21px;z-index:16;text-align:left;">
+<div id="wb_Text044" style="position:absolute;left:209px;top:486px;width:640px;height:21px;z-index:16;text-align:left;">
 <span style="color:#000000;font-family:'Times New Roman';font-size:19px;">• based on STM32Fxxx without operating system</span></div>
-<div id="Text045" style="position:absolute;left:209px;top:506px;width:640px;height:21px;z-index:17;text-align:left;">
+<div id="wb_Text045" style="position:absolute;left:209px;top:506px;width:640px;height:21px;z-index:17;text-align:left;">
 <span style="color:#000000;font-family:'Times New Roman';font-size:19px;">• Raspberry PI and the like with Linux</span></div>
-<div id="Text046" style="position:absolute;left:209px;top:526px;width:640px;height:21px;z-index:18;text-align:left;">
+<div id="wb_Text046" style="position:absolute;left:209px;top:526px;width:640px;height:21px;z-index:18;text-align:left;">
 <span style="color:#000000;font-family:'Times New Roman';font-size:19px;">• x86 with different operating systems</span></div>
-<div id="Text047" style="position:absolute;left:169px;top:566px;width:620px;height:107px;z-index:19;text-align:left;">
+<div id="wb_Text047" style="position:absolute;left:169px;top:566px;width:620px;height:107px;z-index:19;text-align:left;">
 <span style="color:#000000;font-family:'Times New Roman';font-size:19px;">When creating subordinate modules we will use STM microcontrollers (STM32F10x, STM32F30x). The simplest evaluation board is the<br>&quot;Blue </span><span style="color:#000000;font-family:Calibri;font-size:19px;">Pill</span><span style="color:#000000;font-family:'Times New Roman';font-size:19px;">&quot; STM32F103C8T6.<br><br>As an example, various modules for Arduino can be used as sensors / actuators.</span></div>
-<div id="Image041" style="position:absolute;left:269px;top:233px;width:400px;height:135px;z-index:20;">
+<div id="wb_Image041" style="position:absolute;left:269px;top:233px;width:400px;height:135px;z-index:20;">
 <img src="images/greenpill2box.jpg" id="Image041" alt=""></div>
 </div>
 <div id="Layer05" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:33;">
-<div id="Page2" style="position:absolute;left:9px;top:15px;width:19px;height:18px;visibility:hidden;z-index:21;">
+<div id="wb_Page2" style="position:absolute;left:9px;top:15px;width:19px;height:18px;visibility:hidden;z-index:21;">
 <a id="Page2" style="visibility:hidden">&nbsp;</a>
 </div>
-<div id="Shape051" style="position:absolute;left:139px;top:24px;width:680px;height:460px;z-index:22;">
+<div id="wb_Shape051" style="position:absolute;left:139px;top:24px;width:680px;height:460px;z-index:22;">
 <img src="images/img0004.png" id="Shape051" alt="" style="width:680px;height:460px;"></div>
-<div id="Text051" style="position:absolute;left:169px;top:53px;width:640px;height:357px;visibility:hidden;z-index:23;text-align:left;">
+<div id="wb_Text051" style="position:absolute;left:169px;top:53px;width:640px;height:357px;visibility:hidden;z-index:23;text-align:left;">
 <span style="color:#000000;font-family:'Times New Roman';font-size:19px;">The description of programming will be replenished on the site as the software is created.<br><br>The script of modules operation can be written in &quot;C&quot;, &quot;C ++&quot;, programming languages ​​IEC 61131.<br><br>We a create firmwares for different purposes for slave modules. Firmwares of modules are unified, the user interactively configures them for their requirements.<br><br>All that is described on the site are components of a single system. But each component or idea can be used both autonomously and as part of its own project.<br><br>If the proposed hardware or software functionality is not enough, then we can develop and produce individual versions of your modules for various purposes, from solutions for home, to industrial.<br><br>We will help you to develop your project!</span></div>
 </div>
 <div id="Layer06" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:34;">
-<div id="Contacts" style="position:absolute;left:9px;top:9px;width:19px;height:18px;z-index:24;">
+<div id="wb_Contacts" style="position:absolute;left:9px;top:9px;width:19px;height:18px;z-index:24;">
 <a id="Contacts" style="visibility:hidden">&nbsp;</a>
 </div>
-<div id="Text19" style="position:absolute;left:139px;top:18px;width:640px;height:21px;z-index:25;text-align:left;">
+<div id="wb_Text19" style="position:absolute;left:139px;top:18px;width:640px;height:21px;z-index:25;text-align:left;">
 <span style="color:#000000;font-family:'Times New Roman';font-size:19px;">e-mail: info@open-plc.com</span></div>
-<div id="Colors" style="position:absolute;left:159px;top:95px;width:640px;height:168px;visibility:hidden;z-index:26;text-align:left;">
+<div id="wb_Colors" style="position:absolute;left:159px;top:95px;width:640px;height:168px;visibility:hidden;z-index:26;text-align:left;">
 <span style="color:#000000;font-family:'Times New Roman';font-size:19px;">colors:<br>current page E1E1E1<br>layer01 CCCCCC<br>layer02 Transparent<br>layer021 B3B3B3<br>layer022 Transparent<br>layer023 CCCCCC<br>shape F0F8FF</span></div>
 </div>
 </body>
