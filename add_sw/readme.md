@@ -2,3 +2,4 @@
     Flash_Loader_Demonstrator_v2_6_0.zip - Flash Loader Demonstrator v2.6.0 for Windows
     STM32_ST_LINK_Utility_v3_8_0.zip     - STM32 ST LINK Utility v3.8.0
     en.stsw-link004.zip                  - STM32 ST LINK Utility v4.2.0
+    en.stsw-link004_3.zip                - STM32 ST LINK Utility v4.3.0
